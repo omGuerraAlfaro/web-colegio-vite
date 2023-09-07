@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './theme/navbar/Navbar.tsx';
-import Footer from './theme/footer/footer.tsx';
+import Footer2 from './theme/footer/footer.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -17,6 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>
-    <Footer />
+    <Footer2 />
   </React.StrictMode>,
 )

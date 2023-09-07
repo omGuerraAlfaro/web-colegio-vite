@@ -2,9 +2,9 @@ import { Container, Row, Col, Nav, NavLink } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-import "./footer.css";
+import "./Footer.css";
 
-function Footer() {
+const Footer2 = () => {
   return (
     <footer className="py-3 my-4 border-top container">
       <Container fluid>
@@ -34,4 +34,4 @@ function Footer() {
   );
 };
 
-export default Footer;
+export default Footer2;
