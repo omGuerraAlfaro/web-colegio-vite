@@ -4,20 +4,24 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CarouselHome from '../Carousel/Carousel'
 import Hall from '../../assets/img/fotoHall.png'
+import Inclusividad from '../../assets/icon/inclusiv.png'
+import Docentes from '../../assets/icon/docente.png'
+import Excelencia from '../../assets/icon/excelencia.png'
+import Programas from '../../assets/icon/programas.png'
 import './Home.css'
 
 function Home() {
     const compromisos = [
         {
-            imgSrc: "https://ssla.cl/wp-content/uploads/2020/11/Excelencia-academica_1_SSLA.png",
-            imgAlt: "EXCELENCIA ACADÉMICA",
-            caption: "EXCELENCIA ACADÉMICA",
-            title: "EXCELENCIA ACADÉMICA",
+            imgSrc: Inclusividad,
+            imgAlt: "AMBIENTE INCLUSIVO",
+            caption: "AMBIENTE INCLUSIVO",
+            title: "AMBIENTE INCLUSIVO",
             description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
             color: "#FBAE3C"
         },
         {
-            imgSrc: "https://ssla.cl/wp-content/uploads/2020/11/Excelencia-academica_1_SSLA.png",
+            imgSrc: Excelencia,
             imgAlt: "EXCELENCIA ACADÉMICA",
             caption: "EXCELENCIA ACADÉMICA",
             title: "EXCELENCIA ACADÉMICA",
@@ -25,23 +29,23 @@ function Home() {
             color: "#F6884D"
         },
         {
-            imgSrc: "https://ssla.cl/wp-content/uploads/2020/11/Excelencia-academica_1_SSLA.png",
-            imgAlt: "EXCELENCIA ACADÉMICA",
-            caption: "EXCELENCIA ACADÉMICA",
-            title: "EXCELENCIA ACADÉMICA",
+            imgSrc: Docentes,
+            imgAlt: "CUERPO DOCENTE CALIFICADO",
+            caption: "CUERPO DOCENTE CALIFICADO",
+            title: "CUERPO DOCENTE CALIFICADO",
             description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
             color: "#C0526A"
         },
         {
-            imgSrc: "https://ssla.cl/wp-content/uploads/2020/11/Excelencia-academica_1_SSLA.png",
-            imgAlt: "EXCELENCIA ACADÉMICA",
-            caption: "EXCELENCIA ACADÉMICA",
-            title: "EXCELENCIA ACADÉMICA",
+            imgSrc: Programas,
+            imgAlt: "PROGRAMAS EXTRACURRICULARES",
+            caption: "PROGRAMAS EXTRACURRICULARES",
+            title: "PROGRAMAS EXTRACURRICULARES",
             description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
             color: "#683A67"
         },
         {
-            imgSrc: "https://ssla.cl/wp-content/uploads/2020/11/Excelencia-academica_1_SSLA.png",
+            imgSrc: Programas,
             imgAlt: "EXCELENCIA ACADÉMICA",
             caption: "EXCELENCIA ACADÉMICA",
             title: "EXCELENCIA ACADÉMICA",
