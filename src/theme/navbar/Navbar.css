@@ -26,3 +26,16 @@
 .bold {
   font-weight: bold;
 }
+
+#color-bg .navbar-toggler {
+  border-color: white;
+}
+
+#color-bg .navbar-toggler-icon {
+  filter: invert(1); /* This will invert the colors, making black into white */
+}
+
+#color-bg .navbar-toggler:focus {
+  outline: none; /* Removes the default outline */
+  box-shadow: 0 0 5px white; /* Adds a white shadow around the button */
+}

@@ -77,3 +77,24 @@
 .school-info {
   flex: 1;
 }
+
+/* Para pantallas con un ancho máximo de 768px (tablets) */
+@media (max-width: 768px) {
+  .school-presentation {
+    padding: 150px 20px; /* Reducimos el padding */
+    background-size: cover, 400px; /* Reducimos el tamaño de la imagen de fondo */
+  }
+}
+
+/* Para pantallas con un ancho máximo de 480px (móviles) */
+@media (max-width: 480px) {
+  .school-presentation {
+    padding: 100px 10px; /* Reducimos aún más el padding */
+    background-size: cover, 250px; /* Reducimos aún más el tamaño de la imagen de fondo */
+    flex-direction: column; /* Cambiamos la dirección del flexbox para que los elementos se apilen verticalmente */
+  }
+
+  .school-info {
+    order: 2; /* Si hay otros elementos en .school-presentation, esto asegura que .school-info se muestre al final */
+  }
+}
