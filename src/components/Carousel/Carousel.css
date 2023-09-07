@@ -1,0 +1,104 @@
+.my-carousel {
+    margin-bottom: 100px;
+}
+
+.my-carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.my-carousel .carousel-caption h3 {
+    font-size: 2rem;
+}
+
+.my-carousel .carousel-caption p {
+    font-size: 1rem;
+}
+
+.my-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.my-carousel .carousel-indicators button.active {
+    background-color: #683A67;
+}
+
+.my-carousel .carousel-control-prev,
+.my-carousel .carousel-control-next {
+    background-color: transparent;
+}
+
+.my-carousel .carousel-control-prev-icon,
+.my-carousel .carousel-control-next-icon {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.my-carousel .carousel-control-prev-icon:hover,
+.my-carousel .carousel-control-next-icon:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    .my-carousel img {
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    .my-carousel .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+
+    .my-carousel .carousel-caption p {
+        font-size: 0.9rem;
+        display: none;
+    }
+
+    .my-carousel .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+    }
+
+    .my-carousel .carousel-control-prev-icon,
+    .my-carousel .carousel-control-next-icon {
+        padding: 15px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 576px) {
+    .my-carousel img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .my-carousel .carousel-caption h3 {
+        font-size: 1.2rem;
+        margin-top: 100px;
+    }
+
+    .my-carousel .carousel-caption p {
+        font-size: 0.8rem;
+        display: none;
+    }
+
+    .my-carousel .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+    }
+
+    .my-carousel .carousel-control-prev-icon,
+    .my-carousel .carousel-control-next-icon {
+        padding: 10px;
+    }
+}

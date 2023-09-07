@@ -1,0 +1,28 @@
+.custom-link {
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  overflow: hidden; /* Hide the underline before it's fully visible */
+}
+
+.custom-link::after {
+  content: ''; /* Empty content */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%; /* Start with no width */
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: currentColor; /* Use the current text color for the underline */
+  transition: all 0.3s ease;
+  transform: translateX(-50%); /* Center the underline */
+}
+
+.custom-link:hover::after {
+  width: 100%; /* Expand the underline to full width on hover */
+}
+
+#color-bg {
+  background-color: #18223C!important;
+}
+.bold {
+  font-weight: bold;
+}

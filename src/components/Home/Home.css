@@ -1,0 +1,79 @@
+.card-icon {
+  width: 30% !important;
+  align-items: center !important;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.titulo {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #683A67;
+  position: relative;
+  padding-left: 25px;
+}
+
+.titulo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #683A67;
+}
+
+.titulo-card {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #683A67;
+  position: relative;
+  padding-left: 25px;
+}
+
+.titulo-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #ffffff;
+}
+
+.parrafo {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #FBAE3C;
+}
+
+.parrafo-card {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1rem;
+  color: #FBAE3C;
+}
+
+.school-presentation {
+  padding: 350px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.027), rgba(255, 255, 255, 1)), url('../../assets/img/2.png');
+  background-size: cover, 800px;
+  margin-right: 10px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, right center;
+  display: flex;
+  align-items: center;
+}
+
+.school-info {
+  flex: 1;
+}
