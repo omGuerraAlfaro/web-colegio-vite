@@ -4,7 +4,6 @@
 
 .my-carousel img {
     width: 100%;
-    height: auto;
 }
 
 .my-carousel .carousel-caption h3 {
@@ -19,7 +18,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #808080;
     border: none;
     transition: background-color 0.3s;
     margin-right: 5px;
@@ -72,6 +71,13 @@
     .my-carousel .carousel-control-prev-icon,
     .my-carousel .carousel-control-next-icon {
         padding: 15px;
+    }
+}
+
+/* Estilo específico para móviles */
+@media (max-width: 768px) { 
+    .my-carousel img {
+        width: 100vh;
     }
 }
 

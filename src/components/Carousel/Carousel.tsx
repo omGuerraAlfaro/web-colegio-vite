@@ -11,7 +11,7 @@ function CarouselHome() {
                 <Carousel className="my-carousel container" >
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block"
                             src={carousel1}
                             alt="First slide"
                         />
@@ -22,7 +22,7 @@ function CarouselHome() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block"
                             src={carousel1}
                             alt="Second slide"
                         />
@@ -33,7 +33,7 @@ function CarouselHome() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block"
                             src={carousel1}
                             alt="Third slide"
                         />
