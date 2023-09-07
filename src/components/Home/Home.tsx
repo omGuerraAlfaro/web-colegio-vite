@@ -55,15 +55,17 @@ function Home() {
             <CarouselHome />
 
 
-            <section className="school-presentation">
-                <div className="col-md-6 col-12">
-                    <img src={Hall} alt="Colegio Andes Chile" className="img-fluid" />
+            <Container className='my-5'>
+                <div className="row d-flex justify-content-center align-items-center">
+                    <div className="col-md-6 col-12">
+                        <img src={Hall} alt="Colegio Andes Chile" className="img-fluid" />
+                    </div>
+                    <div className="col-md-6 col-12 school-info">
+                        <h4 className='titulo'>Colegio Andes Chile</h4>
+                        <p className='parrafo'>Aspiramos a ser un pilar fundamental en su proceso de aprendizaje, fortaleciendo su conocimiento, autoestima y habilidades personales para que enfrenten nuevos desafíos con confianza y motivación.</p>
+                    </div>
                 </div>
-                <div className="col-md-6 col-12 school-info">
-                    <h4 className='titulo'>Colegio Andes Chile</h4>
-                    <p className='parrafo'>Aspiramos a ser un pilar fundamental en su proceso de aprendizaje, fortaleciendo su conocimiento, autoestima y habilidades personales para que enfrenten nuevos desafíos con confianza y motivación.</p>
-                </div>
-            </section>
+            </Container>
 
 
 
