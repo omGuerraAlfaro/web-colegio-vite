@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CarouselHome from '../Carousel/Carousel'
+import Hall from '../../assets/img/fotoHall.png'
 import './Home.css'
 
 function Home() {
@@ -55,7 +56,9 @@ function Home() {
 
 
             <section className="school-presentation">
-                <div className="col-md-6"></div>
+                <div className="col-md-6">
+                    <img src={Hall} alt="Colegio Andes Chile" className="img-fluid" />
+                </div>
                 <div className="col-md-6 school-info">
                     <h4 className='titulo'>Colegio Andes Chile</h4>
                     <p className='parrafo'>Aspiramos a ser un pilar fundamental en su proceso de aprendizaje, fortaleciendo su conocimiento, autoestima y habilidades personales para que enfrenten nuevos desafíos con confianza y motivación.</p>
