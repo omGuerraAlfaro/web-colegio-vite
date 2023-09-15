@@ -1,0 +1,112 @@
+/* ******************************************** */
+
+.tituloMision {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #683A67;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tituloMision::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #683A67;
+}
+
+.parrafoMision {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #C0526A;
+}
+
+/* ******************************************** */
+
+/* ******************************************** */
+
+.tituloVision {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #73a7c7;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tituloVision::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #73a7c7;
+}
+
+.parrafoVision {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* ******************************************** */
+
+/* ******************************************** */
+
+.tituloHistoria {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #73a7c7;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tituloHistoria::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #73a7c7;
+}
+
+.parrafoHistoria {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* ******************************************** */
+
+.center{
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  
+}
+
+
+@media (max-width: 480px) {
+  
+}
+
