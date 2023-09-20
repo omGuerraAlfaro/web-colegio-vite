@@ -27,6 +27,7 @@ const Navbar = () => {
               <Nav.Link className="text-wrap custom-link text-light bold" href="/reglamento">Reglamento interno de Convivencia Escolar</Nav.Link>
               <Nav.Link className="text-wrap custom-link text-light bold" href="/talleres">Talleres</Nav.Link>
               <Nav.Link className="text-wrap custom-link text-light bold" href="/contacto">Contacto</Nav.Link>
+              <Nav.Link className="text-wrap custom-link text-light bold" href="/admision">Admisión</Nav.Link>
             </Nav>
           </RBNavbar.Collapse>
         </Container>
