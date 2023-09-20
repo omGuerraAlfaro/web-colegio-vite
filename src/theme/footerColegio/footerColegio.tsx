@@ -16,7 +16,7 @@ const FooterColegio = () => {
                 <img src={AndesLogo} width="120" height="150" className="my-3" />
               </NavLink>
               <div className='d-flex flex-column info'>
-                <h5>Direccion:</h5>
+                <h5>Direccion: Manuel Rodriguez #1064</h5>
                 <h5>Telefono:</h5>
                 <h5></h5>
               </div>
@@ -37,9 +37,8 @@ const FooterColegio = () => {
             </Nav>
           </Col>
 
-          <Col md={4} className="d-flex justify-content-end">
-            <Nav className="list-unstyled d-flex">
-
+          <Col md={4} className="d-flex align-item-center ">
+            <Nav className="">
               <li className="ms-3">
                 <NavLink className="text-body-secondary">
                   <FontAwesomeIcon icon={faInstagram} size="3x" />
