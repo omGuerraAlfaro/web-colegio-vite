@@ -1,3 +1,9 @@
+/* body {
+  height: 100vh;
+  overflow: hidden;
+} */
+
+
 @keyframes moveWave {
   0% {
     transform: translateX(0);
@@ -17,7 +23,6 @@
   z-index: -1;
   overflow: hidden;
 }
-
 
 .wave {
   position: absolute;
@@ -48,7 +53,14 @@
 
 
 @media (max-width: 600px) {
+  
   .waveWrapper {
-    height: 50vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 8000px;
+    height: 40vh;
+    z-index: -1;
+    overflow: hidden;
   }
 }
