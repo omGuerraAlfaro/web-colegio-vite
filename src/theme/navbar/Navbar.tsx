@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container d-none d-md-block">
         <img src={AndesLogo} width="120" height="150" className="my-3" />
         <img src={AndesSlogan} width="210" height="140" className="my-3" />
       </div>
