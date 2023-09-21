@@ -14,7 +14,7 @@ const FooterColegio = () => {
               <NavLink href="/" className="mb-3 text-dark text-decoration-none">
                 <img src={AndesLogo} width="120" height="150" className="mx-3 my-3" />
               </NavLink>
-              <div className='d-flex flex-column info'>
+              <div className='d-flex flex-column'>
                 <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
               </div>
             </div>

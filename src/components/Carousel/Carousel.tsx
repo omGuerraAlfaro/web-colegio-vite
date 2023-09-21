@@ -2,6 +2,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css'
 import carousel1 from '../../assets/img/carousel1.jpg'
+import { Button } from 'react-bootstrap';
 
 function CarouselHome() {
 
@@ -16,8 +17,8 @@ function CarouselHome() {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>Colegio Andes Chile</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h2>¡Únete a nuestra comunidad educativa!</h2>
+                            <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -27,8 +28,8 @@ function CarouselHome() {
                             alt="Second slide"
                         />
                         <Carousel.Caption>
-                            <h3>Colegio Andes Chile</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h2>¡Puente de apoyo educativo!</h2>
+                            <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Conocer PAE</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -38,8 +39,8 @@ function CarouselHome() {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h3>Colegio Andes Chile</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h2>¡Únete a nuestra comunidad educativa!</h2>
+                            <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
