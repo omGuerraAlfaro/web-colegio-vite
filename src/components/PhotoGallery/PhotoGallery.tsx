@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Col, Row } from 'react-bootstrap';
 import Pagination from 'react-bootstrap/Pagination';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function PhotoGallery({ photos }: { photos: any }) {
@@ -27,13 +29,14 @@ function PhotoGallery({ photos }: { photos: any }) {
             <Row>
                 {currentPhotos.map((photo: any, index: any) => (
                     <Col xs={12} sm={6} md={4} className="mb-4" key={indexOfFirstPhoto + index}>
-                        <Card>
+                        <Card className='shadow-sm'>
                             <Card.Img variant="top" src={photo.src} />
                             <Card.Body>
                                 <Card.Text>{photo.description}</Card.Text>
-                                <Button variant="primary" onClick={() => handleLike(indexOfFirstPhoto + index)}>
-                                    Me gusta {likes[indexOfFirstPhoto + index]}
+                                <Button variant="secondary" onClick={() => handleLike(indexOfFirstPhoto + index)}>
+                                    <FontAwesomeIcon icon={faThumbsUp} /> Me gusta {likes[indexOfFirstPhoto + index]}
                                 </Button>
+
                             </Card.Body>
                         </Card>
                     </Col>

@@ -57,15 +57,14 @@ function Home() {
     ];
 
     const photosFromDatabase = [
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
+        { src: "https://via.placeholder.com/200x100", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
     ];
 
     return (
