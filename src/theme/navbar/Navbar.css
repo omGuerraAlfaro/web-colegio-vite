@@ -5,19 +5,19 @@
 }
 
 .custom-link::after {
-  content: ''; /* Empty content */
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0%; /* Start with no width */
-  height: 2px; /* Adjust the thickness of the underline */
-  background-color: currentColor; /* Use the current text color for the underline */
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
   transition: all 0.3s ease;
-  transform: translateX(-50%); /* Center the underline */
+  transform: translateX(-50%);
 }
 
-.custom-link:hover::after {
-  width: 100%; /* Expand the underline to full width on hover */
+.custom-link:hover::after, .active-link::after {
+  width: 100%;
 }
 
 #color-bg {
