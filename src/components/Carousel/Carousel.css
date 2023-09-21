@@ -2,11 +2,10 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     font-size: 2.5rem;
-    color: #683A67;
+    color: #65bdc0;
     position: relative;
     padding-left: 25px;
-    -webkit-text-stroke: 1px white;
-    
+    -webkit-text-stroke: 1px white;    
 }
 
 .my-carousel img {
