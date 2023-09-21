@@ -26,8 +26,8 @@ function PhotoGallery({ photos }: { photos: any }) {
         <div className="gallery">
             <Row>
                 {currentPhotos.map((photo: any, index: any) => (
-                    <Col md={4} className="mb-4" key={indexOfFirstPhoto + index}>
-                        <Card style={{ width: '25rem', margin: '1rem' }}>
+                    <Col xs={12} sm={6} md={4} className="mb-4" key={indexOfFirstPhoto + index}>
+                        <Card>
                             <Card.Img variant="top" src={photo.src} />
                             <Card.Body>
                                 <Card.Text>{photo.description}</Card.Text>

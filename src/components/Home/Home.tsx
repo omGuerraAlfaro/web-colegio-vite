@@ -57,15 +57,15 @@ function Home() {
     ];
 
     const photosFromDatabase = [
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
-        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/250", description: "Descripción 1" },
     ];
 
     return (
