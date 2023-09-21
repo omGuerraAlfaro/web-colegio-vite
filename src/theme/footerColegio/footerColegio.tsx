@@ -23,10 +23,10 @@ const FooterColegio = () => {
 
         <Row>
           <Col md={5} className="mb-3">
-            <div className='d-flex flex-column my-3 textFooter'>
-              <h6>Direccion: Manuel Rodríguez #1064, Los Andes</h6>
-              <h6>Telefono: +56 2 402858</h6>
-              <h6>Email: colegioandeschile@gmail.com</h6>
+            <div className='d-flex flex-column my-3 textFooter text-center'>
+              <h6><strong>Direccion:</strong> Manuel Rodríguez #1064, Los Andes</h6>
+              <h6><strong>Email:</strong> colegioandeschile@gmail.com</h6>
+              <h6><strong>Telefono:</strong> +56 2 402858</h6>
             </div>
           </Col>
 

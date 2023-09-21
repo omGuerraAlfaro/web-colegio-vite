@@ -9,6 +9,7 @@ import Docentes from '../../assets/icon/docente.png'
 import Excelencia from '../../assets/icon/excelencia.png'
 import Programas from '../../assets/icon/programas.png'
 import './Home.css'
+import PhotoGallery from '../PhotoGallery/PhotoGallery';
 
 function Home() {
     const compromisos = [
@@ -54,6 +55,19 @@ function Home() {
         },
 
     ];
+
+    const photosFromDatabase = [
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+        { src: "https://via.placeholder.com/150", description: "Descripción 1" },
+    ];
+
     return (
         <>
             <CarouselHome />
@@ -74,7 +88,7 @@ function Home() {
 
 
             <Container className="mt-5">
-                <h3 className="titulo fonty1 mb-4">Nuestro compromiso</h3>
+                <h3 className="titulo fonty1 mb-4">Nuestro Compromiso</h3>
                 <Row className="justify-content-center">
                     {compromisos.map((elemento, index) => (
                         <div className="col-md-4 mb-4" key={index}>
@@ -91,6 +105,11 @@ function Home() {
                     ))}
                 </Row>
             </Container>
+
+            <Container className='my-5'>
+                <h3 className="titulo fonty1 mb-4">Galería de Noticias</h3>
+                <PhotoGallery photos={photosFromDatabase} />
+            </Container >
         </>
     )
 }

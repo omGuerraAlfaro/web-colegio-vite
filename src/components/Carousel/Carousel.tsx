@@ -45,7 +45,6 @@ function CarouselHome() {
                     </Carousel.Item>
                 </Carousel>
             </div>
-
         </>
     )
 }
