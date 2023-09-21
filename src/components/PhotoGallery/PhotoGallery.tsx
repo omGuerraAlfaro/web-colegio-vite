@@ -5,6 +5,7 @@ import { Col, Row } from 'react-bootstrap';
 import Pagination from 'react-bootstrap/Pagination';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './PhotoGallery.css';
 
 
 function PhotoGallery({ photos }: { photos: any }) {
@@ -36,13 +37,12 @@ function PhotoGallery({ photos }: { photos: any }) {
                                 <Button variant="secondary" onClick={() => handleLike(indexOfFirstPhoto + index)}>
                                     <FontAwesomeIcon icon={faThumbsUp} /> Me gusta {likes[indexOfFirstPhoto + index]}
                                 </Button>
-
                             </Card.Body>
                         </Card>
                     </Col>
                 ))}
             </Row>
-            <Pagination className="justify-content-center mt-4">
+            <Pagination className="justify-content-center mt-4 custom-pagination">
                 {[...Array(totalPages).keys()].map((page) => (
                     <Pagination.Item key={page + 1} active={page + 1 === currentPage} onClick={() => setCurrentPage(page + 1)}>
                         {page + 1}
