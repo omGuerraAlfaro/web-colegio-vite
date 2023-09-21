@@ -1,9 +1,3 @@
-/* body {
-  height: 100vh;
-  overflow: hidden;
-} */
-
-
 @keyframes moveWave {
   0% {
     transform: translateX(0);

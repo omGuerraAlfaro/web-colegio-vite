@@ -17,7 +17,7 @@ function CarouselHome() {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h2>¡Únete a nuestra comunidad educativa!</h2>
+                            <h2 className='tituloCarrusel'>¡Únete a nuestra comunidad educativa!</h2>
                             <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -28,7 +28,7 @@ function CarouselHome() {
                             alt="Second slide"
                         />
                         <Carousel.Caption>
-                            <h2>¡Puente de apoyo educativo!</h2>
+                            <h2 className='tituloCarrusel'>¡Puente de apoyo educativo!</h2>
                             <Button href='/pae' variant="outline-primary" className="buttonAnimated mx-3">Conocer PAE</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -39,7 +39,7 @@ function CarouselHome() {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h2>¡Nuestra comunidad educativa!</h2>
+                            <h2 className='tituloCarrusel'>¡Nuestra comunidad educativa!</h2>
                             <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Comunidad educativa</Button>
                         </Carousel.Caption>
                     </Carousel.Item>

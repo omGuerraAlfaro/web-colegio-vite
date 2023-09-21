@@ -1,7 +1,27 @@
+.tituloNav {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #74a6cf;
+  position: relative;
+  padding-left: 25px;
+}
+
+.subtituloNav {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #74a6cf;
+  position: relative;
+  padding-left: 25px;
+}
+
 .custom-link {
   position: relative;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-  overflow: hidden; /* Hide the underline before it's fully visible */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+  overflow: hidden;
+  /* Hide the underline before it's fully visible */
 }
 
 .custom-link::after {
@@ -16,13 +36,15 @@
   transform: translateX(-50%);
 }
 
-.custom-link:hover::after, .active-link::after {
+.custom-link:hover::after,
+.active-link::after {
   width: 100%;
 }
 
 #color-bg {
-  background-color: #ad96c2!important;
+  background-color: #ad96c2 !important;
 }
+
 .bold {
   font-weight: bold;
 }
@@ -32,10 +54,13 @@
 }
 
 #color-bg .navbar-toggler-icon {
-  filter: invert(1); /* This will invert the colors, making black into white */
+  filter: invert(1);
+  /* This will invert the colors, making black into white */
 }
 
 #color-bg .navbar-toggler:focus {
-  outline: none; /* Removes the default outline */
-  box-shadow: 0 0 5px white; /* Adds a white shadow around the button */
+  outline: none;
+  /* Removes the default outline */
+  box-shadow: 0 0 5px white;
+  /* Adds a white shadow around the button */
 }
