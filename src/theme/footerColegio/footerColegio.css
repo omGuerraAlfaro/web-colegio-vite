@@ -57,3 +57,22 @@
 }
 
 /* FontAwesome */
+
+
+.textFooter {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #585858 !important;
+}
+
+.textFooter2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #585858 !important;
+}
+
+.textFooter2:hover {
+    color: #4BD1FF !important;
+}
