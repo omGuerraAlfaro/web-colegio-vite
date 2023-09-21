@@ -12,10 +12,10 @@ const FooterColegio = () => {
           <Col md={12} className="mb-3">
             <div className='d-flex align-items-center justify-content-center'>
               <NavLink href="/" className="mb-3 text-dark text-decoration-none">
-                <img src={AndesLogo} width="120" height="150" className="mx-5 my-3" />
+                <img src={AndesLogo} width="120" height="150" className="mx-3 my-3" />
               </NavLink>
               <div className='d-flex flex-column info'>
-                <Button variant="outline-primary" className="buttonAnimated">Admisión 2024</Button>
+                <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
               </div>
             </div>
           </Col>
@@ -30,6 +30,8 @@ const FooterColegio = () => {
             </div>
           </Col>
 
+
+
           <Col md={3} className="mb-3 d-none d-md-block">
             <Nav className="flex-column">
               <NavLink className="text-dark bold textFooter2" href="/comunidad">Nuestra Comunidad</NavLink>
@@ -42,12 +44,12 @@ const FooterColegio = () => {
           <Col md={3} className="d-flex flex-column justify-content-between align-items-center">
             <Nav className="w-100 d-flex justify-content-center">
               <li className="ms-3">
-                <NavLink className="text-body-secondary">
+                <NavLink className="text-body-secondary" href='https://www.instagram.com/cach.colegioandeschile/'>
                   <FontAwesomeIcon icon={faInstagram} size="3x" className='iconEffect' />
                 </NavLink>
               </li>
               <li className="ms-3">
-                <NavLink className="text-body-secondary">
+                <NavLink className="text-body-secondary" href='https://www.facebook.com/colegioandeschile'>
                   <FontAwesomeIcon icon={faFacebook} size="3x" className='iconEffect' />
                 </NavLink>
               </li>

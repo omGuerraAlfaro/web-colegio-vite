@@ -66,6 +66,12 @@
     color: #585858 !important;
 }
 
+@media (min-width: 412px) {
+    .textFooter h6 {
+        font-size: 0.9rem;
+    }
+}
+
 .textFooter2 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
