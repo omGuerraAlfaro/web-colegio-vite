@@ -56,7 +56,7 @@
     background-color: #683A67;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .tituloReglamento::before {
         left: 40px;
     }
