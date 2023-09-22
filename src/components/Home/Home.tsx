@@ -79,7 +79,7 @@ function Home() {
                     </div>
                     <div className="col-md-6 col-12 school-info">
                         <h4 className='titulo'>Colegio Andes Chile</h4>
-                        <p className='parrafo'>Aspiramos a ser un pilar fundamental en su proceso de aprendizaje, fortaleciendo su conocimiento, autoestima y habilidades personales para que enfrenten nuevos desafíos con confianza y motivación.</p>
+                        <p className='parrafo'>Aspiramos a ser un pilar fundamental en su proceso de aprendizaje, fortaleciendo su conocimiento, autoestima y habilidades personales para que enfrenten nuevos desafíos con motivación y confianza.</p>
                     </div>
                 </div>
             </Container>

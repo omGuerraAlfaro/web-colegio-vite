@@ -86,7 +86,7 @@ function Comunidad() {
                 </div>
             </Container>
 
-            <Container className='my-5'>
+            <Container className='my-5 d-none d-md-block'>
                 <div className='center'>
                     <img src={AndesSlogan} width="50%" height="50%" className="my-3" />
                 </div>

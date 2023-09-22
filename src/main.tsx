@@ -9,6 +9,7 @@ import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
 import Comunidad from './components/Comunidad/Comunidad.tsx';
 import Pae from './components/Pae/Pae.tsx';
+import Reglamento from './components/Reglamento/Reglamento.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Home />} />
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/pae" element={<Pae />} />
+        <Route path="/reglamento" element={<Reglamento />} />
       </Routes>
       <FooterColegio />
     </Router>
