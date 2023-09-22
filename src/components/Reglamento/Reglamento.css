@@ -56,14 +56,44 @@
     background-color: #683A67;
 }
 
-@media (max-width: 600px) {
-    .tituloReglamento::before {
-        left: 40px;
-    }
-}
-
 .textReglamento {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: .8rem;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .buttonAnimated {
+        padding: 1em 2.5em;
+        font-size: 10px;
+    }
+
+    .tituloReglamento {
+        font-size: 2rem;
+    }
+
+    .tituloReglamento::before {
+        left: 10px;
+    }
+
+    .textReglamento {
+        font-size: .7rem;
+    }
+}
+
+/* Estilos responsivos para pantallas aún más pequeñas */
+@media (max-width: 400px) {
+    .buttonAnimated {
+        padding: 0.8em 2em;
+        font-size: 9px;
+    }
+
+    .tituloReglamento {
+        font-size: 1.8rem;
+    }
+
+    .textReglamento {
+        font-size: .6rem;
+    }
 }
