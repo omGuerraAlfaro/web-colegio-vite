@@ -70,3 +70,29 @@
   top: 0;
   z-index: 1000;
 }
+
+/* Estilos para pantallas con un ancho máximo de 768px (tablets) */
+@media (max-width: 768px) {
+  .tituloNav {
+    font-size: 2rem;
+    padding-left: 15px;
+  }
+
+  .subtituloNav {
+    font-size: 1.5rem;
+    padding-left: 15px;
+  }
+}
+
+/* Estilos para pantallas con un ancho máximo de 480px (móviles) */
+@media (max-width: 480px) {
+  .tituloNav {
+    font-size: 1.5rem;
+    padding-left: 10px;
+  }
+
+  .subtituloNav {
+    font-size: 1.2rem;
+    padding-left: 10px;
+  }
+}
