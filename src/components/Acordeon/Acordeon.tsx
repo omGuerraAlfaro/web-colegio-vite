@@ -4,7 +4,7 @@ import './Acordeon.css';
 function AcordeonPAE() {
     return (
         <>
-            <h1 className='tituloAcordion'>Puente de Apoyo Educativo</h1>
+            <h1 className='tituloAcordion'>Puente de Apoyo Educativo (PAE)</h1>
             <h1 className='tituloAcordion'>TE ACOMPAÑAMOS EN CADA PASO DEL APRENDIZAJE</h1>
             <p>Atención personalizada para estudiantes con un equipo especializado en fonoaudiología, psicopedagogía, psicología y terapia ocupacional. Impulsamos el éxito académico y el desarrollo integral, fortaleciendo habilidades y confianza para futuros desafíos.</p>
             <p>Aspiramos a ser un pilar fundamental en su proceso de aprendizaje, fortaleciendo su conocimiento, autoestima y habilidades personales para que enfrenten nuevos desafíos con confianza y motivación</p>
