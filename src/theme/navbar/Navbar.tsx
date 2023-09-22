@@ -28,7 +28,7 @@ const Navbar = () => {
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/") ? "active-link" : ""}`} href="/">Inicio</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/comunidad") ? "active-link" : ""}`} href="/comunidad">Nuestra Comunidad</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/pae") ? "active-link" : ""}`} href="/pae">Programa PAE</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/reglamento") ? "active-link" : ""}`} href="/reglamento">Reglamento interno de Convivencia Escolar</Nav.Link>
+              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/reglamento") ? "active-link" : ""}`} href="/reglamento">Reglamento Interno de Convivencia Escolar</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/utiles") ? "active-link" : ""}`} href="/utiles">Lista de Útiles</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/talleres") ? "active-link" : ""}`} href="/talleres">Talleres</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/contacto") ? "active-link" : ""}`} href="/contacto">Contacto</Nav.Link>
