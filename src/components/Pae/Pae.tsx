@@ -1,12 +1,12 @@
 import Container from 'react-bootstrap/Container';
-import './Pae.css'
 import { Accordion, Col, Row } from 'react-bootstrap';
+import './Pae.css'
 
 function Pae() {
 
     return (
         <>
-            <Container>
+            <Container className='cont'>
                 <h1 className='tituloPae'>Puente de Apoyo Educativo (PAE)</h1>
 
                 <Row>
