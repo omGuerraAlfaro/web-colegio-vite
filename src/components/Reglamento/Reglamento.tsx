@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import './Reglamento.css'
 import ReglamentoPDF from '../../assets/docs/Reglamento-interno.pdf';
+import { Button } from 'react-bootstrap';
 
 function Reglamento() {
 
@@ -8,9 +9,9 @@ function Reglamento() {
         <>
             <Container>
                 <div>
-                    <a href={ReglamentoPDF} download className="btn btn-primary">
+                    <Button href={ReglamentoPDF} className="buttonAnimated">
                         Descargar PDF
-                    </a>
+                    </Button>
                 </div>
             </Container>
         </>

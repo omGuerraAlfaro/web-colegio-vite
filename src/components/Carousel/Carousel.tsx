@@ -40,7 +40,7 @@ function CarouselHome() {
                         />
                         <Carousel.Caption>
                             <h2 className='tituloCarrusel'>¡Nuestra comunidad educativa!</h2>
-                            <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Comunidad educativa</Button>
+                            <Button href='/comunidad' variant="outline-primary" className="buttonAnimated mx-3">Comunidad educativa</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
