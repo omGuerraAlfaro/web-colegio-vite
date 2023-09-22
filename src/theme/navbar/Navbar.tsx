@@ -13,13 +13,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container d-none d-md-block text-center">
+    {/* d-none d-md-block */}
+      <div className="container text-center">
         <img src={AndesLogo} width="120" height="150" className="my-3" />
         <h3 className='tituloNav'>Colegio Andes Chile</h3>
         <h5 className='subtituloNav'>Educando con Amor</h5>
         {/* <img src={AndesSlogan} width="210" height="140" className="my-3" /> */}
       </div>
-      <RBNavbar bg="light" expand="lg" id='color-bg' className='mb-4 shadow'>
+      <RBNavbar bg="light" expand="lg" id='color-bg' className='mb-4 shadow sticky-navbar'>
         <Container>
           <RBNavbar.Toggle aria-controls="basic-navbar-nav" />
           <RBNavbar.Collapse id="basic-navbar-nav">

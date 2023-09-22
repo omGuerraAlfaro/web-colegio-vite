@@ -6,7 +6,7 @@ function Pae() {
 
     return (
         <>
-            <Container className='cont'>
+            <Container>
                 <h1 className='tituloPae'>Puente de Apoyo Educativo (PAE)</h1>
 
                 <Row>

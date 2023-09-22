@@ -64,3 +64,9 @@
   box-shadow: 0 0 5px white;
   /* Adds a white shadow around the button */
 }
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
