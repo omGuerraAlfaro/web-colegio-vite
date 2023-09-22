@@ -19,7 +19,7 @@ const Navbar = () => {
         <h5 className='subtituloNav'>Educando con Amor</h5>
         {/* <img src={AndesSlogan} width="210" height="140" className="my-3" /> */}
       </div>
-      <RBNavbar bg="light" expand="lg" id='color-bg' className='mb-4 mt-4 shadow'>
+      <RBNavbar bg="light" expand="lg" id='color-bg' className='mb-4 shadow'>
         <Container>
           <RBNavbar.Toggle aria-controls="basic-navbar-nav" />
           <RBNavbar.Collapse id="basic-navbar-nav">
