@@ -62,7 +62,7 @@
     font-size: 1.5rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .tituloReglamento {
         font-size: 1.5rem;
     }
