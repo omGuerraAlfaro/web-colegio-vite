@@ -45,3 +45,21 @@
     margin-bottom: 20px;
 }
 
+.myCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegurarse de que el contenido esté distribuido verticalmente de manera uniforme */
+}
+
+.myCard .card-title {
+    /* Si necesitas algún estilo específico para el título, puedes agregarlo aquí */
+    text-align: center; /* Para centrar el título */
+}
+
+.myCard .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Para asegurarse de que los elementos dentro del cuerpo de la tarjeta estén distribuidos horizontalmente de manera uniforme */
+    align-items: center; /* Para centrar verticalmente los elementos en el cuerpo de la tarjeta */
+}
+

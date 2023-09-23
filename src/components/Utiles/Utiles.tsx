@@ -31,9 +31,9 @@ function Utiles() {
                     <h1 className='tituloCursos'>Nivel Pre-Escolar</h1>
                     {cursos1.map((curso, index) => (
                         <Col key={index} sm={12} md={6} lg={4}>
-                            <Card>
+                            <Card className="myCard">
+                                <Card.Title className='mt-2'>{curso.curso}</Card.Title>
                                 <Card.Body className="text-center">
-                                    <Card.Title>{curso.curso}</Card.Title>
                                     <a
                                         href={curso.pdfUrl}
                                         download
@@ -59,9 +59,9 @@ function Utiles() {
                     <h1 className='tituloCursos'>Nivel Básico</h1>
                     {cursos2.map((curso, index) => (
                         <Col key={index} sm={12} md={6} lg={4}>
-                            <Card>
+                            <Card className="myCard">
+                                <Card.Title className='mt-2'>{curso.curso}</Card.Title>
                                 <Card.Body className="text-center">
-                                    <Card.Title>{curso.curso}</Card.Title>
                                     <a
                                         href={curso.pdfUrl}
                                         download
