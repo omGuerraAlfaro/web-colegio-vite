@@ -33,22 +33,18 @@ function Utiles() {
                         <Col key={index} sm={12} md={6} lg={4}>
                             <Card className="myCard">
                                 <Card.Body className="text-center">
-                                    <Card.Title>{curso.curso}</Card.Title>
-                                    <a
-                                        href={curso.pdfUrl}
-                                        download
-                                        rel="noopener noreferrer"
-                                        className="btn btn-primary mx-1"
-                                    >
-                                        <FontAwesomeIcon icon={faDownload} className="mr-2" /> Descargar PDF
+                                    <Card.Title className='tituloCards'>{curso.curso}</Card.Title>
+                                    <a href={curso.pdfUrl} download rel="noopener noreferrer">
+                                        <button className="buttonPDF">
+                                            <span>Descargar PDF</span>
+                                            <FontAwesomeIcon icon={faDownload} className="mx-1" />
+                                        </button>
                                     </a>
-                                    <a
-                                        href={curso.pdfUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn btn-primary mx-1"
-                                    >
-                                        <FontAwesomeIcon icon={faFilePdf} className="mr-2" /> Ver PDF
+                                    <a href={curso.pdfUrl} target="_blank" rel="noopener noreferrer">
+                                        <button className="buttonPDF">
+                                            <span>Ver PDF</span>
+                                            <FontAwesomeIcon icon={faFilePdf} className="mx-1" />
+                                        </button>
                                     </a>
                                 </Card.Body>
                             </Card>
@@ -61,22 +57,18 @@ function Utiles() {
                         <Col key={index} sm={12} md={6} lg={4}>
                             <Card className="myCard">
                                 <Card.Body className="text-center">
-                                    <Card.Title >{curso.curso}</Card.Title>
-                                    <a
-                                        href={curso.pdfUrl}
-                                        download
-                                        rel="noopener noreferrer"
-                                        className="btn btn-primary mx-1"
-                                    >
-                                        <FontAwesomeIcon icon={faDownload} className="mr-2" /> Descargar PDF
+                                    <Card.Title className='tituloCards'>{curso.curso}</Card.Title>
+                                    <a href={curso.pdfUrl} download rel="noopener noreferrer">
+                                        <button className="buttonPDF">
+                                            <span>Descargar PDF</span>
+                                            <FontAwesomeIcon icon={faDownload} className="mx-1" />
+                                        </button>
                                     </a>
-                                    <a
-                                        href={curso.pdfUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn btn-primary mx-1"
-                                    >
-                                        <FontAwesomeIcon icon={faFilePdf} className="mr-2" /> Ver PDF
+                                    <a href={curso.pdfUrl} target="_blank" rel="noopener noreferrer">
+                                        <button className="buttonPDF">
+                                            <span>Ver PDF</span>
+                                            <FontAwesomeIcon icon={faFilePdf} className="mx-1" />
+                                        </button>
                                     </a>
                                 </Card.Body>
                             </Card>
