@@ -1,10 +1,18 @@
 import { Container, Row, Col, Nav, NavLink, Button } from 'react-bootstrap';
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import AndesLogo from '../../assets/img/LOGOCOLEGIO.png';
 import "./footerColegio.css";
 
 const FooterColegio = () => {
+
+  const renderTooltip = (props: any) => (
+    <Tooltip id="whatsapp-tooltip" {...props}>
+      Comunícate con nosotros
+    </Tooltip>
+  );
+
   return (
     <footer className="py-5 border-top footerCss">
       <Container>
@@ -59,8 +67,14 @@ const FooterColegio = () => {
 
         </Row>
 
-        <div className="btn-float">
-          <a href="https://wa.me/56949147149?text=Hola,%20estoy%20busca%20de%20información,%20mi%20consulta%20es%20la%20siguiente:" className="whatsapp" target="_blank"><FontAwesomeIcon className='whatsapp-icon' icon={faWhatsapp} /></a>
+        <div className="whatsapp">
+          <OverlayTrigger
+            placement="top"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip}
+          >
+            <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
+          </OverlayTrigger>
         </div>
       </Container>
     </footer>
