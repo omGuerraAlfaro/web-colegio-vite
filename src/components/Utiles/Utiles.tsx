@@ -5,22 +5,31 @@ import './Utiles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
-
+import prekinder from '../../assets/docs/utiles/prekinder.pdf';
+import kinder from '../../assets/docs/utiles/kinder.pdf';
+import primero from '../../assets/docs/utiles/1.pdf';
+import segundo from '../../assets/docs/utiles/2.pdf';
+import tercero from '../../assets/docs/utiles/3.pdf';
+import cuarto from '../../assets/docs/utiles/4.pdf';
+import quinto from '../../assets/docs/utiles/5.pdf';
+import sexto from '../../assets/docs/utiles/6.pdf';
+import septimo from '../../assets/docs/utiles/7.pdf';
+import octavo from '../../assets/docs/utiles/8.pdf';
 
 function Utiles() {
     const cursos1 = [
-        { curso: 'Pre-Kinder', pdfUrl: '/src/assets/docs/utiles/prekinder.pdf' },
-        { curso: 'Kinder', pdfUrl: '/src/assets/docs/utiles/kinder.pdf' }
+        { curso: 'Pre-Kinder', pdfUrl: prekinder },
+        { curso: 'Kinder', pdfUrl: kinder },
     ];
     const cursos2 = [
-        { curso: '1° Básico', pdfUrl: './src/assets/docs/utiles/1.pdf' },
-        { curso: '2° Básico', pdfUrl: './src/assets/docs/utiles/2.pdf' },
-        { curso: '3° Básico', pdfUrl: './src/assets/docs/utiles/3.pdf' },
-        { curso: '4° Básico', pdfUrl: './src/assets/docs/utiles/4.pdf' },
-        { curso: '5° Básico', pdfUrl: './src/assets/docs/utiles/5.pdf' },
-        { curso: '6° Básico', pdfUrl: './src/assets/docs/utiles/6.pdf' },
-        { curso: '7° Básico', pdfUrl: './src/assets/docs/utiles/7.pdf' },
-        { curso: '8° Básico', pdfUrl: './src/assets/docs/utiles/8.pdf' },
+        { curso: '1° Básico', pdfUrl: primero },
+        { curso: '2° Básico', pdfUrl: segundo },
+        { curso: '3° Básico', pdfUrl: tercero },
+        { curso: '4° Básico', pdfUrl: cuarto },
+        { curso: '5° Básico', pdfUrl: quinto },
+        { curso: '6° Básico', pdfUrl: sexto },
+        { curso: '7° Básico', pdfUrl: septimo },
+        { curso: '8° Básico', pdfUrl: octavo },
     ];
 
     return (
