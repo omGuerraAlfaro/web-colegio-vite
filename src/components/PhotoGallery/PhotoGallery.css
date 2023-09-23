@@ -16,3 +16,7 @@
 .custom-pagination .page-link:hover {
     background-color: #c0c0c0;
 }
+
+.text-right {
+    text-align: right;
+}

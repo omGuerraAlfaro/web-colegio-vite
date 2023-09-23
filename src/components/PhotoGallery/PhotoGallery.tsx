@@ -33,6 +33,7 @@ function PhotoGallery({ photos }: { photos: any }) {
                         <Card className='shadow-sm'>
                             <Card.Img variant="top" src={photo.src} />
                             <Card.Body>
+                                <small className='d-flex justify-content-end'>{photo.fecha}</small>
                                 <Card.Text>{photo.description}</Card.Text>
                                 <Button variant="secondary" onClick={() => handleLike(indexOfFirstPhoto + index)}>
                                     <FontAwesomeIcon icon={faThumbsUp} /> Me gusta {likes[indexOfFirstPhoto + index]}
