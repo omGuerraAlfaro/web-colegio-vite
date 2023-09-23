@@ -18,3 +18,30 @@
     height: 80%;
     background-color: #683A67;
 }
+
+.tituloCursos {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #683A67;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 3rem;
+}
+
+.tituloCursos::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 80%;
+    background-color: #683A67;
+}
+
+.card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
