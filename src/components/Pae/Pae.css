@@ -39,6 +39,14 @@
     background-color: #683A67;
 }
 
+.tituloPrograma{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #683A67;
+    position: relative;
+}
+
 .textAcordion {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;

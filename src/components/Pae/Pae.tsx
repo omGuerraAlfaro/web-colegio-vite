@@ -18,7 +18,7 @@ function Pae() {
                     <Col xs={12} sm={6} md={6}>
                         <Accordion>
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header><h5>Programa A</h5></Accordion.Header>
+                                <Accordion.Header><h5 className='tituloPrograma'>Programa A</h5></Accordion.Header>
                                 <Accordion.Body className='textAcordion'>
                                     <p><strong>Este programa está dirigido a los diagnósticos permanentes como TEA (Trastorno del espectro autista), Discapacidad Intelectual, Síndrome de Down.</strong></p>
                                     <h6><strong>1.- Atención Psicopedagógica:</strong></h6>
@@ -81,7 +81,7 @@ function Pae() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header><h5>Programa B</h5></Accordion.Header>
+                                <Accordion.Header><h5 className='tituloPrograma'>Programa B</h5></Accordion.Header>
                                 <Accordion.Body className='textAcordion'>
                                     <p><strong>Este programa está dirigido a dificultades más transitorias como Trastorno del Lenguaje. Expresivo o Mixto (TDL) Déficit Atencional Funcionamiento Intelectual Limítrofe (FIL) con o sin Hiperactividad (TDA)</strong></p>
                                     <h6><strong>1.- Atención Psicopedagógica:</strong></h6>
@@ -119,7 +119,7 @@ function Pae() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header><h5>Programa C</h5></Accordion.Header>
+                                <Accordion.Header><h5 className='tituloPrograma'>Programa C</h5></Accordion.Header>
                                 <Accordion.Body className='textAcordion'>
                                     <p><strong>Este programa está dirigido al Diagnóstico de Dificultades Específicas del Aprendizaje (DEA)</strong></p>
                                     <h6><strong>1.- Atención Psicopedagógica:</strong></h6>
@@ -137,7 +137,7 @@ function Pae() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header><h5>Programa D</h5></Accordion.Header>
+                                <Accordion.Header><h5 className='tituloPrograma'>Programa D</h5></Accordion.Header>
                                 <Accordion.Body className='textAcordion'>
                                     <p><strong>Este programa está dirigido al Diagnóstico de Dificultades Específicas del Aprendizaje (DEA)</strong></p>
                                     <h6><strong>1.- Adecuaciones Curriculares:</strong></h6>
