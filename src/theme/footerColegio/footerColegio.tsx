@@ -1,6 +1,6 @@
 import { Container, Row, Col, Nav, NavLink, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import AndesLogo from '../../assets/img/LOGOCOLEGIO.png';
 import "./footerColegio.css";
 
@@ -59,6 +59,9 @@ const FooterColegio = () => {
 
         </Row>
 
+        <div className="btn-float">
+          <a href="https://wa.me/56949147149?text=Hola,%20estoy%20busca%20de%20información,%20mi%20consulta%20es%20la%20siguiente:" className="whatsapp" target="_blank"><FontAwesomeIcon className='whatsapp-icon' icon={faWhatsapp} /></a>
+        </div>
       </Container>
     </footer>
   );
