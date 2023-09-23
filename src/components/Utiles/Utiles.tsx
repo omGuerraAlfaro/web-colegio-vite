@@ -13,14 +13,14 @@ function Utiles() {
         { curso: 'Kinder', pdfUrl: '/src/assets/docs/utiles/kinder.pdf' }
     ];
     const cursos2 = [
-        { curso: '1° Básico', pdfUrl: '/src/assets/docs/utiles/1.pdf' },
-        { curso: '2° Básico', pdfUrl: '/src/assets/docs/utiles/2.pdf' },
-        { curso: '3° Básico', pdfUrl: '/src/assets/docs/utiles/3.pdf' },
-        { curso: '4° Básico', pdfUrl: '/src/assets/docs/utiles/4.pdf' },
-        { curso: '5° Básico', pdfUrl: '/src/assets/docs/utiles/5.pdf' },
-        { curso: '6° Básico', pdfUrl: '/src/assets/docs/utiles/6.pdf' },
-        { curso: '7° Básico', pdfUrl: '/src/assets/docs/utiles/7.pdf' },
-        { curso: '8° Básico', pdfUrl: '/src/assets/docs/utiles/8.pdf' },
+        { curso: '1° Básico', pdfUrl: './src/assets/docs/utiles/1.pdf' },
+        { curso: '2° Básico', pdfUrl: './src/assets/docs/utiles/2.pdf' },
+        { curso: '3° Básico', pdfUrl: './src/assets/docs/utiles/3.pdf' },
+        { curso: '4° Básico', pdfUrl: './src/assets/docs/utiles/4.pdf' },
+        { curso: '5° Básico', pdfUrl: './src/assets/docs/utiles/5.pdf' },
+        { curso: '6° Básico', pdfUrl: './src/assets/docs/utiles/6.pdf' },
+        { curso: '7° Básico', pdfUrl: './src/assets/docs/utiles/7.pdf' },
+        { curso: '8° Básico', pdfUrl: './src/assets/docs/utiles/8.pdf' },
     ];
 
     return (
