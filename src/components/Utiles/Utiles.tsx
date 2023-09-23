@@ -28,7 +28,7 @@ function Utiles() {
             <Container>
                 <h1 className='tituloUtiles'>Lista de Útiles Año 2023</h1>
                 <Row>
-                    <h1 className='tituloCursos'>Lista de Útiles Año 2023</h1>
+                    <h1 className='tituloCursos'>Nivel Pre-Escolar</h1>
                     {cursos1.map((curso, index) => (
                         <Col key={index} sm={12} md={6} lg={4}>
                             <Card>
@@ -56,7 +56,7 @@ function Utiles() {
                     ))}
                 </Row>
                 <Row>
-                    <h1 className='tituloCursos'>Lista de Útiles Año 2023</h1>
+                    <h1 className='tituloCursos'>Nivel Básico</h1>
                     {cursos2.map((curso, index) => (
                         <Col key={index} sm={12} md={6} lg={4}>
                             <Card>
