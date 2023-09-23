@@ -32,8 +32,8 @@ function Utiles() {
                     {cursos1.map((curso, index) => (
                         <Col key={index} sm={12} md={6} lg={4}>
                             <Card className="myCard">
-                                <Card.Title className='mt-2'>{curso.curso}</Card.Title>
                                 <Card.Body className="text-center">
+                                    <Card.Title>{curso.curso}</Card.Title>
                                     <a
                                         href={curso.pdfUrl}
                                         download
@@ -60,8 +60,8 @@ function Utiles() {
                     {cursos2.map((curso, index) => (
                         <Col key={index} sm={12} md={6} lg={4}>
                             <Card className="myCard">
-                                <Card.Title className='mt-2'>{curso.curso}</Card.Title>
                                 <Card.Body className="text-center">
+                                    <Card.Title >{curso.curso}</Card.Title>
                                     <a
                                         href={curso.pdfUrl}
                                         download
