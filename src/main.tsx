@@ -10,6 +10,7 @@ import FooterColegio from './theme/footerColegio/footerColegio.tsx';
 import Comunidad from './components/Comunidad/Comunidad.tsx';
 import Pae from './components/Pae/Pae.tsx';
 import Reglamento from './components/Reglamento/Reglamento.tsx';
+import Utiles from './components/Utiles/Utiles.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/pae" element={<Pae />} />
         <Route path="/reglamento" element={<Reglamento />} />
+        <Route path="/utiles" element={<Utiles />} />
       </Routes>
       <FooterColegio />
     </Router>

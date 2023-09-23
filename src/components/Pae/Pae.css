@@ -9,7 +9,7 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     font-size: 3rem;
-    color: #74a6cf;
+    color: #683A67;
     position: relative;
     padding-left: 25px;
     margin-bottom: 3rem;
@@ -23,7 +23,7 @@
     transform: translateY(-50%);
     width: 10px;
     height: 80%;
-    background-color: #74a6cf;
+    background-color: #683A67;
 }
 
 .tituloAcordion {

@@ -71,7 +71,6 @@ function Home() {
         <>
             <CarouselHome />
 
-
             <Container className='my-5'>
                 <div className="row d-flex justify-content-center align-items-center">
                     <div className="col-md-6 col-12">
@@ -83,8 +82,6 @@ function Home() {
                     </div>
                 </div>
             </Container>
-
-
 
             <Container className="mt-5">
                 <h3 className="titulo fonty1 mb-4">Nuestro Compromiso</h3>
