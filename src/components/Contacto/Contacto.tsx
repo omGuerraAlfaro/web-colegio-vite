@@ -19,7 +19,7 @@ const Contacto = () => {
                         title="Google Maps"
                     ></iframe>
                 </Col>
-                <Col md={4} xs={12}>
+                <Col md={4} xs={12} className='my-3'>
                     <div className="body-card-contacto">
                         <h4 className='titulo-contacto'>Dirección</h4>
                         <div className='d-flex align-items-center my-3'>
