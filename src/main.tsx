@@ -11,6 +11,7 @@ import Comunidad from './components/Comunidad/Comunidad.tsx';
 import Pae from './components/Pae/Pae.tsx';
 import Reglamento from './components/Reglamento/Reglamento.tsx';
 import Utiles from './components/Utiles/Utiles.tsx';
+import Talleres from './components/Talleres/Talleres.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/pae" element={<Pae />} />
         <Route path="/reglamento" element={<Reglamento />} />
         <Route path="/utiles" element={<Utiles />} />
+        <Route path="/talleres" element={<Talleres />} />
       </Routes>
       <FooterColegio />
     </Router>

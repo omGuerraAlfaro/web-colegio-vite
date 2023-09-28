@@ -84,7 +84,7 @@ function Home() {
             </Container>
 
             <Container className="mt-5">
-                <h3 className="titulo fonty1 mb-4">Nuestro Compromiso</h3>
+                <h3 className="titulo mb-4">Nuestro Compromiso</h3>
                 <Row className="justify-content-center">
                     {compromisos.map((elemento, index) => (
                         <div className="col-md-4 mb-4" key={index}>
