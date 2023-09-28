@@ -67,7 +67,7 @@ const FooterColegio = () => {
 
         </Row>
 
-        <div className="whatsapp">
+        <a href="https://wa.me/56967249389?text=Estimados,%20me%20dirijo%20a%20ustedes%20para%20solicitar%20información%20acerca%20del%20colegio.%20Agradezco%20su%20pronta%20respuesta." target="_blank" className="whatsapp">
           <OverlayTrigger
             placement="top"
             delay={{ show: 250, hide: 400 }}
@@ -75,7 +75,7 @@ const FooterColegio = () => {
           >
             <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
           </OverlayTrigger>
-        </div>
+        </a>
       </Container>
     </footer>
   );
