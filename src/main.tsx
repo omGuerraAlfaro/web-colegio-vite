@@ -14,6 +14,7 @@ import Reglamento from './components/Reglamento/Reglamento.tsx';
 import Utiles from './components/Utiles/Utiles.tsx';
 import Talleres from './components/Talleres/Talleres.tsx';
 import Contacto from './components/Contacto/Contacto.tsx';
+import Admision from './components/Admision/Admision.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/utiles" element={<Utiles />} />
         <Route path="/talleres" element={<Talleres />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/Admision" element={<Admision />} />
       </Routes>
       <FooterColegio />
     </Router>
