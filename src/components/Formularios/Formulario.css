@@ -1,0 +1,14 @@
+.select-wrapper {
+    position: relative;
+    display: block;
+}
+
+.select-icon {
+    position: absolute;
+    right: 15px;
+    /* Ajusta según tus necesidades */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 2;
+}

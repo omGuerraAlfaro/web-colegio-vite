@@ -10,11 +10,11 @@ const Admision = () => {
   return (
     <Container>
       <Row>
-        <Col xs={12}>
+        <Col sm={6} xs={12}>
           <FormularioAdmision />
         </Col>
-        <Col xs={12}>
-        Pasos
+        <Col sm={6} xs={12}>
+          Pasos
         </Col>
       </Row>
     </Container>
