@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Form, InputGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faSchool, faSortUp, faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone, faSchool, /* faSortUp */faSortDown } from "@fortawesome/free-solid-svg-icons";
 
 const formSchema = yup.object().shape({
   pupilo: yup.string().required('El nombre del postulante es requerido'),
