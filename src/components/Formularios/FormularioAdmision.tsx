@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faSchool } from "@fortawesome/free-solid-svg-icons";
+import "./Formulario.css"
 
 const formSchema = yup.object().shape({
   pupilo: yup.string().required('El nombre del postulante es requerido'),
@@ -73,7 +74,7 @@ const FormularioAdmision = () => {
       <Card.Body>
         <Form onSubmit={formik.handleSubmit}>
           <Form.Group>
-            <Form.Label>Nombre completo del postulante</Form.Label>
+            <Form.Label><small>Nombre completo del postulante</small></Form.Label>
             <Form.Control
               type="text"
               placeholder="Ingrese nombre completo"
@@ -87,8 +88,8 @@ const FormularioAdmision = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label>Nombre completo del apoderado</Form.Label>
+          <Form.Group className="margenLabel">
+            <Form.Label><small>Nombre completo del apoderado</small></Form.Label>
             <Form.Control
               type="text"
               placeholder="Ingrese nombre completo"
@@ -102,8 +103,8 @@ const FormularioAdmision = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label>Curso al que postula</Form.Label>
+          <Form.Group className="margenLabel">
+            <Form.Label><small>Curso al que postula</small></Form.Label>
             <div className="select-wrapper">
               <Form.Control
                 as="select"
@@ -126,10 +127,10 @@ const FormularioAdmision = () => {
             </div>
           </Form.Group>
 
-          <Row>
+          <Row className="margenLabel">
             <Col md={6} xs={12}>
               <Form.Group>
-                <Form.Label>Teléfono</Form.Label>
+                <Form.Label><small>Teléfono</small></Form.Label>
                 <InputGroup>
                   <InputGroup.Text>
                     <FontAwesomeIcon icon={faPhone} />
@@ -151,7 +152,7 @@ const FormularioAdmision = () => {
 
             <Col md={6} xs={12}>
               <Form.Group>
-                <Form.Label>Email</Form.Label>
+                <Form.Label><small>Email</small></Form.Label>
                 <InputGroup>
                   <InputGroup.Text>
                     <FontAwesomeIcon icon={faEnvelope} />
@@ -172,8 +173,8 @@ const FormularioAdmision = () => {
             </Col>
           </Row>
 
-          <Form.Group>
-            <Form.Label>Colegio o Jardín de procedencia</Form.Label>
+          <Form.Group className="margenLabel">
+            <Form.Label><small>Colegio o Jardín de procedencia</small></Form.Label>
             <InputGroup>
               <InputGroup.Text>
                 <FontAwesomeIcon icon={faSchool} />
@@ -192,7 +193,7 @@ const FormularioAdmision = () => {
             </InputGroup>
           </Form.Group>
 
-          <Form.Group>
+          <Form.Group className="margenLabel">
             <Form.Check
               type="checkbox"
               label="Doy mi consentimiento para el manejo de mis datos."

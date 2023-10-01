@@ -12,3 +12,7 @@
     pointer-events: none;
     z-index: 2;
 }
+
+.margenLabel {
+    margin-top: .6rem;
+}
