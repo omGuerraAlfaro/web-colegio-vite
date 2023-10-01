@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { Button, Form, InputGroup } from "react-bootstrap";
+import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faSchool, /* faSortUp */faSortDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -68,139 +68,146 @@ const FormularioAdmision = () => {
   }; */
 
   return (
-    <Form onSubmit={formik.handleSubmit}>
-      <Form.Group>
-        <Form.Label>Nombre completo del postulante</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Ingrese nombre completo"
-          name="pupilo"
-          value={formik.values.pupilo}
-          onChange={formik.handleChange}
-          isInvalid={!!formik.errors.pupilo && formik.touched.pupilo}
-        />
-        <Form.Control.Feedback type="invalid">
-          {formik.errors.pupilo}
-        </Form.Control.Feedback>
-      </Form.Group>
+    <Card style={{ backgroundColor: '#f5f5f5', borderRadius: '15px', padding: '20px' }}>
+      <Card.Title>Formulario de Admisión 2024</Card.Title>
+      <Card.Body>
+        <Form onSubmit={formik.handleSubmit}>
+          <Form.Group>
+            <Form.Label>Nombre completo del postulante</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ingrese nombre completo"
+              name="pupilo"
+              value={formik.values.pupilo}
+              onChange={formik.handleChange}
+              isInvalid={!!formik.errors.pupilo && formik.touched.pupilo}
+            />
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.pupilo}
+            </Form.Control.Feedback>
+          </Form.Group>
 
-      <Form.Group>
-        <Form.Label>Nombre completo del apoderado</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Ingrese nombre completo"
-          name="apoderado"
-          value={formik.values.apoderado}
-          onChange={formik.handleChange}
-          isInvalid={!!formik.errors.apoderado && formik.touched.apoderado}
-        />
-        <Form.Control.Feedback type="invalid">
-          {formik.errors.apoderado}
-        </Form.Control.Feedback>
-      </Form.Group>
+          <Form.Group>
+            <Form.Label>Nombre completo del apoderado</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ingrese nombre completo"
+              name="apoderado"
+              value={formik.values.apoderado}
+              onChange={formik.handleChange}
+              isInvalid={!!formik.errors.apoderado && formik.touched.apoderado}
+            />
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.apoderado}
+            </Form.Control.Feedback>
+          </Form.Group>
 
-      <Form.Group>
-        <Form.Label>Curso al que postula</Form.Label>
-        <div className="select-wrapper">
-          <Form.Control
-            as="select"
-            name="cursoPostula"
-            onChange={formik.handleChange}
-            value={formik.values.cursoPostula}
-            isInvalid={!!formik.errors.cursoPostula && formik.touched.cursoPostula}
-            className="position-relative"
-          >
-            <option value="" disabled hidden>Seleccionar curso</option> {/* Placeholder option */}
-            {cursos.map((curso, index) => (
-              <option key={index} value={curso}>
-                {curso}
-              </option>
-            ))}
-          </Form.Control>          
-          <Form.Control.Feedback type="invalid">
-            {formik.errors.cursoPostula}
-          </Form.Control.Feedback>
-        </div>
-      </Form.Group>
+          <Form.Group>
+            <Form.Label>Curso al que postula</Form.Label>
+            <div className="select-wrapper">
+              <Form.Control
+                as="select"
+                name="cursoPostula"
+                onChange={formik.handleChange}
+                value={formik.values.cursoPostula}
+                isInvalid={!!formik.errors.cursoPostula && formik.touched.cursoPostula}
+                className="position-relative"
+              >
+                <option value="" disabled hidden>Seleccionar curso</option> {/* Placeholder option */}
+                {cursos.map((curso, index) => (
+                  <option key={index} value={curso}>
+                    {curso}
+                  </option>
+                ))}
+              </Form.Control>
+              <Form.Control.Feedback type="invalid">
+                {formik.errors.cursoPostula}
+              </Form.Control.Feedback>
+            </div>
+          </Form.Group>
 
+          <Row>
+            <Col md={6} xs={12}>
+              <Form.Group>
+                <Form.Label>Teléfono</Form.Label>
+                <InputGroup>
+                  <InputGroup.Text>
+                    <FontAwesomeIcon icon={faPhone} />
+                  </InputGroup.Text>
+                  <Form.Control
+                    type="tel"
+                    placeholder="Ingrese teléfono"
+                    name="telefono"
+                    value={formik.values.telefono}
+                    onChange={formik.handleChange}
+                    isInvalid={!!formik.errors.telefono && formik.touched.telefono}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.telefono}
+                  </Form.Control.Feedback>
+                </InputGroup>
+              </Form.Group>
+            </Col>
 
+            <Col md={6} xs={12}>
+              <Form.Group>
+                <Form.Label>Email</Form.Label>
+                <InputGroup>
+                  <InputGroup.Text>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </InputGroup.Text>
+                  <Form.Control
+                    type="email"
+                    placeholder="Ingrese email"
+                    name="email"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    isInvalid={!!formik.errors.email && formik.touched.email}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.email}
+                  </Form.Control.Feedback>
+                </InputGroup>
+              </Form.Group>
+            </Col>
+          </Row>
 
+          <Form.Group>
+            <Form.Label>Colegio o Jardín de procedencia</Form.Label>
+            <InputGroup>
+              <InputGroup.Text>
+                <FontAwesomeIcon icon={faSchool} />
+              </InputGroup.Text>
+              <Form.Control
+                type="text"
+                placeholder="Ingrese colegio o jardín de procedencia"
+                name="colegio"
+                value={formik.values.colegio}
+                onChange={formik.handleChange}
+                isInvalid={!!formik.errors.colegio && formik.touched.colegio}
+              />
+              <Form.Control.Feedback type="invalid">
+                {formik.errors.colegio}
+              </Form.Control.Feedback>
+            </InputGroup>
+          </Form.Group>
 
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              label="Doy mi consentimiento para el manejo de mis datos."
+              name="consentimiento"
+              checked={formik.values.consentimiento}
+              onChange={formik.handleChange}
+              isInvalid={!!formik.errors.consentimiento && formik.touched.consentimiento}
+            />
+            {formik.errors.consentimiento && formik.touched.consentimiento && <Form.Text className="text-danger">{formik.errors.consentimiento}</Form.Text>}
+          </Form.Group>
 
-      <Form.Group>
-        <Form.Label>Teléfono</Form.Label>
-        <InputGroup>
-          <InputGroup.Text>
-            <FontAwesomeIcon icon={faPhone} />
-          </InputGroup.Text>
-          <Form.Control
-            type="tel"
-            placeholder="Ingrese teléfono"
-            name="telefono"
-            value={formik.values.telefono}
-            onChange={formik.handleChange}
-            isInvalid={!!formik.errors.telefono && formik.touched.telefono}
-          />
-          <Form.Control.Feedback type="invalid">
-            {formik.errors.telefono}
-          </Form.Control.Feedback>
-        </InputGroup>
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Label>Email</Form.Label>
-        <InputGroup>
-          <InputGroup.Text>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </InputGroup.Text>
-          <Form.Control
-            type="email"
-            placeholder="Ingrese email"
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            isInvalid={!!formik.errors.email && formik.touched.email}
-          />
-          <Form.Control.Feedback type="invalid">
-            {formik.errors.email}
-          </Form.Control.Feedback>
-        </InputGroup>
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Label>Colegio de procedencia</Form.Label>
-        <InputGroup>
-          <InputGroup.Text>
-            <FontAwesomeIcon icon={faSchool} />
-          </InputGroup.Text>
-          <Form.Control
-            type="text"
-            placeholder="Ingrese colegio de procedencia"
-            name="colegio"
-            value={formik.values.colegio}
-            onChange={formik.handleChange}
-            isInvalid={!!formik.errors.colegio && formik.touched.colegio}
-          />
-          <Form.Control.Feedback type="invalid">
-            {formik.errors.colegio}
-          </Form.Control.Feedback>
-        </InputGroup>
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Check
-          type="checkbox"
-          label="Doy mi consentimiento para el manejo de mis datos."
-          name="consentimiento"
-          checked={formik.values.consentimiento}
-          onChange={formik.handleChange}
-          isInvalid={!!formik.errors.consentimiento && formik.touched.consentimiento}
-        />
-        {formik.errors.consentimiento && formik.touched.consentimiento && <Form.Text className="text-danger">{formik.errors.consentimiento}</Form.Text>}
-      </Form.Group>
-
-      <Button type="submit">Enviar</Button>
-    </Form>
+          <Button type="submit">Enviar formulario de admisión</Button>
+        </Form>
+      </Card.Body>
+    </Card >
   );
 };
 
