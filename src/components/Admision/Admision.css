@@ -1,0 +1,52 @@
+.bodySteps {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.bodySteps::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #333;
+}
+
+.textSteps {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.tituloAdmision {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #683A67;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tituloAdmision {
+        font-size: 1.5rem;
+    }
+
+    .textSteps {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .tituloAdmision {
+        font-size: 1.2rem;
+    }
+
+    .textSteps {
+        font-size: 0.8rem;
+    }
+
+}

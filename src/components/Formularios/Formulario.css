@@ -16,3 +16,26 @@
 .margenLabel {
     margin-top: .6rem;
 }
+
+.rounded-input {
+    border-radius: 25px !important;
+}
+
+.rounded-input-right {
+    border-top-right-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+}
+
+.buttonFormulario {
+    background-color: #683A67;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}

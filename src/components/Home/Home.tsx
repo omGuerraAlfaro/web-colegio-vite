@@ -10,6 +10,7 @@ import Excelencia from '../../assets/icon/excelencia.png'
 import Programas from '../../assets/icon/programas.png'
 import './Home.css'
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
+import AlertWelcome from '../Alert/AlertWelcome';
 
 function Home() {
     const compromisos = [
@@ -69,6 +70,7 @@ function Home() {
 
     return (
         <>
+            <AlertWelcome />
             <CarouselHome />
 
             <Container className='my-5'>

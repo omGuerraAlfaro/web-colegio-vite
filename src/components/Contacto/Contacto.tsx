@@ -10,6 +10,7 @@ const Contacto = () => {
 
     return (
         <Container>
+            <h1 className='titulo'>Contacto</h1>
             <Row>
                 <Col md={8} xs={12}>
                     <iframe

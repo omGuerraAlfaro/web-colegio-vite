@@ -69,13 +69,14 @@ const FormularioAdmision = () => {
   }; */
 
   return (
-    <Card style={{ backgroundColor: '#f5f5f5', borderRadius: '15px', padding: '20px' }}>
+    <Card style={{ backgroundColor: '#f5f5f5', borderRadius: '15px', padding: '20px' }} className='shadow'>
       <Card.Title>Formulario de Admisión 2024</Card.Title>
       <Card.Body>
         <Form onSubmit={formik.handleSubmit}>
           <Form.Group>
-            <Form.Label><small>Nombre completo del postulante</small></Form.Label>
+            <Form.Label><small><strong>Nombre completo del postulante</strong></small></Form.Label>
             <Form.Control
+              className="rounded-input"
               type="text"
               placeholder="Ingrese nombre completo"
               name="pupilo"
@@ -89,8 +90,9 @@ const FormularioAdmision = () => {
           </Form.Group>
 
           <Form.Group className="margenLabel">
-            <Form.Label><small>Nombre completo del apoderado</small></Form.Label>
+            <Form.Label><small><strong>Nombre completo del apoderado</strong></small></Form.Label>
             <Form.Control
+              className="rounded-input"
               type="text"
               placeholder="Ingrese nombre completo"
               name="apoderado"
@@ -104,15 +106,15 @@ const FormularioAdmision = () => {
           </Form.Group>
 
           <Form.Group className="margenLabel">
-            <Form.Label><small>Curso al que postula</small></Form.Label>
+            <Form.Label><small><strong>Curso al que postula</strong></small></Form.Label>
             <div className="select-wrapper">
               <Form.Control
+                className="rounded-input"
                 as="select"
                 name="cursoPostula"
                 onChange={formik.handleChange}
                 value={formik.values.cursoPostula}
                 isInvalid={!!formik.errors.cursoPostula && formik.touched.cursoPostula}
-                className="position-relative"
               >
                 <option value="" disabled hidden>Seleccionar curso</option> {/* Placeholder option */}
                 {cursos.map((curso, index) => (
@@ -130,12 +132,13 @@ const FormularioAdmision = () => {
           <Row className="margenLabel">
             <Col md={6} xs={12}>
               <Form.Group>
-                <Form.Label><small>Teléfono</small></Form.Label>
+                <Form.Label><small><strong>Teléfono</strong></small></Form.Label>
                 <InputGroup>
                   <InputGroup.Text>
                     <FontAwesomeIcon icon={faPhone} />
                   </InputGroup.Text>
                   <Form.Control
+                    className="rounded-input-right"
                     type="tel"
                     placeholder="Ingrese teléfono"
                     name="telefono"
@@ -152,12 +155,13 @@ const FormularioAdmision = () => {
 
             <Col md={6} xs={12}>
               <Form.Group>
-                <Form.Label><small>Email</small></Form.Label>
+                <Form.Label><small><strong>Email</strong></small></Form.Label>
                 <InputGroup>
                   <InputGroup.Text>
                     <FontAwesomeIcon icon={faEnvelope} />
                   </InputGroup.Text>
                   <Form.Control
+                    className="rounded-input-right"
                     type="email"
                     placeholder="Ingrese email"
                     name="email"
@@ -174,12 +178,13 @@ const FormularioAdmision = () => {
           </Row>
 
           <Form.Group className="margenLabel">
-            <Form.Label><small>Colegio o Jardín de procedencia</small></Form.Label>
+            <Form.Label><small><strong>Colegio o Jardín de procedencia</strong></small></Form.Label>
             <InputGroup>
               <InputGroup.Text>
                 <FontAwesomeIcon icon={faSchool} />
               </InputGroup.Text>
               <Form.Control
+                className="rounded-input-right"
                 type="text"
                 placeholder="Ingrese colegio o jardín de procedencia"
                 name="colegio"
@@ -205,7 +210,11 @@ const FormularioAdmision = () => {
             {formik.errors.consentimiento && formik.touched.consentimiento && <Form.Text className="text-danger">{formik.errors.consentimiento}</Form.Text>}
           </Form.Group>
 
-          <Button type="submit">Enviar formulario de admisión</Button>
+          <Row>
+            <Col md={12} sm={12} xs={12}>
+              <Button type="submit" className='buttonFormulario btn-light'>Enviar formulario de admisión</Button>
+            </Col>
+          </Row>
         </Form>
       </Card.Body>
     </Card >
