@@ -116,8 +116,7 @@ const FormularioAdmision = () => {
                 {curso}
               </option>
             ))}
-          </Form.Control>
-          <FontAwesomeIcon icon={faSortDown} className="select-icon" />
+          </Form.Control>          
           <Form.Control.Feedback type="invalid">
             {formik.errors.cursoPostula}
           </Form.Control.Feedback>
