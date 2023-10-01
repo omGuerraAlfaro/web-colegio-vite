@@ -25,7 +25,7 @@ const Navbar = () => {
           <RBNavbar.Toggle aria-controls="basic-navbar-nav" />
           <RBNavbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex justify-content-between align-items-center w-100">
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/") ? "active-link" : ""}`} href="/">Inicio</Nav.Link>
+              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/inicio") ? "active-link" : ""}`} href="/">Inicio</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/comunidad") ? "active-link" : ""}`} href="/comunidad">Nuestra Comunidad</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/pae") ? "active-link" : ""}`} href="/pae">Programa PAE</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/reglamento") ? "active-link" : ""}`} href="/reglamento">Reglamento Interno de Convivencia Escolar</Nav.Link>

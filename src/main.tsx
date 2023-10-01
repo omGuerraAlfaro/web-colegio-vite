@@ -20,8 +20,7 @@ import Admision from './components/Admision/Admision.tsx';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Router>
-      <Navbar />
-      
+      <Navbar />      
       <div className="waveWrapper">
         <div className="wave wave1"></div>
         <div className="wave wave2"></div>
