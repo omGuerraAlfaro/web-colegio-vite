@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faSchool } from "@fortawesome/free-solid-svg-icons";
+import axios from 'axios';
 import "./Formulario.css"
 
 const formSchema = yup.object().shape({
@@ -27,9 +28,14 @@ const FormularioAdmision = () => {
       consentimiento: false
     },
     validationSchema: formSchema,
-    onSubmit: (values) => {
-      console.log(values);
-      // Lógica adicional de envío, por ejemplo, llamadas API...
+    onSubmit: async (values) => {
+      try {
+        console.log(values);
+        const response = await enviarDatos(values);
+        console.log(response);
+      } catch (error) {
+        console.error('Error al enviar los datos:', error);
+      }
     }
   });
 
@@ -45,6 +51,15 @@ const FormularioAdmision = () => {
     "Séptimo",
     "Octavo"
   ];
+
+  const enviarDatos = async (data: any) => {
+    try {
+      const response = await axios.post('http://localhost:4002/correo/enviar', data);
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error al enviar los datos:', error);
+    }
+  };
 
 
   /* const getRecaptchaKeys = async () => {
