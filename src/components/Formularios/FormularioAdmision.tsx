@@ -53,23 +53,23 @@ const FormularioAdmision = () => {
 
   const enviarDatos = async (data: any) => {
     try {
-        const headers = {
-            'Content-Type': 'application/json',
-        };
-        await axios.post('https://colegio-mail.onrender.com/correo/enviar', data, { headers: headers });
-        // console.log(response.data);
-        Swal.fire({
-          title: '¡Gracias!',
-          text: 'Su formulario de admisión ha sido enviado.',
-          icon: 'success',
-          confirmButtonText: 'Entendido',
-          timer: 3000,
-          timerProgressBar: true,
-        });
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+      await axios.post('https://colegio-mail.onrender.com/correo/enviar', data, { headers: headers });
+      // console.log(response.data);
+      Swal.fire({
+        title: '¡Gracias!',
+        text: 'Su formulario de admisión ha sido enviado.',
+        icon: 'success',
+        confirmButtonText: 'Entendido',
+        timer: 3000,
+        timerProgressBar: true,
+      });
     } catch (error) {
-        console.error('Error al enviar los datos:', error);
+      console.error('Error al enviar los datos:', error);
     }
-}
+  }
 
 
 
