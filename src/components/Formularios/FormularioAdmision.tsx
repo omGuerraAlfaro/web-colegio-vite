@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faSchool } from "@fortawesome/free-solid-svg-icons";
+import Swal from 'sweetalert2';
 import axios from 'axios';
 import "./Formulario.css"
 
@@ -30,9 +31,7 @@ const FormularioAdmision = () => {
     validationSchema: formSchema,
     onSubmit: async (values) => {
       try {
-        console.log(values);
-        const response = await enviarDatos(values);
-        console.log(response);
+        await enviarDatos(values);
       } catch (error) {
         console.error('Error al enviar los datos:', error);
       }
@@ -54,18 +53,30 @@ const FormularioAdmision = () => {
 
   const enviarDatos = async (data: any) => {
     try {
-      const response = await axios.post('http://localhost:4002/correo/enviar', data);
-      console.log(response.data);
+        const headers = {
+            'Content-Type': 'application/json',
+        };
+        await axios.post('https://colegio-mail.onrender.com/correo/enviar', data, { headers: headers });
+        // console.log(response.data);
+        Swal.fire({
+          title: '¡Gracias!',
+          text: 'Su formulario de admisión ha sido enviado.',
+          icon: 'success',
+          confirmButtonText: 'Entendido',
+          timer: 3000,
+          timerProgressBar: true,
+        });
     } catch (error) {
-      console.error('Error al enviar los datos:', error);
+        console.error('Error al enviar los datos:', error);
     }
-  };
+}
+
 
 
   /* const getRecaptchaKeys = async () => {
     const projectId = "6LeMr2IoAAAAADIjt0ZIqmn0WljROZgMqCscBtDX";
     const url = `https://recaptchaenterprise.googleapis.com/v1/projects/${projectId}/keys`;
-
+  
     try {
       const response = await axios.get(url);
       console.log(response.data);
@@ -73,13 +84,13 @@ const FormularioAdmision = () => {
       console.error("Error al obtener las claves de reCAPTCHA:", error);
     }
   };
-
+  
   const handleClick = async (e: any) => {
     e.preventDefault();
     console.log(formData);
-
+  
     await getRecaptchaKeys();
-
+  
     ... resto de la lógica de handleClick ...
   }; */
 
