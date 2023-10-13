@@ -23,20 +23,20 @@ function Home() {
             color: "#FBAE3C"
         },
         {
-            imgSrc: Excelencia,
-            imgAlt: "EXCELENCIA ACADÉMICA",
-            caption: "EXCELENCIA ACADÉMICA",
-            title: "EXCELENCIA ACADÉMICA",
-            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento de nuestros profesionales en la unidad técnica pedagogica (UTP) y todos nuestros docentes, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
-            color: "#F6884D"
-        },
-        {
             imgSrc: Docentes,
             imgAlt: "CUERPO DOCENTE CALIFICADO",
             caption: "CUERPO DOCENTE CALIFICADO",
             title: "CUERPO DOCENTE CALIFICADO",
             description: "Contamos con un equipo de docentes altamente calificado, comprometidos con la formación integral de nuestros estudiantes. Muchos de nuestros profesores han demostrado una lealtad institucional, siendo pilares fundamentales en nuestra comunidad educativa a lo largo de los años. Nuestro cuerpo docente se somete a formaciones continuas, garantizando así la adopción de las mejores prácticas pedagógicas. Esta combinación de experiencia, dedicación y pasión por la enseñanza asegura que cada estudiante reciba una educación personalizada y de alta calidad.",
             color: "#C0526A"
+        },
+        {
+            imgSrc: Programas,
+            imgAlt: "ENSEÑANZA DE INGLÉS",
+            caption: "ENSEÑANZA DE INGLÉS",
+            title: "ENSEÑANZA DE INGLÉS",
+            description: "En la Comunidad Colegio Andes Chile, reconocemos la importancia del inglés como lengua global. Estamos comprometidos con ofrecer una enseñanza de inglés de alta calidad, utilizando metodologías actualizadas y herramientas tecnológicas modernas. Nuestro objetivo es que cada estudiante desarrolle habilidades lingüísticas sólidas y capacidades interlinguales, preparándolos para oportunidades globales y relaciones multilingües.",
+            color: "#4A8EAD"
         },
         {
             imgSrc: Programas,
@@ -47,13 +47,13 @@ function Home() {
             color: "#683A67"
         },
         {
-            imgSrc: Programas,
-            imgAlt: "ENSEÑANZA DE INGLÉS",
-            caption: "ENSEÑANZA DE INGLÉS",
-            title: "ENSEÑANZA DE INGLÉS",
-            description: "En la Comunidad Colegio Andes Chile, reconocemos la importancia del inglés como lengua global. Estamos comprometidos con ofrecer una enseñanza de inglés de alta calidad, utilizando metodologías actualizadas y herramientas tecnológicas modernas. Nuestro objetivo es que cada estudiante desarrolle habilidades lingüísticas sólidas y capacidades interlinguales, preparándolos para oportunidades globales y relaciones multilingües.",
-            color: "#4A8EAD"
-        }
+            imgSrc: Excelencia,
+            imgAlt: "EXCELENCIA ACADÉMICA",
+            caption: "EXCELENCIA ACADÉMICA",
+            title: "EXCELENCIA ACADÉMICA",
+            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento de nuestros profesionales en la unidad técnica pedagogica (UTP) y todos nuestros docentes, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
+            color: "#F6884D"
+        },
         
         
 
