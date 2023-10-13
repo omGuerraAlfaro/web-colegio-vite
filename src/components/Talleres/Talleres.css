@@ -45,11 +45,11 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background-color: #333;
+    width: 6px;
+    background-color: #74a6cf;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 880px) {
     .tituloTaller {
         font-size: 1.5rem;
     }
@@ -64,4 +64,16 @@
         margin-left: 0px;
         margin-bottom: 30px;
     }
+}
+.hrclass{
+width: 50%;
+}
+
+.titulo-taller{
+    color: #74a6cf;
+}
+
+.awesome{
+    font-size: 1.5rem;
+    color: #74a6cf;
 }

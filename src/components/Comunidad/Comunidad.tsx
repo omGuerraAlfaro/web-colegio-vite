@@ -61,8 +61,7 @@ function Comunidad() {
                     </div>
                     <div className="col-md-6 col-12 school-info mb-5">
                         <h4 className='tituloMision'>Misión</h4>
-                        <p className='parrafoMision'>El Colegio Andes Chile busca la formación académica integral de sus niños y niñas, despertando el interés por descubrir con sus propios talentos el entorno social y cultural que les rodea, para ser un gran aporte a la sociedad.
-                            El Colegio Andes Chile fomenta la integración escolar a través del respeto, tolerancia y honestidad en un entorno familiar basado en la educación con amor.</p>
+                        <p className='parrafoMision'>El Colegio Andes Chile busca la formación académica integral de sus niños y niñas, despertando el interés por descubrir con sus propios talentos en el entorno social y cultural que les rodea. El Colegio Andes Chile fomenta la integración escolar a través del respeto, tolerancia y honestidad en un entorno familiar basado en la educación con amor.</p>
                     </div>
                     <div className="col-md-6 col-12">
                         <h4 className='tituloVision'>Visión</h4>
@@ -78,8 +77,8 @@ function Comunidad() {
                 <div className='row'>
                     <div className='col-12'>
                         <h4 className='tituloHistoria'>Nuestra Historia</h4>
-                        <p className='parrafoHistoria'>Colegio Andes Chile, fue fundado el 31 de octubre de 2003, para dar espacio educativo personalizado a muchas familias que buscaban un colegio distinto y diferente, donde niñas y niños se sintieran íntegros en su quehacer educativo diario. Colegio Andes Chile es un establecimiento educacional particular, que se ubica en Rodríguez # 1064, comuna de Los Andes. Su director es el señor Elwin Fernández Varas, y su sostenedor, el señor Alfredo Gallegos Ávila.</p>
-                        <p className='parrafoHistoria'>Nuestro establecimiento, es un centro educacional que imparte educación básica desde prekínder a 8º año básico. Así mismo a todos los alumnos se les imparte música, educación física, computación e inglés desde prekínder.</p>
+                        <p className='parrafoHistoria'>Colegio Andes Chile, fue fundado el 31 de octubre de 2003, para dar espacio educativo personalizado a muchas familias que buscaban un colegio distinto y diferente, donde niñas y niños se sintieran íntegros en su quehacer educativo diario. Colegio Andes Chile es un establecimiento educacional particular, que se ubica en Rodríguez # 1064, comuna de Los Andes. Su director es  el señor Alfredo Agustín Gallegos Ávila.</p>
+                        <p className='parrafoHistoria'>Nuestro establecimiento, es un centro educacional que imparte educación prebásica y básica. Así mismo a todos los alumnos se les imparte música, educación física, computación e inglés desde prekínder.</p>
                         <p className='parrafoHistoria'>A nivel pedagógico, Colegio Andes Chile impulsa una educación personalizada, centrada en las habilidades y capacidades de cada niño y niña, buscando un equilibrio entre rendimiento académico y valores transversales, dados por el carácter cercano y personalizado que da sustento valórico a nuestro proceso educativo y que es un elemento central dentro de la cultura escolar.</p>
                         <p className='parrafoHistoria'>Otro de los elementos que proporciona el sustento a estas características, es el Proyecto de Apoyo Educativo, que atiende a niños y niñas con necesidades educativas, proporcionando la tolerancia y aprecio a la diversidad que tanto se requieren en nuestra sociedad.</p>
                     </div>

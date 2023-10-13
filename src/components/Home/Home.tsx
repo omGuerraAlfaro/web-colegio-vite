@@ -19,7 +19,7 @@ function Home() {
             imgAlt: "AMBIENTE INCLUSIVO",
             caption: "AMBIENTE INCLUSIVO",
             title: "AMBIENTE INCLUSIVO",
-            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
+            description: "En Nuestra Comunidad Colegio Andes Chile, cada estudiante es esencial. Nuestro compromiso es que cada miembro se sienta valorado y respetado, creando así un ambiente óptimo para el aprendizaje y crecimiento personal. Ofrecemos oportunidades para explorar, compartir y aprender, asegurando que todos tengan voz y espacio. Nuestra misión es construir juntos un futuro donde la educación sea sinónimo de unidad y respeto y amor. Te invitamos a ser parte de este viaje y a enriquecer nuestra comunidad con tu presencia.",
             color: "#FBAE3C"
         },
         {
@@ -27,7 +27,7 @@ function Home() {
             imgAlt: "EXCELENCIA ACADÉMICA",
             caption: "EXCELENCIA ACADÉMICA",
             title: "EXCELENCIA ACADÉMICA",
-            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
+            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento de nuestros profesionales en la unidad técnica pedagogica (UTP) y todos nuestros docentes, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
             color: "#F6884D"
         },
         {
@@ -35,7 +35,7 @@ function Home() {
             imgAlt: "CUERPO DOCENTE CALIFICADO",
             caption: "CUERPO DOCENTE CALIFICADO",
             title: "CUERPO DOCENTE CALIFICADO",
-            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
+            description: "Contamos con un equipo de docentes altamente calificado, comprometidos con la formación integral de nuestros estudiantes. Muchos de nuestros profesores han demostrado una lealtad institucional, siendo pilares fundamentales en nuestra comunidad educativa a lo largo de los años. Nuestro cuerpo docente se somete a formaciones continuas, garantizando así la adopción de las mejores prácticas pedagógicas. Esta combinación de experiencia, dedicación y pasión por la enseñanza asegura que cada estudiante reciba una educación personalizada y de alta calidad.",
             color: "#C0526A"
         },
         {
@@ -43,17 +43,19 @@ function Home() {
             imgAlt: "PROGRAMAS EXTRACURRICULARES",
             caption: "PROGRAMAS EXTRACURRICULARES",
             title: "PROGRAMAS EXTRACURRICULARES",
-            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
+            description: "Ofrecemos una amplia variedad de programas extracurriculares diseñados para complementar la formación académica de nuestros estudiantes. Desde actividades deportivas, talleres artísticos, talleres de ciencia y tecnología; nuestros programas buscan desarrollar habilidades, pasiones y talentos en un ambiente de sana convivencia y diversión.",
             color: "#683A67"
         },
         {
             imgSrc: Programas,
-            imgAlt: "EXCELENCIA ACADÉMICA",
-            caption: "EXCELENCIA ACADÉMICA",
-            title: "EXCELENCIA ACADÉMICA",
-            description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
-            color: "#18223C"
-        },
+            imgAlt: "ENSEÑANZA DE INGLÉS",
+            caption: "ENSEÑANZA DE INGLÉS",
+            title: "ENSEÑANZA DE INGLÉS",
+            description: "En la Comunidad Colegio Andes Chile, reconocemos la importancia del inglés como lengua global. Estamos comprometidos con ofrecer una enseñanza de inglés de alta calidad, utilizando metodologías actualizadas y herramientas tecnológicas modernas. Nuestro objetivo es que cada estudiante desarrolle habilidades lingüísticas sólidas y capacidades interlinguales, preparándolos para oportunidades globales y relaciones multilingües.",
+            color: "#4A8EAD"
+        }
+        
+        
 
     ];
 
