@@ -8,7 +8,7 @@ const AlertWelcome: React.FC = () => {
       text: 'Esta página es nueva y está en construcción.',
       icon: 'info',
       confirmButtonText: 'Entendido',
-      timer: 3000,
+      timer: 5000,
       timerProgressBar: true,
     });
   }, []);
