@@ -33,6 +33,7 @@ function PhotoGallery({ photos }: { photos: any }) {
                         <Card className='shadow-sm'>
                             <Card.Img variant="top" src={photo.src} />
                             <Card.Body>
+                                <h5 className='d-flex justify-content-start'>{photo.titulo}</h5>
                                 <small className='d-flex justify-content-end'>{photo.fecha}</small>
                                 <Card.Text>{photo.description}</Card.Text>
                                 <Button variant="secondary" onClick={() => handleLike(indexOfFirstPhoto + index)}>
