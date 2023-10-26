@@ -11,8 +11,60 @@ import Programas from '../../assets/icon/programas.png'
 import './Home.css'
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
 import AlertWelcome from '../Alert/AlertWelcome';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function base64ToURL(base64: any) {
+    const binary = atob(base64);
+    const array = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+        array[i] = binary.charCodeAt(i);
+    }
+    const blob = new Blob([array], { type: 'image/jpeg' }); 
+    return URL.createObjectURL(blob);
+}
+
+function isValidBase64(str: any) {
+    try {
+        atob(str);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 
 function Home() {
+
+    const [noticias, setNoticias] = useState([]);
+
+    useEffect(() => {
+        async function fetchNoticias() {
+            try {
+                const response = await axios.get('https://api-colegio.onrender.com/noticias');
+                const transformedNoticias = response.data.map((noticia: { images: string[]; }) => {
+                    noticia.images = noticia.images.map(image => {
+                        if (isValidBase64(image)) {
+                            return base64ToURL(image);
+                        } else {
+                            // Si no es una cadena base64 válida, retorna la misma imagen.
+                            return image;
+                        }
+                    });
+                    return noticia;
+                });
+                setNoticias(transformedNoticias);
+            } catch (error) {
+                console.error("Hubo un error cargando las noticias:", error);
+            }
+        }
+
+        fetchNoticias();
+    }, []);
+
+
+
+
+
     const compromisos = [
         {
             imgSrc: Inclusividad,
@@ -54,21 +106,11 @@ function Home() {
             description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento de nuestros profesionales en la unidad técnica pedagogica (UTP) y todos nuestros docentes, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
             color: "#F6884D"
         },
-        
-        
+
+
 
     ];
 
-    const photosFromDatabase = [
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-        { src: "https://via.placeholder.com/200x100", fecha: "25/04/2012", titulo:"Título de prueba", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur alias quaerat non exercitationem, itaque dignissimos quos repellat voluptas ex? Dolores voluptate, illo libero ipsum voluptas excepturi dicta natus ab?" },
-    ];
 
     return (
         <>
@@ -108,7 +150,7 @@ function Home() {
 
             <Container className='my-5'>
                 <h3 className="titulo fonty1 mb-4">Galería de Noticias</h3>
-                <PhotoGallery photos={photosFromDatabase} />
+                <PhotoGallery photos={noticias} />
             </Container >
         </>
     )

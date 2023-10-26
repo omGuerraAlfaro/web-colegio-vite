@@ -66,7 +66,7 @@ const FormularioAdmision = () => {
       }).then(() => {
         formik.resetForm();
       });
-      await axios.post('https://colegio-mail.onrender.com/correo/enviar', data, { headers: headers });
+      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
       // console.log(response.data);
     } catch (error) {
       console.error('Error al enviar los datos:', error);

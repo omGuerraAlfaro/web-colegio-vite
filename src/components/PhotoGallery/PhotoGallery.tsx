@@ -7,6 +7,24 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './PhotoGallery.css';
 
+function bufferToBase64(buffer: number[]): string {
+    const binaryString = buffer.map(byte => String.fromCharCode(byte)).join('');
+    return btoa(binaryString);
+}
+
+function getFormattedBase64Image(imageObject: any): string {
+    const prefix = 'data:image/jpeg;base64,';
+
+    // Verifica si el objeto tiene la estructura esperada
+    if (imageObject && imageObject.image_data && Array.isArray(imageObject.image_data.data)) {
+        // Convierte el buffer a base64
+        const base64String = bufferToBase64(imageObject.image_data.data);
+        return prefix + base64String;
+    } else {
+        console.warn('Unexpected image data format:', imageObject);
+        return '';
+    }
+}
 
 function PhotoGallery({ photos }: { photos: any }) {
     const [likes, setLikes] = useState(new Array(photos.length).fill(0));
@@ -31,7 +49,7 @@ function PhotoGallery({ photos }: { photos: any }) {
                 {currentPhotos.map((photo: any, index: any) => (
                     <Col xs={12} sm={6} md={4} className="mb-4" key={indexOfFirstPhoto + index}>
                         <Card className='shadow-sm'>
-                            <Card.Img variant="top" src={photo.src} />
+                            <Card.Img variant="top" src={getFormattedBase64Image(photo.images[0])} />
                             <Card.Body>
                                 <h5 className='d-flex justify-content-start'>{photo.titulo}</h5>
                                 <small className='d-flex justify-content-end'>{photo.fecha}</small>
