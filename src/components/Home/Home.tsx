@@ -9,10 +9,11 @@ import Docentes from '../../assets/icon/docente.png'
 import Excelencia from '../../assets/icon/excelencia.png'
 import Programas from '../../assets/icon/programas.png'
 import './Home.css'
-import PhotoGallery from '../PhotoGallery/PhotoGallery';
 import AlertWelcome from '../Alert/AlertWelcome';
 import { useState, useEffect } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
+import PhotoGallery from '../PhotoGallery/PhotoGallery';
 
 function base64ToURL(base64: any) {
     const binary = atob(base64);
@@ -20,7 +21,7 @@ function base64ToURL(base64: any) {
     for (let i = 0; i < binary.length; i++) {
         array[i] = binary.charCodeAt(i);
     }
-    const blob = new Blob([array], { type: 'image/jpeg' }); 
+    const blob = new Blob([array], { type: 'image/jpeg' });
     return URL.createObjectURL(blob);
 }
 
@@ -34,6 +35,7 @@ function isValidBase64(str: any) {
 }
 
 function Home() {
+    const [isLoading, setIsLoading] = useState(true);
 
     const [noticias, setNoticias] = useState([]);
 
@@ -55,6 +57,8 @@ function Home() {
                 setNoticias(transformedNoticias);
             } catch (error) {
                 console.error("Hubo un error cargando las noticias:", error);
+            } finally {
+                setIsLoading(false);
             }
         }
 
@@ -150,8 +154,16 @@ function Home() {
 
             <Container className='my-5'>
                 <h3 className="titulo fonty1 mb-4">Galería de Noticias</h3>
-                <PhotoGallery photos={noticias} />
-            </Container >
+                {isLoading ? (
+                    <div className="d-flex justify-content-center align-items-center">
+                        <Spinner animation="border" role="status" style={{ marginRight: '10px' }} />
+                        Cargando Noticias...
+                    </div>
+
+                ) : (
+                    <PhotoGallery photos={noticias} />
+                )}
+            </Container>
         </>
     )
 }
