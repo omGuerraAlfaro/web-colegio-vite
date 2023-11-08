@@ -2,6 +2,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css'
 import carousel1 from '../../assets/img/carousel1.jpg'
+import pae from '../../assets/img/pae.png'
 import { Button } from 'react-bootstrap';
 
 function CarouselHome() {
@@ -24,7 +25,7 @@ function CarouselHome() {
                     <Carousel.Item>
                         <img
                             className="d-block"
-                            src={carousel1}
+                            src={pae}
                             alt="Second slide"
                         />
                         <Carousel.Caption>
