@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faSchool } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import "./Formulario.css"
@@ -12,7 +12,6 @@ const formSchema = yup.object().shape({
   apoderado: yup.string().required('El nombre del apoderado es requerido'),
   telefono: yup.string().required('El teléfono es requerido'),
   email: yup.string().email('Debe ser un email válido').required('El email es requerido'),
-  colegio: yup.string().required('El colegio de procedencia es requerido'),
   direccion: yup.string().required('La dirección es requerida'),
   consentimiento: yup.boolean().oneOf([true], 'El consentimiento es requerido'),
 });
@@ -30,6 +29,7 @@ const FormularioEscuelaVerano = () => {
     validationSchema: formSchema,
     onSubmit: async (values) => {
       try {
+        // console.log(values);
         await enviarDatos(values);
       } catch (error) {
         console.error('Error al enviar los datos:', error);
@@ -53,7 +53,7 @@ const FormularioEscuelaVerano = () => {
       }).then(() => {
         formik.resetForm();
       });
-      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
+      await axios.post('https://api-colegio.onrender.com/correo/enviar/verano', data, { headers: headers });
       // console.log(response.data);
     } catch (error) {
       console.error('Error al enviar los datos:', error);

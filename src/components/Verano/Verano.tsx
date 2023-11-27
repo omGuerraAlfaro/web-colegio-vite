@@ -25,11 +25,7 @@ const EscuelaVerano = () => {
                 Hora de la entrevista de inscripción
               </li>
             </ul>
-          </div>
-          <div className="bodySteps">
-            <h4><strong>Paso 3: </strong>Entrevista:</h4>
-            <p>La entrevista será con el Director del Establecimiento, quien entrevistará tanto a los apoderados como al alumno postulante. Durante este encuentro, se proporcionará toda la información y documentación necesaria para el proceso de admisión.</p>
-          </div>
+          </div>          
         </Col>
       </Row>
     </Container>
