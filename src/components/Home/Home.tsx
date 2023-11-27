@@ -9,7 +9,6 @@ import Docentes from '../../assets/icon/docente.png'
 import Excelencia from '../../assets/icon/excelencia.png'
 import Programas from '../../assets/icon/programas.png'
 import './Home.css'
-import AlertWelcome from '../Alert/AlertWelcome';
 import { useState, useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
@@ -118,7 +117,7 @@ function Home() {
 
     return (
         <>
-            <AlertWelcome />
+            {/* <AlertWelcome /> */}
             <CarouselHome />
 
             <Container className='my-5'>

@@ -55,7 +55,11 @@ function PhotoGallery({ photos }: PhotoGalleryProps) {
         const loadPhotos = async () => {
             try {
                 const response = await axios.get('https://api-colegio.onrender.com/noticias/');
-                const fetchedPhotos = response.data;
+                let fetchedPhotos = response.data;
+
+                // Ordenar las noticias por noticiaId en orden descendente
+                fetchedPhotos.sort((a: any, b: any) => b.noticiaId - a.noticiaId);
+
                 setPhotos(fetchedPhotos);
                 setLikes(fetchedPhotos.map((photo: any) => photo.likes_count));
             } catch (error) {
@@ -116,29 +120,66 @@ function PhotoGallery({ photos }: PhotoGalleryProps) {
     return (
         <div className="gallery">
             <Row>
-                {currentPhotos.map((photo: any, index: number) => (
-                    <Col xs={12} sm={6} md={4} className="mb-4" key={indexOfFirstPhoto + index}>
-                        <Card className='shadow-sm'>
-                            <Card.Img variant="top" src={getFormattedBase64Image(photo.images[0])} />
-                            <Card.Body>
-                                <h5 className='d-flex justify-content-start'>{photo.titulo}</h5>
-                                <small className='d-flex justify-content-end'>{photo.fecha}</small>
-                                <Card.Text>{photo.description}</Card.Text>
-                                <Button
-                                    variant="primary"
-                                    onClick={() => handleLike(index)}
-                                    disabled={likedPhotos.includes(photo.noticiaId.toString())}>
-                                    <FontAwesomeIcon icon={faThumbsUp} /> Me gusta {likes[index]}
-                                </Button>
+                {[...currentPhotos] // Hacemos una copia del array para no modificar el original
+                    .reverse() // Invertimos el orden del array
+                    .map((photo: any, index: number) => {
+                        const isFirstChild = index === 0; // Comprobar si es la primera foto
 
-                                <Button variant="secondary mx-1" onClick={() => handleViewPhotos(photo)}>
-                                    <FontAwesomeIcon icon={faEye} /> Ver Fotografías
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
+                        return (
+                            <Col xs={12} sm={isFirstChild ? 12 : 6} md={isFirstChild ? 12 : 4} className="mb-4" key={indexOfFirstPhoto + index}>
+                                <Card className='shadow-sm'>
+                                    {isFirstChild ? (
+                                        <Row>
+                                            <Col md={7}>
+                                                <Card.Img variant="top" src={getFormattedBase64Image(photo.images[0])}
+                                                    className="img-fluid"
+                                                    style={{ height: '400px', width: '100%', objectFit: 'cover' }} />
+                                            </Col>
+                                            <Col md={5}>
+                                                <Card.Body>
+                                                    <small className='d-flex justify-content-start my-2'>{photo.fecha}</small>
+                                                    <h5 className='d-flex justify-content-start'>{photo.titulo}</h5>
+                                                    <Card.Text>{photo.description}</Card.Text>
+                                                    <Button
+                                                        variant="primary"
+                                                        onClick={() => handleLike(index)}
+                                                        disabled={likedPhotos.includes(photo.noticiaId.toString())}>
+                                                        <FontAwesomeIcon icon={faThumbsUp} /> Me gusta {likes[index]}
+                                                    </Button>
+
+                                                    <Button variant="secondary mx-1" onClick={() => handleViewPhotos(photo)}>
+                                                        <FontAwesomeIcon icon={faEye} /> Ver Fotografías
+                                                    </Button>
+                                                </Card.Body>
+                                            </Col>
+                                        </Row>
+                                    ) : (
+                                        // Diseño para las demás cards
+                                        <>
+                                            <Card.Img variant="top" src={getFormattedBase64Image(photo.images[0])} />
+                                            <Card.Body>
+                                                <small className='d-flex justify-content-start my-2'>{photo.fecha}</small>
+                                                <h5 className='d-flex justify-content-start'>{photo.titulo}</h5>
+                                                <Card.Text>{photo.description}</Card.Text>
+                                                <Button
+                                                    variant="primary"
+                                                    onClick={() => handleLike(index)}
+                                                    disabled={likedPhotos.includes(photo.noticiaId.toString())}>
+                                                    <FontAwesomeIcon icon={faThumbsUp} /> Me gusta {likes[index]}
+                                                </Button>
+
+                                                <Button variant="secondary mx-1" onClick={() => handleViewPhotos(photo)}>
+                                                    <FontAwesomeIcon icon={faEye} /> Ver Fotografías
+                                                </Button>
+                                            </Card.Body>
+                                        </>
+                                    )}
+                                </Card>
+                            </Col>
+                        );
+                    })}
             </Row>
+
             <Pagination className="justify-content-center mt-4 custom-pagination">
                 {[...Array(totalPages).keys()].map((page) => (
                     <Pagination.Item key={page + 1} active={page + 1 === currentPage} onClick={() => setCurrentPage(page + 1)}>
