@@ -24,28 +24,28 @@ const Contacto = () => {
                     <div className="body-card-contacto">
                         <h4 className='titulo-contacto'>Dirección</h4>
                         <div className='d-flex align-items-center my-3'>
-                            <FontAwesomeIcon icon={faHome} className='mx-2' size='xl' color='#74a6cf' />
+                            <FontAwesomeIcon icon={faHome} className='mx-2' size='xl' color='#1c2260' />
                             <p className='align-self-center adjust-text mx-1 txt'>Manuel Rodríguez #1064, Los Andes</p>
                         </div>
                     </div>
                     <div className="body-card-contacto">
                         <h4 className='titulo-contacto'>Horario de Atención</h4>
                         <div className='d-flex align-items-center my-3'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2' size='xl' color='#74a6cf' />
+                            <FontAwesomeIcon icon={faClock} className='mx-2' size='xl' color='#1c2260' />
                             <p className='align-self-center adjust-text mx-1 txt'>Lunes a Viernes | 08:00 | 16:45</p>
                         </div>
                     </div>
                     <div className="body-card-contacto">
                         <h4 className='titulo-contacto'>Correo Electrónico</h4>
                         <div className='d-flex align-items-center my-3'>
-                            <FontAwesomeIcon icon={faAt} className='mx-2' size='xl' color='#74a6cf' />
+                            <FontAwesomeIcon icon={faAt} className='mx-2' size='xl' color='#1c2260' />
                             <p className='align-self-center adjust-text mx-1 txt'>colegioandeschile@gmail.com</p>
                         </div>
                     </div>
                     <div className="body-card-contacto">
                         <h4 className='titulo-contacto'>Teléfono</h4>
                         <div className='d-flex align-items-center my-3'>
-                            <FontAwesomeIcon icon={faPhone} className='mx-2' size='xl' color='#74a6cf'/>
+                            <FontAwesomeIcon icon={faPhone} className='mx-2' size='xl' color='#1c2260'/>
                             <p className='align-self-center adjust-text mx-1 txt'>+56 2 402858</p>
                         </div>
                     </div>

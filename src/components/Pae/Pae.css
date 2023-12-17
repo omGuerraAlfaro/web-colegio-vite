@@ -1,8 +1,8 @@
 .tituloPae {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 3rem;
-    color: #683A67;
+    color: #1c2260;
     position: relative;
     padding-left: 25px;
     margin-bottom: 3rem;
@@ -16,14 +16,14 @@
     transform: translateY(-50%);
     width: 10px;
     height: 80%;
-    background-color: #683A67;
+    background-color: #1c2260;
 }
 
 .tituloAcordion {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    color: #683A67;
+    color: #1c2260;
     position: relative;
     padding-left: 25px;
 }
@@ -36,19 +36,19 @@
     transform: translateY(-50%);
     width: 10px;
     height: 80%;
-    background-color: #683A67;
+    background-color: #1c2260;
 }
 
-.tituloPrograma{
-    font-family: 'Roboto Mono', monospace;
+.tituloPrograma {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1rem;
-    color: #683A67;
+    color: #1c2260;
     position: relative;
 }
 
 .textAcordion {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -87,4 +87,3 @@
         font-size: 1rem;
     }
 }
-

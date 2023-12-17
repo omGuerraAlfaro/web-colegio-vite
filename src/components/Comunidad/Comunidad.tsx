@@ -38,7 +38,7 @@ function Comunidad() {
             caption: "PROGRAMAS EXTRACURRICULARES",
             title: "PROGRAMAS EXTRACURRICULARES",
             description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento docente, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
-            color: "#683A67"
+            color: "#1c2260"
         },
         {
             imgSrc: Programas,

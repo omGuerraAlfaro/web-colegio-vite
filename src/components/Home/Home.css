@@ -6,10 +6,10 @@
 }
 
 .titulo {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #683A67;
+  color: #1c2260;
   position: relative;
   padding-left: 25px;
 }
@@ -22,14 +22,14 @@
   transform: translateY(-50%);
   width: 10px;
   height: 80%;
-  background-color: #683A67;
+  background-color: #1c2260;
 }
 
 .titulo-card {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #683A67;
+  color: #1c2260;
   position: relative;
   padding-left: 25px;
 }
@@ -46,7 +46,7 @@
 }
 
 .parrafo {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
@@ -55,7 +55,7 @@
 }
 
 .parrafo-card {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
@@ -66,12 +66,11 @@
 
 
 @media (max-width: 480px) {
-  .titulo{
+  .titulo {
     font-size: 1.5rem;
   }
 
-  .parrafo{
+  .parrafo {
     font-size: 1rem;
   }
 }
-

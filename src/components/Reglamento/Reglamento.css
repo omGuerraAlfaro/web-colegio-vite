@@ -37,10 +37,10 @@
 
 
 .tituloReglamento {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
-    color: #683A67;
+    color: #1c2260;
     position: relative;
     padding-left: 25px;
 }
@@ -53,11 +53,11 @@
     transform: translateY(-50%);
     width: 10px;
     height: 80%;
-    background-color: #683A67;
+    background-color: #1c2260;
 }
 
 .textReglamento {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
 }

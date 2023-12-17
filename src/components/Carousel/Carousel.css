@@ -1,11 +1,11 @@
 .tituloCarrusel {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 2.5rem;
     color: #65bdc0;
     position: relative;
     padding-left: 25px;
-    -webkit-text-stroke: 1px white;    
+    -webkit-text-stroke: 1px white;
 }
 
 .my-carousel img {
@@ -32,7 +32,7 @@
 }
 
 .my-carousel .carousel-indicators button.active {
-    background-color: #683A67;
+    background-color: #1c2260;
 }
 
 .my-carousel .carousel-control-prev,
@@ -57,13 +57,13 @@
 @media (max-width: 992px) {
 
     .tituloCarrusel {
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'Poppins', sans-serif;
         font-weight: bold;
         font-size: 1.5rem;
         color: #65bdc0;
         position: relative;
         padding-left: 25px;
-        -webkit-text-stroke: 1px white;    
+        -webkit-text-stroke: 1px white;
     }
 
     .my-carousel img {

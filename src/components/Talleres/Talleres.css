@@ -1,8 +1,8 @@
 .tituloTaller {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
-    color: #683A67;
+    color: #1c2260;
     position: relative;
     padding-left: 25px;
 }
@@ -15,11 +15,11 @@
     transform: translateY(-50%);
     width: 10px;
     height: 80%;
-    background-color: #683A67;
+    background-color: #1c2260;
 }
 
 .parrafoTalleres {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: justify;
     text-justify: inter-word;
@@ -46,7 +46,7 @@
     top: 0;
     bottom: 0;
     width: 6px;
-    background-color: #74a6cf;
+    background-color: #1c2260;
 }
 
 @media (max-width: 880px) {
@@ -65,15 +65,16 @@
         margin-bottom: 30px;
     }
 }
-.hrclass{
-width: 50%;
+
+.hrclass {
+    width: 50%;
 }
 
-.titulo-taller{
-    color: #74a6cf;
+.titulo-taller {
+    color: #1c2260;
 }
 
-.awesome{
+.awesome {
     font-size: 1.5rem;
-    color: #74a6cf;
+    color: #1c2260;
 }

@@ -1,10 +1,10 @@
 /* ******************************************** */
 
 .tituloMision {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #683A67;
+  color: #1c2260;
   position: relative;
   padding-left: 25px;
 }
@@ -17,11 +17,11 @@
   transform: translateY(-50%);
   width: 10px;
   height: 80%;
-  background-color: #683A67;
+  background-color: #1c2260;
 }
 
 .parrafoMision {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
@@ -34,10 +34,10 @@
 /* ******************************************** */
 
 .tituloVision {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #683A67;
+  color: #1c2260;
   position: relative;
   padding-left: 25px;
 }
@@ -50,11 +50,11 @@
   transform: translateY(-50%);
   width: 10px;
   height: 80%;
-  background-color: #683A67;
+  background-color: #1c2260;
 }
 
 .parrafoVision {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
@@ -67,10 +67,10 @@
 /* ******************************************** */
 
 .tituloHistoria {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #683A67;
+  color: #1c2260;
   position: relative;
   padding-left: 25px;
 }
@@ -83,12 +83,12 @@
   transform: translateY(-50%);
   width: 10px;
   height: 80%;
-  background-color: #683A67;
+  background-color: #1c2260;
   /* background-color: #73a7c7; */
 }
 
 .parrafoHistoria {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;

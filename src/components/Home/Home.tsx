@@ -99,7 +99,7 @@ function Home() {
             caption: "PROGRAMAS EXTRACURRICULARES",
             title: "PROGRAMAS EXTRACURRICULARES",
             description: "Ofrecemos una amplia variedad de programas extracurriculares diseñados para complementar la formación académica de nuestros estudiantes. Desde actividades deportivas, talleres artísticos, talleres de ciencia y tecnología; nuestros programas buscan desarrollar habilidades, pasiones y talentos en un ambiente de sana convivencia y diversión.",
-            color: "#683A67"
+            color: "#1c2260"
         },
         {
             imgSrc: Excelencia,
@@ -151,7 +151,7 @@ function Home() {
                 </Row>
             </Container>
 
-            <Container className='my-5'>
+            <Container className='my-5' id='noticias'>
                 <h3 className="titulo fonty1 mb-4">Galería de Noticias</h3>
                 {isLoading ? (
                     <div className="d-flex justify-content-center align-items-center">

@@ -61,7 +61,7 @@
 
 
 .textFooter {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: #585858 !important;
@@ -74,7 +74,7 @@
 }
 
 .textFooter2 {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: #585858 !important;
@@ -108,7 +108,7 @@
 }
 
 .whatsapp:hover .whatsapp-icon {
-    color: #FFF;    
+    color: #FFF;
 }
 
 .whatsapp-icon {

@@ -15,16 +15,16 @@
 }
 
 .textSteps {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
 }
 
 .tituloAdmision {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    color: #683A67;
+    color: #1c2260;
     position: relative;
     margin-bottom: 1rem;
 }
