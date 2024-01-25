@@ -4,8 +4,25 @@ import './Carousel.css'
 import carousel1 from '../../assets/img/carousel1.jpg'
 import pae from '../../assets/img/pae.png'
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function CarouselHome() {
+
+
+    // Dentro de tu componente
+    const navigate = useNavigate();
+
+    const handleNavClick = () => {
+        if (window.location.pathname !== '/') {
+            navigate('/');
+        }
+        setTimeout(() => {
+            const noticiasElement = document.getElementById('noticias');
+            if (noticiasElement) {
+                noticiasElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+    };
 
     return (
         <>
@@ -41,7 +58,7 @@ function CarouselHome() {
                         />
                         <Carousel.Caption>
                             <h2 className='tituloCarrusel'>¡Nuestra comunidad educativa!</h2>
-                            <Button href='/comunidad' variant="outline-primary" className="buttonAnimated mx-3">Comunidad educativa</Button>
+                            <Button onClick={handleNavClick} variant="outline-primary" className="buttonAnimated mx-3">Comunidad educativa</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

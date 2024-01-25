@@ -75,7 +75,7 @@ function Home() {
             caption: "AMBIENTE INCLUSIVO",
             title: "AMBIENTE INCLUSIVO",
             description: "En Nuestra Comunidad Colegio Andes Chile, cada estudiante es esencial. Nuestro compromiso es que cada miembro se sienta valorado y respetado, creando así un ambiente óptimo para el aprendizaje y crecimiento personal. Ofrecemos oportunidades para explorar, compartir y aprender, asegurando que todos tengan voz y espacio. Nuestra misión es construir juntos un futuro donde la educación sea sinónimo de unidad y respeto y amor. Te invitamos a ser parte de este viaje y a enriquecer nuestra comunidad con tu presencia.",
-            color: "#FBAE3C"
+            color: "#c12437"
         },
         {
             imgSrc: Docentes,
@@ -83,7 +83,7 @@ function Home() {
             caption: "CUERPO DOCENTE CALIFICADO",
             title: "CUERPO DOCENTE CALIFICADO",
             description: "Contamos con un equipo de docentes altamente calificado, comprometidos con la formación integral de nuestros estudiantes. Muchos de nuestros profesores han demostrado una lealtad institucional, siendo pilares fundamentales en nuestra comunidad educativa a lo largo de los años. Nuestro cuerpo docente se somete a formaciones continuas, garantizando así la adopción de las mejores prácticas pedagógicas. Esta combinación de experiencia, dedicación y pasión por la enseñanza asegura que cada estudiante reciba una educación personalizada y de alta calidad.",
-            color: "#C0526A"
+            color: "#e58b5b"
         },
         {
             imgSrc: Programas,
@@ -107,7 +107,7 @@ function Home() {
             caption: "EXCELENCIA ACADÉMICA",
             title: "EXCELENCIA ACADÉMICA",
             description: "Aspiramos a la excelencia en todos los ámbitos del quehacer educativo, la que se expresa en la búsqueda constante de nuevas metodologías, perfeccionamiento de nuestros profesionales en la unidad técnica pedagogica (UTP) y todos nuestros docentes, revisión y actualización de contenidos; todo ello acompañado de los recursos humanos y tecnológicos necesarios para brindar una educación de calidad.",
-            color: "#F6884D"
+            color: "#666666"
         },
 
 

@@ -8,7 +8,6 @@ import "leaflet/dist/leaflet.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
-import Comunidad from './components/Comunidad/Comunidad.tsx';
 import Pae from './components/Pae/Pae.tsx';
 import Reglamento from './components/Reglamento/Reglamento.tsx';
 import Utiles from './components/Utiles/Utiles.tsx';
@@ -16,6 +15,7 @@ import Talleres from './components/Talleres/Talleres.tsx';
 import Contacto from './components/Contacto/Contacto.tsx';
 import Admision from './components/Admision/Admision.tsx';
 import EscuelaVerano from './components/Verano/Verano.tsx';
+import MisionVision from './components/MisionVision/MisionVision.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -29,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/comunidad" element={<Comunidad />} />
+        <Route path="/mision-vision" element={<MisionVision />} />
         <Route path="/pae" element={<Pae />} />
         <Route path="/reglamento" element={<Reglamento />} />
         <Route path="/utiles" element={<Utiles />} />

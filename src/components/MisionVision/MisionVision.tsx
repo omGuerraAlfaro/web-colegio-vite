@@ -2,11 +2,11 @@
 // import Card from 'react-bootstrap/Card';
 // import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import './Comunidad.css'
+import './MisionVision.css'
 import CarouselComunidad from '../Carousel/CarouselComunidad';
 import AndesSlogan from '../../assets/img/slogan2.png';
 
-function Comunidad() {
+function MisionVision() {
     /* const compromisos = [
         {
             imgSrc: Inclusividad,
@@ -97,4 +97,4 @@ function Comunidad() {
     )
 }
 
-export default Comunidad
+export default MisionVision

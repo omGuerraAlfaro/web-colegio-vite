@@ -45,7 +45,7 @@ const Navbar = () => {
             <Nav className="me-auto d-flex justify-content-between align-items-center w-100">
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/") ? "active-link" : ""}`} href="/">Inicio</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/#noticias") ? "active-link" : ""}`} onClick={handleNavClick}>Noticias</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/comunidad") ? "active-link" : ""}`} href="/comunidad">Misión - Visión</Nav.Link>
+              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/comunidad") ? "active-link" : ""}`} href="/mision-vision">Misión - Visión</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/pae") ? "active-link" : ""}`} href="/pae">Programa PAE</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/reglamento") ? "active-link" : ""}`} href="/reglamento">Reglamento Interno de Convivencia Escolar</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/utiles") ? "active-link" : ""}`} href="/utiles">Lista de Útiles</Nav.Link>

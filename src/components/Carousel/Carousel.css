@@ -1,11 +1,16 @@
 .tituloCarrusel {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 2.5rem;
-    color: #65bdc0;
+    font-size: 3rem;
+    color: #8fcfe5;
     position: relative;
-    padding-left: 25px;
-    -webkit-text-stroke: 1px white;
+    padding-left: 20px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .my-carousel img {
