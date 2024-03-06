@@ -56,6 +56,7 @@ const FormularioAdmision = () => {
       const headers = {
         'Content-Type': 'application/json',
       };
+      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
       Swal.fire({
         title: '¡Gracias!',
         text: 'Su formulario de admisión ha sido enviado.',
@@ -66,10 +67,19 @@ const FormularioAdmision = () => {
       }).then(() => {
         formik.resetForm();
       });
-      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
       // console.log(response.data);
     } catch (error) {
       console.error('Error al enviar los datos:', error);
+      Swal.fire({
+        title: '¡ Lo Sentimos :( !',
+        text: 'Tenemos problemas con nuestros servicios, por favor intente más tarde. Si el problema persiste, por favor contacte al colegio a través de nuestro Whatsapp.',
+        icon: 'error',
+        confirmButtonText: 'Entendido',
+        timer: 8000,
+        timerProgressBar: true,
+      }).then(() => {
+        formik.resetForm();
+      });
     }
   }
 
