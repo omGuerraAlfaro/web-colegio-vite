@@ -50,9 +50,9 @@ const Navbar = () => {
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/reglamento") ? "active-link" : ""}`} href="/reglamento">Reglamento Interno de Convivencia Escolar</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/utiles") ? "active-link" : ""}`} href="/utiles">Lista de Útiles</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/talleres") ? "active-link" : ""}`} href="/talleres">Talleres</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/contacto") ? "active-link" : ""}`} href="/contacto">Contacto</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/admision") ? "active-link" : ""}`} href="/admision">Admisión 2024</Nav.Link>
               <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/verano") ? "active-link" : ""}`} href="/verano">Escuela de Verano</Nav.Link>
+              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/admision") ? "active-link" : ""}`} href="/admision">Admisión 2024</Nav.Link>
+              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/contacto") ? "active-link" : ""}`} href="/contacto">Contacto</Nav.Link>
             </Nav>
           </RBNavbar.Collapse>
         </Container>

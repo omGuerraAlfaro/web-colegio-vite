@@ -41,7 +41,13 @@ function Home() {
     useEffect(() => {
         async function fetchNoticias() {
             try {
-                const response = await axios.get('https://api-colegio.onrender.com/noticias');
+                const response = await axios.get('https://api-colegio.onrender.com/noticias', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Añade aquí otros headers que tu API necesite
+                    },
+                    withCredentials: true // Solo si necesitas enviar o recibir cookies
+                });
                 const transformedNoticias = response.data.map((noticia: { images: string[]; }) => {
                     noticia.images = noticia.images.map(image => {
                         if (isValidBase64(image)) {
