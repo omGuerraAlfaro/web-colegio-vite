@@ -1,0 +1,76 @@
+.card-icon {
+  width: 30% !important;
+  align-items: center !important;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.titulo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1c2260;
+  position: relative;
+  padding-left: 25px;
+}
+
+.titulo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #1c2260;
+}
+
+.titulo-card {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1c2260;
+  position: relative;
+  padding-left: 25px;
+}
+
+.titulo-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #ffffff;
+}
+
+.parrafo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.parrafo-card {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1rem;
+  color: #FBAE3C;
+}
+
+
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .parrafo {
+    font-size: 1rem;
+  }
+}
