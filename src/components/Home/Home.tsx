@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
+import AlertWelcome from '../Alert/AlertWelcome';
 
 function base64ToURL(base64: any) {
     const binary = atob(base64);
@@ -123,7 +124,7 @@ function Home() {
 
     return (
         <>
-            {/* <AlertWelcome /> */}
+            <AlertWelcome />
             <CarouselHome />
 
             <Container className='my-5'>

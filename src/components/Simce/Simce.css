@@ -1,0 +1,137 @@
+/* ******************************************** */
+
+.tituloMision {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1c2260;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tituloMision::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #1c2260;
+}
+
+.parrafoMision {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* ******************************************** */
+
+/* ******************************************** */
+
+.tituloVision {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1c2260;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tituloVision::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #1c2260;
+}
+
+.parrafoVision {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* ******************************************** */
+
+/* ******************************************** */
+
+.tituloHistoria {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1c2260;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tituloHistoria::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 80%;
+  background-color: #1c2260;
+  /* background-color: #73a7c7; */
+}
+
+.parrafoHistoria {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* ******************************************** */
+
+.center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .tituloMision,
+  .tituloVision,
+  .tituloHistoria {
+    font-size: 2rem;
+    padding-left: 20px;
+  }
+
+  .parrafoMision,
+  .parrafoVision,
+  .parrafoHistoria {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .tituloMision,
+  .tituloVision,
+  .tituloHistoria {
+    font-size: 1.5rem;
+    padding-left: 15px;
+  }
+
+  .parrafoMision,
+  .parrafoVision,
+  .parrafoHistoria {
+    font-size: 1rem;
+  }
+
+}

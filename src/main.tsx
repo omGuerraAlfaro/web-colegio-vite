@@ -17,6 +17,7 @@ import Admision from './components/Admision/Admision.tsx';
 import EscuelaVerano from './components/Verano/Verano.tsx';
 import MisionVision from './components/MisionVision/MisionVision.tsx';
 import RespuestaWebPay from './components/RespuestaWebPay/RespuestaWebPay.tsx';
+import Simce from './components/Simce/Simce.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/admision" element={<Admision />} />
         <Route path="/verano" element={<EscuelaVerano />} />
         <Route path="/webpay-respuesta" element={<RespuestaWebPay />} />
+        <Route path="/info-simce" element={<Simce />} />
       </Routes>
       <FooterColegio />
     </Router>
