@@ -2,7 +2,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css'
 import hall from '../../assets/img/fotoHall.png'
-
+import foto6 from '../../assets/img/imagenes carrusel/6.png';
+import foto1 from '../../assets/img/imagenes carrusel/1.png';
 function CarouselComunidad() {
 
     return (
@@ -21,7 +22,7 @@ function CarouselComunidad() {
                         <img
                             className="d-block"
                             style={{ width: "100%", height: "100%" }}
-                            src={hall}
+                            src={foto6}
                             alt="First slide"
                         />
                     </Carousel.Item>
@@ -29,7 +30,7 @@ function CarouselComunidad() {
                         <img
                             className="d-block"
                             style={{ width: "100%", height: "100%" }}
-                            src={hall}
+                            src={foto1}
                             alt="First slide"
                         />
                     </Carousel.Item>

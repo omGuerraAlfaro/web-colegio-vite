@@ -4,7 +4,9 @@
 import Container from 'react-bootstrap/Container';
 import './MisionVision.css'
 import CarouselComunidad from '../Carousel/CarouselComunidad';
-import AndesSlogan from '../../assets/img/slogan2.png';
+import AndesSlogan from '../../assets/img/imagenes carrusel/1.png'
+import CarouselSimce from '../Carousel/CarouselSimce';
+
 
 function MisionVision() {
     /* const compromisos = [
@@ -68,7 +70,7 @@ function MisionVision() {
                         <p className='parrafoVision'>El colegio Andes Chile busca ser un centro educativo integral, enfocado en la formación académica inclusiva, complementando su cuerpo docente con la una educación que responde al curriculum vigente y a las necesidades individuales de los estudiantes, a traves, del conocimiento personal y familiar de la comunidad educativa.</p>
                     </div>
                     <div className="col-md-6 col-12 school-info">
-                        <CarouselComunidad />
+                        <CarouselSimce />
                     </div>
                 </div>
             </Container>
@@ -87,7 +89,7 @@ function MisionVision() {
 
             <Container className='my-5 d-none d-md-block'>
                 <div className='center'>
-                    <img src={AndesSlogan} width="50%" height="50%" className="my-3" />
+                    <img src={AndesSlogan} width="70%" height="90%" className="mb-3" />
                 </div>
             </Container>
 

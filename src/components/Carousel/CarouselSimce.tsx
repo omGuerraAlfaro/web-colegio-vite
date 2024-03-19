@@ -1,16 +1,25 @@
 // import { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import './Carousel.css'
-import hall from '../../assets/img/fotoHall.png'
+import './Carousel.css';
+import foto2 from '../../assets/img/imagenes carrusel/2.png';
+import foto4 from '../../assets/img/imagenes carrusel/4.png';
 import foto5 from '../../assets/img/imagenes carrusel/5.png';
 
 
-function CarouselTalleres() {
+function CarouselSimce() {
 
     return (
         <>
             <div className="carousel-wrapper">
                 <Carousel className="my-carousel container" >
+                    <Carousel.Item>
+                        <img
+                            className="d-block"
+                            style={{ width: "100%", height: "100%" }}
+                            src={foto2}
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block"
@@ -23,15 +32,7 @@ function CarouselTalleres() {
                         <img
                             className="d-block"
                             style={{ width: "100%", height: "100%" }}
-                            src={hall}
-                            alt="First slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block"
-                            style={{ width: "100%", height: "100%" }}
-                            src={hall}
+                            src={foto4}
                             alt="First slide"
                         />
                     </Carousel.Item>
@@ -42,4 +43,4 @@ function CarouselTalleres() {
     )
 }
 
-export default CarouselTalleres
+export default CarouselSimce

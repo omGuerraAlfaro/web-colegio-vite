@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import './simce.css'
-import CarouselComunidad from '../Carousel/CarouselComunidad';
 import Grafica from '../../assets/img/SIMCE.png';
+import CarouselSimce from '../Carousel/CarouselSimce';
 
 function Simce() {
 
@@ -12,7 +12,7 @@ function Simce() {
             <Container className='my-2'>
                 <div className="row d-flex justify-content-center align-items-center">
                     <div className="col-md-6 col-12 mb-5">
-                        <CarouselComunidad />
+                        <CarouselSimce />
                     </div>
                     <div className="col-md-6 col-12 school-info mb-5">
                         <h4 className='tituloMision'>Resultados SIMCE 2023</h4>
