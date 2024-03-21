@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faSchool } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import "./Formulario.css"
@@ -12,9 +12,9 @@ const formSchema = yup.object().shape({
   apoderado: yup.string().required('El nombre del apoderado es requerido'),
   telefono: yup.string().required('El teléfono es requerido'),
   email: yup.string().email('Debe ser un email válido').required('El email es requerido'),
-  colegio: yup.string().required('El colegio de procedencia es requerido'),
   consentimiento: yup.boolean().oneOf([true], 'El consentimiento es requerido'),
-  tallerPostula: yup.string().required('El taller al que postula es requerido')
+  tallerPostula: yup.string().required('El taller al que postula es requerido'),
+  cursoPostula: yup.string().required('El curso al que postula es requerido')
 });
 
 const FormularioTalleres = () => {
@@ -26,6 +26,7 @@ const FormularioTalleres = () => {
       email: '',
       colegio: '',
       tallerPostula: '',
+      cursoPostula: '',
       consentimiento: false
     },
     validationSchema: formSchema,
@@ -68,7 +69,8 @@ const FormularioTalleres = () => {
       const headers = {
         'Content-Type': 'application/json',
       };
-      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
+      await axios.post('http://localhost:3200/correo/enviar/taller', data, { headers: headers });
+      // await axios.post('https://api-colegio.onrender.com/correo/enviar/taller', data, { headers: headers });
       Swal.fire({
         title: '¡Gracias!',
         text: 'Su formulario de inscripción ha sido enviado.',
@@ -122,15 +124,39 @@ const FormularioTalleres = () => {
               <Form.Control
                 className="rounded-input"
                 as="select"
-                name="tallerPostula"
+                name="cursoPostula"
                 onChange={formik.handleChange}
-                value={formik.values.tallerPostula}
-                isInvalid={!!formik.errors.tallerPostula && formik.touched.tallerPostula}
+                value={formik.values.cursoPostula}
+                isInvalid={!!formik.errors.cursoPostula && formik.touched.cursoPostula}
               >
                 <option value="" disabled hidden>Seleccionar Curso</option>
                 {cursos.map((curso, index) => (
                   <option key={index} value={curso}>
                     {curso}
+                  </option>
+                ))}
+              </Form.Control>
+              <Form.Control.Feedback type="invalid">
+                {formik.errors.cursoPostula}
+              </Form.Control.Feedback>
+            </div>
+          </Form.Group>
+
+          <Form.Group className="margenLabel">
+            <Form.Label><small><strong>Taller al que postula</strong></small></Form.Label>
+            <div className="select-wrapper">
+              <Form.Control
+                className="rounded-input"
+                as="select"
+                name="tallerPostula"
+                onChange={formik.handleChange}
+                value={formik.values.tallerPostula}
+                isInvalid={!!formik.errors.tallerPostula && formik.touched.tallerPostula}
+              >
+                <option value="" disabled hidden>Seleccionar Taller</option>
+                {talleres.map((taller, index) => (
+                  <option key={index} value={taller}>
+                    {taller}
                   </option>
                 ))}
               </Form.Control>
@@ -156,29 +182,6 @@ const FormularioTalleres = () => {
             </Form.Control.Feedback>
           </Form.Group>          
 
-          <Form.Group className="margenLabel">
-            <Form.Label><small><strong>Taller al que postula</strong></small></Form.Label>
-            <div className="select-wrapper">
-              <Form.Control
-                className="rounded-input"
-                as="select"
-                name="tallerPostula"
-                onChange={formik.handleChange}
-                value={formik.values.tallerPostula}
-                isInvalid={!!formik.errors.tallerPostula && formik.touched.tallerPostula}
-              >
-                <option value="" disabled hidden>Seleccionar Taller</option>
-                {talleres.map((taller, index) => (
-                  <option key={index} value={taller}>
-                    {taller}
-                  </option>
-                ))}
-              </Form.Control>
-              <Form.Control.Feedback type="invalid">
-                {formik.errors.tallerPostula}
-              </Form.Control.Feedback>
-            </div>
-          </Form.Group>
 
           <Row className="margenLabel">
             <Col md={6} xs={12}>
