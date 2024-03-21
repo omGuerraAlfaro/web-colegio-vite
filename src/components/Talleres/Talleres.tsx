@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faChildren, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
 import './Talleres.css';
 import CarouselTalleres from '../Carousel/CarouselTalleres';
+import FormularioTalleres from '../Formularios/FormularioTalleres';
 
 function Talleres() {
     return (
@@ -144,7 +145,8 @@ function Talleres() {
                             <p className='align-self-center adjust-text'>Anggelo Álvarez</p>
                         </div>
                     </div>
-                </Col>                
+                </Col>   
+                <FormularioTalleres />             
             </Row>
         </Container>
     );
