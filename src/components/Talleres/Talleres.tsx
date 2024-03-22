@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faChildren, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faChildren, faPersonChalkboard, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import './Talleres.css';
 import CarouselTalleres from '../Carousel/CarouselTalleres';
 import FormularioTalleres from '../Formularios/FormularioTalleres';
@@ -33,6 +33,10 @@ function Talleres() {
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Miss Paula Muñoz</p>
                         </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Gratis</b></p>
+                        </div>
                         <hr className='hrclass'/>
                         <div className='d-flex align-items-center mt-3'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
@@ -45,6 +49,10 @@ function Talleres() {
                         <div className='d-flex align-items-center my-1'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Miss Paula Muñoz</p>
+                        </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Gratis</b></p>
                         </div>
                     </div>
                 </Col>
@@ -63,6 +71,10 @@ function Talleres() {
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Juan Francisco Palacios</p>
                         </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Gratis</b></p>
+                        </div>
                         <hr className='hrclass'/>
                         <div className='d-flex align-items-center mt-3'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
@@ -75,6 +87,10 @@ function Talleres() {
                         <div className='d-flex align-items-center my-1'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Juan Francisco Palacios</p>
+                        </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Gratis</b></p>
                         </div>
                     </div>
                 </Col>
@@ -93,6 +109,10 @@ function Talleres() {
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Javiera Muñoz</p>
                         </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>4 clases por $16.000</p>
+                        </div>
                     </div>
                 </Col>
                 <Col md={4} sm={6} xs={12}>
@@ -109,6 +129,10 @@ function Talleres() {
                         <div className='d-flex align-items-center my-1'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Erick Jegó</p>
+                        </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>4 clases por $16.000</p>
                         </div>
                     </div>
                 </Col>
@@ -127,6 +151,10 @@ function Talleres() {
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Miguel Ángel Gomez</p>
                         </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>4 clases por $16.000</p>
+                        </div>
                     </div>
                 </Col>
                 <Col md={4} sm={6} xs={12}>
@@ -143,6 +171,10 @@ function Talleres() {
                         <div className='d-flex align-items-center my-1'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Anggelo Álvarez</p>
+                        </div>
+                        <div className='d-flex align-items-center my-1'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>4 clases por $16.000</p>
                         </div>
                     </div>
                 </Col>   

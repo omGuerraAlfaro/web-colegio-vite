@@ -40,15 +40,12 @@ const FormularioTalleres = () => {
   });
 
   const talleres = [
-    "Futbol",
-    "Basquetbol",
-    "Voleibol",
-    "Ajedrez",
-    "Ballet",
-    "Danza",
-    "Teatro",
-    "Pintura",
-    "Música"
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
   ];
 
   const cursos = [
