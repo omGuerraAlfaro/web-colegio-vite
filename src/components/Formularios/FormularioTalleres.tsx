@@ -40,12 +40,18 @@ const FormularioTalleres = () => {
   });
 
   const talleres = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
+    "Taller de Circo y Malabares",
+    "Taller de Ingles",
+    "Taller Fútbol Recreativo",
+    "Taller Instrumental y Expresión Musical",
+    "Taller de Reforzamiento",
+    "Taller de Ballet",
+    "Taller de Manualidades",
+    "Taller de Teatro y Expresión Corporal",
+    "Taller Voleibol Recreativo",
+    "Taller Danza Recreativa",
+    "Taller Simce 4to Básico",
+    "Taller de Defensa Personal",
   ];
 
   const cursos = [
