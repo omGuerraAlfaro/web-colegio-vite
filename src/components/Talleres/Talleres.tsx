@@ -36,7 +36,7 @@ function Talleres() {
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>Gratis</b></p>
+                            <p className='align-self-center adjust-text mx-3'><b>$16.000(Valor Mensual)</b></p>
                         </div>
                         <hr className='hrclass' />
                         <h6 className='cupos'>10 cupos máximo</h6>
@@ -67,7 +67,7 @@ function Talleres() {
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faChildren} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Segundo Ciclo</p>
+                            <p className='align-self-center adjust-text'>Primer Ciclo</p>
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
@@ -143,7 +143,7 @@ function Talleres() {
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faChildren} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Segundo Ciclo</p>
+                            <p className='align-self-center adjust-text'>Primer Ciclo</p>
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
@@ -168,7 +168,7 @@ function Talleres() {
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>$16.000(Valor Mensual)</b></p>
+                            <p className='align-self-center adjust-text mx-3'><b>Gratis</b></p>
                         </div>
                     </div>
                 </Col>
@@ -269,7 +269,7 @@ function Talleres() {
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>$16.000(Valor Mensual)</b></p>
+                            <p className='align-self-center adjust-text mx-3'><b>Gratis</b></p>
                         </div>
                     </div>
                 </Col>
@@ -341,7 +341,7 @@ function Talleres() {
                         <h4 className='titulo-taller'>Taller de Defensa Personal</h4>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Viernes | 14:45 | 15:15</p>
+                            <p className='align-self-center adjust-text mx-1'>Viernes | 14:15 | 15:15</p>
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faChildren} className='mx-2 awesome' />
