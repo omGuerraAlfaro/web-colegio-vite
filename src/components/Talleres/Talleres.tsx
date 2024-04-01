@@ -14,9 +14,12 @@ function Talleres() {
                     <CarouselTalleres />
                 </Col>
                 <Col md={6} sm={6} xs={12}>
-                    <p className='parrafoTalleres'>Dentro de nuestra comunidad, creemos que el aprendizaje va más allá del aula. Los talleres son vitales para brindar experiencias prácticas, fomentando la creatividad y la colaboración. Son oportunidades para que nuestros estudiantes se empoderen y enriquezcan su formación, consolidando nuestro compromiso con una educación integral y significativa.</p>
+                    <p className='parrafoTalleres'>Dentro de nuestra comunidad, creemos que el aprendizaje va más allá del aula.</p>
+                    <p className='parrafoTalleres'>Este año como colegio ampliamos la gama de talleres, entregando más opciones con el fin de fomentar el desarrollo de diversas habilidades en nuestros niños y niñas, y que puedan explorar diferentes áreas para un desarrollo integral.</p>
+                    <p className='parrafoTalleres'>A continuación se detallan los talleres con el día que se llevará a cabo y su costo.</p>
                 </Col>
             </Row>
+
             <Row>
                 <Col md={4} sm={6} xs={12}>
                     <div className="body-card">
@@ -357,6 +360,35 @@ function Talleres() {
                         </div>
                     </div>
                 </Col>
+                <Container>
+                    <Col md={12} sm={6} xs={12}>
+                        <code className='nota text-center d-none d-md-block'>Nota: Aquellos estudiantes que asistan deberán traer su colación fría para ingerirla a la salida de clases (14:15 hrs).</code>
+                        <code className='notaCel text-center d-block d-md-none'>Nota: Aquellos estudiantes que asistan deberán traer su colación fría para ingerirla a la salida de clases (14:15 hrs).</code>
+                        <div className='cuadroProfe'>
+                            <div className='text-center'>
+                                <h3>Teller de Circo</h3>
+                                <h3>Luis Adán Salinas Vera</h3>
+                                <p>Tecnólogo en deportes y recreación, Magíster en ciencias de la salud y el deporte</p>
+                                <p>Especialidad en la Escuela de Artes Circense del Circo del Mundo-Chile. Santiago de Chile</p>
+                            </div>
+                        </div>
+                        <div className='cuadroProfe'>
+                            <div className='text-center'>
+                                <h3>Teller de Ballet</h3>
+                                <h3>Paula Flores Casanova</h3>
+                                <p>Danza y Coreografía Uniacc</p>
+                                <p>Docente en academia semillitas e interprete compañía de danza Matices</p>
+                            </div>
+                        </div>
+                        <div className='cuadroProfe'>
+                            <div className='text-center'>
+                                <h3>Teller de Defensa Personal y Artes Marciales</h3>
+                                <h3>Mushka Ceballos Arenas</h3>
+                                <p>Instructora certificada Cinturón Negro III Dan</p>
+                            </div>
+                        </div>
+                    </Col>
+                </Container>
             </Row>
 
             <h3 className="titulo my-3">Formulario de Inscripción Talleres 2024</h3>
