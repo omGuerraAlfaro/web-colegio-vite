@@ -366,7 +366,7 @@ function Talleres() {
                         <code className='notaCel text-center d-block d-md-none'>Nota: Aquellos estudiantes que asistan deberán traer su colación fría para ingerirla a la salida de clases (14:15 hrs).</code>
                         <div className='cuadroProfe'>
                             <div className='text-center'>
-                                <h3>Teller de Circo</h3>
+                                <h3>Taller de Circo</h3>
                                 <h3>Luis Adán Salinas Vera</h3>
                                 <p>Tecnólogo en deportes y recreación, Magíster en ciencias de la salud y el deporte</p>
                                 <p>Especialidad en la Escuela de Artes Circense del Circo del Mundo-Chile. Santiago de Chile</p>
@@ -374,7 +374,7 @@ function Talleres() {
                         </div>
                         <div className='cuadroProfe'>
                             <div className='text-center'>
-                                <h3>Teller de Ballet</h3>
+                                <h3>Taller de Ballet</h3>
                                 <h3>Paula Flores Casanova</h3>
                                 <p>Danza y Coreografía Uniacc</p>
                                 <p>Docente en academia semillitas e interprete compañía de danza Matices</p>
@@ -382,7 +382,7 @@ function Talleres() {
                         </div>
                         <div className='cuadroProfe'>
                             <div className='text-center'>
-                                <h3>Teller de Defensa Personal y Artes Marciales</h3>
+                                <h3>Taller de Defensa Personal y Artes Marciales</h3>
                                 <h3>Mushka Ceballos Arenas</h3>
                                 <p>Instructora certificada Cinturón Negro III Dan</p>
                             </div>
