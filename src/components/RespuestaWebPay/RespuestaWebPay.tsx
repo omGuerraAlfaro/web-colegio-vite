@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import axios from 'axios';
-import './RespuestaWebPay.css'; 
+import './RespuestaWebPay.css';
 
 export interface WebpayResponse {
     vci?: string;
@@ -44,7 +44,7 @@ function RespuestaWebPay() {
     };
     const getWebpayResponse = async (token: string) => {
         try {
-            const response = await axios.post(`https://api-colegio.onrender.com/payment/confirm`, {token} , config);
+            const response = await axios.post(`https://api-colegio.onrender.com/payment/confirm`, { token }, config);
             setWebpayRespuesta(response.data);
         } catch (error) {
             console.error('Error al obtener la respuesta de Webpay:', error);
@@ -68,9 +68,16 @@ function RespuestaWebPay() {
                     <p>PAYMENT_TYPE_CODE = {webpayRespuesta.payment_type_code}</p>
                     <p>RESPONSE_CODE = {webpayRespuesta.response_code}</p>
                     <p>INSTALLMENTS_NUMBER = {webpayRespuesta.installments_number}</p>
+
+                    
+                    <a href="intent://colegioandeschile.cl/app#Intent;scheme=https;package=colegio.andes.chile.app;end">Volver a la APP</a>
                 </>
             ) : (
-                <p>Cargando respuesta...</p>
+                <>
+                    <p>Cargando respuesta...</p>
+                </>
+
+
             )}
         </Container>
     );
