@@ -46,11 +46,8 @@ function RespuestaWebPay() {
             const session_id = queryParams.get('TBK_ID_SESION')?.toString();
 
             const data = { buy_order, session_id };
-            console.log(data);
 
             setAnulacionCompraRespuesta(data);
-            console.log(AnulacionCompraRespuesta);
-
         }
 
         if (token) {
@@ -73,17 +70,16 @@ function RespuestaWebPay() {
         }
     };
 
-    const putBoleta = async (data: putBoletaResponse) => {
-        try {
-            const response = await axios.put(`https://api-colegio.onrender.com/boleta/updateBoleta`, data, config)
-            setBoletaUpdateRespuesta(response.data);
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
+    // const putBoleta = async (data: putBoletaResponse) => {
+    //     try {
+    //         const response = await axios.put(`https://api-colegio.onrender.com/boleta/updateBoleta`, data, config)
+    //         setBoletaUpdateRespuesta(response.data);
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //     }
+    // }
+
     if (AnulacionCompraRespuesta) {
-        console.log(AnulacionCompraRespuesta);
-        
         return <TransactionNull data={AnulacionCompraRespuesta} />;
     }
 
@@ -101,16 +97,16 @@ function RespuestaWebPay() {
         case 'TSY':
         case 'TSYS':
         case 'TSYF':
-            const rawId = webpayRespuesta.buy_order ? webpayRespuesta.buy_order.split('-').pop() : null;
-            const idBoleta = rawId && !isNaN(parseInt(rawId, 10)) ? parseInt(rawId, 10) : undefined;
+            // const rawId = webpayRespuesta.buy_order ? webpayRespuesta.buy_order.split('-').pop() : null;
+            // const idBoleta = rawId && !isNaN(parseInt(rawId, 10)) ? parseInt(rawId, 10) : undefined;
 
-            const updateData: putBoletaResponse = {
-                idBoleta: idBoleta,
-                estado: 2,
-                idPago: webpayRespuesta.buy_order
-            };
+            // const updateData: putBoletaResponse = {
+            //     idBoleta: idBoleta,
+            //     estado: 2,
+            //     idPago: webpayRespuesta.buy_order
+            // };
 
-            putBoleta(updateData);
+            // putBoleta(updateData);
 
             return <TransactionSuccess data={webpayRespuesta} />;
         default:
