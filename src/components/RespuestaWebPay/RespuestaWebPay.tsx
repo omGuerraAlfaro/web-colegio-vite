@@ -32,7 +32,7 @@ export interface putBoletaResponse {
 
 function RespuestaWebPay() {
     const [webpayRespuesta, setWebpayRespuesta] = useState<WebpayResponse | null>(null);
-    const [/* boletaUpdateRespuesta */, setBoletaUpdateRespuesta] = useState<any>(null);
+    // const [/* boletaUpdateRespuesta */, setBoletaUpdateRespuesta] = useState<any>(null);
     const [AnulacionCompraRespuesta, setAnulacionCompraRespuesta] = useState<any>(null);
     const location = useLocation();
 
