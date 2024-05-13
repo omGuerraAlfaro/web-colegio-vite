@@ -6,6 +6,7 @@ import './RespuestaWebPay.css';
 import TransactionSuccess from './tipoTransaccion/TransactionSuccess';
 import TransactionFailure from './tipoTransaccion/TransactionFailure';
 import { Spinner } from 'react-bootstrap';
+import TransactionNull from './tipoTransaccion/TransactionNull';
 
 export interface WebpayResponse {
     vci?: string;
@@ -23,16 +24,34 @@ export interface WebpayResponse {
     response_code?: number;
     installments_number?: number;
 }
+export interface putBoletaResponse {
+    idBoleta?: number;
+    estado?: number;
+    idPago?: string;
+}
 
 function RespuestaWebPay() {
     const [webpayRespuesta, setWebpayRespuesta] = useState<WebpayResponse | null>(null);
+    const [/* boletaUpdateRespuesta */, setBoletaUpdateRespuesta] = useState<any>(null);
+    const [AnulacionCompraRespuesta, setAnulacionCompraRespuesta] = useState<any>(null);
     const location = useLocation();
 
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
+        const tokenAnulacion = queryParams.get('TBK_TOKEN')?.toString();
         const token = queryParams.get('token_ws')?.toString();
-        console.log('token:', token);
 
+        if (tokenAnulacion) {
+            const buy_order = queryParams.get('TBK_ORDEN_COMPRA')?.toString();
+            const session_id = queryParams.get('TBK_ID_SESION')?.toString();
+
+            const data = { buy_order, session_id };
+            console.log(data);
+
+            setAnulacionCompraRespuesta(data);
+            console.log(AnulacionCompraRespuesta);
+
+        }
 
         if (token) {
             getWebpayResponse(token);
@@ -54,6 +73,20 @@ function RespuestaWebPay() {
         }
     };
 
+    const putBoleta = async (data: putBoletaResponse) => {
+        try {
+            const response = await axios.put(`https://api-colegio.onrender.com/boleta/updateBoleta`, data, config)
+            setBoletaUpdateRespuesta(response.data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+    if (AnulacionCompraRespuesta) {
+        console.log(AnulacionCompraRespuesta);
+        
+        return <TransactionNull data={AnulacionCompraRespuesta} />;
+    }
+
     if (!webpayRespuesta) {
         return <Container className='my-5'>
             <div className="d-flex justify-content-center align-items-center">
@@ -63,13 +96,26 @@ function RespuestaWebPay() {
         </Container>;
     }
 
+
     switch (webpayRespuesta.vci) {
         case 'TSY':
         case 'TSYS':
         case 'TSYF':
+            const rawId = webpayRespuesta.buy_order ? webpayRespuesta.buy_order.split('-').pop() : null;
+            const idBoleta = rawId && !isNaN(parseInt(rawId, 10)) ? parseInt(rawId, 10) : undefined;
+
+            const updateData: putBoletaResponse = {
+                idBoleta: idBoleta,
+                estado: 2,
+                idPago: webpayRespuesta.buy_order
+            };
+
+            putBoleta(updateData);
+
             return <TransactionSuccess data={webpayRespuesta} />;
         default:
             return <TransactionFailure data={webpayRespuesta} />;
+
     }
 
     // return (
