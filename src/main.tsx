@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './components/Home/Home.tsx'
+
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "leaflet/dist/leaflet.css";
@@ -8,17 +8,18 @@ import "leaflet/dist/leaflet.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
-import Pae from './components/Pae/Pae.tsx';
-import Reglamento from './components/Reglamento/Reglamento.tsx';
-import Utiles from './components/Utiles/Utiles.tsx';
-import Talleres from './components/Talleres/Talleres.tsx';
-import Contacto from './components/Contacto/Contacto.tsx';
-import Admision from './components/Admision/Admision.tsx';
-import EscuelaVerano from './components/Verano/Verano.tsx';
-import MisionVision from './components/MisionVision/MisionVision.tsx';
-import RespuestaWebPay from './components/RespuestaWebPay/RespuestaWebPay.tsx';
-import Simce from './components/Simce/Simce.tsx';
 
+const Home = lazy(() => import('./components/Home/Home.tsx'));
+const Pae = lazy(() => import('./components/Pae/Pae.tsx'));
+const Reglamento = lazy(() => import('./components/Reglamento/Reglamento.tsx'));
+const Utiles = lazy(() => import('./components/Utiles/Utiles.tsx'));
+const Talleres = lazy(() => import('./components/Talleres/Talleres.tsx'));
+const Contacto = lazy(() => import('./components/Contacto/Contacto.tsx'));
+const Admision = lazy(() => import('./components/Admision/Admision.tsx'));
+const EscuelaVerano = lazy(() => import('./components/Verano/Verano.tsx'));
+const MisionVision = lazy(() => import('./components/MisionVision/MisionVision.tsx'));
+const RespuestaWebPay = lazy(() => import('./components/RespuestaWebPay/RespuestaWebPay.tsx'));
+const Simce = lazy(() => import('./components/Simce/Simce.tsx'));
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

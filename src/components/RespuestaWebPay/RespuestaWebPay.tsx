@@ -70,17 +70,12 @@ function RespuestaWebPay() {
         }
     };
 
-    // const putBoleta = async (data: putBoletaResponse) => {
-    //     try {
-    //         const response = await axios.put(`https://api-colegio.onrender.com/boleta/updateBoleta`, data, config)
-    //         setBoletaUpdateRespuesta(response.data);
-    //     } catch (error) {
-    //         console.error('Error:', error);
-    //     }
-    // }
-
     if (AnulacionCompraRespuesta) {
-        return <TransactionNull data={AnulacionCompraRespuesta} />;
+        return (
+            <Container className='my-5'>
+                <TransactionNull data={AnulacionCompraRespuesta} />
+            </Container>
+        );
     }
 
     if (!webpayRespuesta) {
@@ -97,53 +92,18 @@ function RespuestaWebPay() {
         case 'TSY':
         case 'TSYS':
         case 'TSYF':
-            // const rawId = webpayRespuesta.buy_order ? webpayRespuesta.buy_order.split('-').pop() : null;
-            // const idBoleta = rawId && !isNaN(parseInt(rawId, 10)) ? parseInt(rawId, 10) : undefined;
-
-            // const updateData: putBoletaResponse = {
-            //     idBoleta: idBoleta,
-            //     estado: 2,
-            //     idPago: webpayRespuesta.buy_order
-            // };
-
-            // putBoleta(updateData);
-
-            return <TransactionSuccess data={webpayRespuesta} />;
+            return (
+                <Container className='my-5'>
+                    <TransactionSuccess data={webpayRespuesta} />
+                </Container>
+            );
         default:
-            return <TransactionFailure data={webpayRespuesta} />;
-
+            return (
+                <Container className='my-5'>
+                    <TransactionFailure data={webpayRespuesta} />
+                </Container>
+            );
     }
-
-    // return (
-    //     <Container className='my-5'>
-    //         <h1>Respuesta WebPay</h1>
-    //         {webpayRespuesta ? (
-    //             <>
-    //                 <p>VCI = {webpayRespuesta.vci}</p>
-    //                 <p>MONTO = {webpayRespuesta.amount}</p>
-    //                 <p>STATUS = {webpayRespuesta.status}</p>
-    //                 <p>BUY_ORDER = {webpayRespuesta.buy_order}</p>
-    //                 <p>SESSION_ID = {webpayRespuesta.session_id}</p>
-    //                 <p>CARD_DETAIL = {webpayRespuesta.card_detail?.card_number}</p>
-    //                 <p>ACCOUNTING_DATE = {webpayRespuesta.accounting_date}</p>
-    //                 <p>TRANSACTION_DATE = {webpayRespuesta.transaction_date}</p>
-    //                 <p>AUTHORIZATION_CODE = {webpayRespuesta.authorization_code}</p>
-    //                 <p>PAYMENT_TYPE_CODE = {webpayRespuesta.payment_type_code}</p>
-    //                 <p>RESPONSE_CODE = {webpayRespuesta.response_code}</p>
-    //                 <p>INSTALLMENTS_NUMBER = {webpayRespuesta.installments_number}</p>
-
-
-    //                 <a href="intent://colegioandeschile.cl/app#Intent;scheme=https;package=colegio.andes.chile.app;end">Volver a la APP</a>
-    //             </>
-    //         ) : (
-    //             <>
-    //                 <p>Cargando respuesta...</p>
-    //             </>
-
-
-    //         )}
-    //     </Container>
-    // );
 }
 
 export default RespuestaWebPay;
