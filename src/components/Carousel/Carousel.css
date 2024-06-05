@@ -1,28 +1,29 @@
+/* Carousel.css */
 .tituloCarrusel {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 3rem;
     color: #8fcfe5;
-    position: relative;
-    padding-left: 20px;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
     border: none;
     border-radius: 45px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px 20px;
 }
 
 .my-carousel img {
     width: 100%;
+    object-fit: cover;
 }
 
-.my-carousel .carousel-caption h3 {
+.my-carousel .carousel-caption h2 {
     font-size: 2rem;
-}
-
-.my-carousel .carousel-caption p {
-    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    width: 80%;
+    margin: 0 auto;
 }
 
 .my-carousel .carousel-indicators button {
@@ -32,8 +33,7 @@
     background-color: #808080;
     border: none;
     transition: background-color 0.3s;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: 0 5px;
 }
 
 .my-carousel .carousel-indicators button.active {
@@ -60,29 +60,17 @@
 
 /* Estilos para pantallas medianas (tablets) */
 @media (max-width: 992px) {
-
     .tituloCarrusel {
-        font-family: 'Poppins', sans-serif;
-        font-weight: bold;
-        font-size: 1.5rem;
-        color: #65bdc0;
-        position: relative;
-        padding-left: 25px;
-        -webkit-text-stroke: 1px white;
+        font-size: 2rem;
+        padding: 10px 15px;
     }
 
     .my-carousel img {
         max-height: 450px;
-        object-fit: cover;
     }
 
-    .my-carousel .carousel-caption h3 {
+    .my-carousel .carousel-caption h2 {
         font-size: 1.5rem;
-    }
-
-    .my-carousel .carousel-caption p {
-        font-size: 0.9rem;
-        display: none;
     }
 
     .my-carousel .carousel-indicators button {
@@ -96,28 +84,26 @@
     }
 }
 
-/* Estilo específico para móviles */
-@media (max-width: 768px) {
-    .my-carousel img {
-        width: 100vh;
-    }
-}
-
 /* Estilos para pantallas pequeñas (teléfonos móviles) */
 @media (max-width: 576px) {
+    .tituloCarrusel {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    }
+
     .my-carousel img {
-        max-height: 300px;
+        width: 600px!important;
+        max-height: 450px; /* Aumentar la altura máxima para dispositivos móviles */
         object-fit: cover;
     }
 
-    .my-carousel .carousel-caption h3 {
-        font-size: 1.2rem;
-        margin-top: 100px;
-    }
-
-    .my-carousel .carousel-caption p {
-        font-size: 0.8rem;
-        display: none;
+    .my-carousel .carousel-caption h2 {
+        font-size: 1rem;
+        margin-top: 20px; /* Ajustar el margen superior */
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+        padding: 10px;
+        border-radius: 10px;
     }
 
     .my-carousel .carousel-indicators button {
@@ -129,8 +115,15 @@
     .my-carousel .carousel-control-next-icon {
         padding: 10px;
     }
-}
 
+    .buttonAnimated {
+        margin-top: 10px;
+        padding: 0.5em 1em; /* Reducir el tamaño del botón */
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        border-radius: 30px;
+    }
+}
 
 .buttonAnimated {
     margin-top: 20px;
@@ -143,9 +136,7 @@
     background-color: #fff;
     border: none;
     border-radius: 45px;
-    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -153,17 +144,11 @@
 
 .buttonAnimated:hover {
     background-color: #4BD1FF;
-    -webkit-box-shadow: 0px 15px 20px rgba(75, 209, 255, 0.4);
     box-shadow: 0px 15px 20px rgba(75, 209, 255, 0.4);
     color: #fff;
-    -webkit-transform: translateY(-7px) scale(1.05);
-    -ms-transform: translateY(-7px) scale(1.05);
     transform: translateY(-7px) scale(1.05);
 }
 
-
 .buttonAnimated:active {
-    -webkit-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
     transform: translateY(-1px);
 }

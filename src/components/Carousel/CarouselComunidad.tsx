@@ -1,9 +1,9 @@
 // import { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css'
-import hall from '../../assets/img/fotoHall.png'
-import foto6 from '../../assets/img/imagenes carrusel/6.png';
-import foto1 from '../../assets/img/imagenes carrusel/1.png';
+import foto6 from '../../assets/img/imagenes carrusel/13.png';
+import foto7 from '../../assets/img/imagenes carrusel/15.png';
+import foto1 from '../../assets/img/imagenes carrusel/9.png';
 function CarouselComunidad() {
 
     return (
@@ -14,7 +14,7 @@ function CarouselComunidad() {
                         <img
                             className="d-block"
                             style={{ width: "100%", height: "100%" }}
-                            src={hall}
+                            src={foto6}
                             alt="First slide"
                         />
                     </Carousel.Item>
@@ -22,7 +22,7 @@ function CarouselComunidad() {
                         <img
                             className="d-block"
                             style={{ width: "100%", height: "100%" }}
-                            src={foto6}
+                            src={foto7}
                             alt="First slide"
                         />
                     </Carousel.Item>

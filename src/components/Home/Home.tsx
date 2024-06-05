@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CarouselHome from '../Carousel/Carousel'
-import Hall from '../../assets/img/fotoHall.png'
+import Hall from '../../assets/img/imagenes carrusel/18.png'
 import Inclusividad from '../../assets/icon/inclusiv.png'
 import Docentes from '../../assets/icon/docente.png'
 import Excelencia from '../../assets/icon/excelencia.png'
@@ -70,10 +70,6 @@ function Home() {
 
         fetchNoticias();
     }, []);
-
-
-
-
 
     const compromisos = [
         {

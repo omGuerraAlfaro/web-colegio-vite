@@ -1,9 +1,9 @@
 // import { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css';
-import foto2 from '../../assets/img/imagenes carrusel/2.png';
-import foto4 from '../../assets/img/imagenes carrusel/4.png';
-import foto5 from '../../assets/img/imagenes carrusel/5.png';
+import foto2 from '../../assets/img/imagenes carrusel/19.png';
+import foto4 from '../../assets/img/imagenes carrusel/10.png';
+import foto5 from '../../assets/img/imagenes carrusel/16.png';
 
 
 function CarouselSimce() {

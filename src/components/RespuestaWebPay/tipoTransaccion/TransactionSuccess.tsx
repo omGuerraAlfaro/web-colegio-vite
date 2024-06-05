@@ -98,7 +98,7 @@ function TransactionSuccess({ data }: Props) {
         doc.text('Total: $' + formatNumber(data.amount), 15, finalY + 10);
 
         // Guardar el PDF
-        doc.save('invoice.pdf');
+        doc.save('comprobante_pago.pdf');
     };
 
     return (
