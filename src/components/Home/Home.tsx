@@ -45,16 +45,14 @@ function Home() {
                 const response = await axios.get('https://api-colegio.onrender.com/noticias', {
                     headers: {
                         'Content-Type': 'application/json',
-                        // Añade aquí otros headers que tu API necesite
                     },
-                    withCredentials: true // Solo si necesitas enviar o recibir cookies
+                    withCredentials: true 
                 });
                 const transformedNoticias = response.data.map((noticia: { images: string[]; }) => {
                     noticia.images = noticia.images.map(image => {
                         if (isValidBase64(image)) {
                             return base64ToURL(image);
                         } else {
-                            // Si no es una cadena base64 válida, retorna la misma imagen.
                             return image;
                         }
                     });

@@ -7,6 +7,7 @@ import "leaflet/dist/leaflet.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
+
 const Home = lazy(() => import('./components/Home/Home.tsx'));
 const Pae = lazy(() => import('./components/Pae/Pae.tsx'));
 const Reglamento = lazy(() => import('./components/Reglamento/Reglamento.tsx'));
@@ -18,7 +19,6 @@ const EscuelaVerano = lazy(() => import('./components/Verano/Verano.tsx'));
 const MisionVision = lazy(() => import('./components/MisionVision/MisionVision.tsx'));
 const RespuestaWebPay = lazy(() => import('./components/RespuestaWebPay/RespuestaWebPay.tsx'));
 const Simce = lazy(() => import('./components/Simce/Simce.tsx'));
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
