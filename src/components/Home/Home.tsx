@@ -46,7 +46,7 @@ function Home() {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    withCredentials: true 
+                    // withCredentials: true 
                 });
                 const transformedNoticias = response.data.map((noticia: { images: string[]; }) => {
                     noticia.images = noticia.images.map(image => {

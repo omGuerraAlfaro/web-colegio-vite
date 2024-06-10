@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import './Reglamento.css'
-import ReglamentoPDF from '../../assets/docs/Reglamento-interno.pdf';
+import ReglamentoPDF from '../../assets/docs/Reglamento-interno-2024.pdf';
 import { Button, Row } from 'react-bootstrap';
 
 function Reglamento() {
