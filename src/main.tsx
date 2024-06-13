@@ -9,7 +9,7 @@ import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
 
 const Home = lazy(() => import('./components/Home/Home.tsx'));
-const Pae = lazy(() => import('./components/Pae/Pae.tsx'));
+/* const Pae = lazy(() => import('./components/Pae/Pae.tsx'));*/
 const Reglamento = lazy(() => import('./components/Reglamento/Reglamento.tsx'));
 const Utiles = lazy(() => import('./components/Utiles/Utiles.tsx'));
 const Talleres = lazy(() => import('./components/Talleres/Talleres.tsx'));
@@ -32,7 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mision-vision" element={<MisionVision />} />
-        <Route path="/pae" element={<Pae />} />
+        {/* <Route path="/pae" element={<Pae />} /> */}
         <Route path="/reglamento" element={<Reglamento />} />
         <Route path="/utiles" element={<Utiles />} />
         <Route path="/talleres" element={<Talleres />} />
