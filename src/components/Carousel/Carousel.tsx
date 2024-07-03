@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css';
 import carousel1 from '../../assets/img/carru.jpg';
-import carousel2 from '../../assets/img/carru2.png';
+// import carousel2 from '../../assets/img/carru2.png';
 import carousel3 from '../../assets/img/carru3.png';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -31,13 +31,13 @@ function CarouselHome() {
                         <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img className="d-block" src={carousel2} alt="Second slide" />
                     <Carousel.Caption>
                         <h2 className='tituloCarrusel'>¡Puente de apoyo educativo!</h2>
                         <Button href='/pae' variant="outline-primary" className="buttonAnimated mx-3">Conocer PAE</Button>
                     </Carousel.Caption>
-                </Carousel.Item>
+                </Carousel.Item> */}
                 <Carousel.Item>
                     <img className="d-block" src={carousel3} alt="Third slide" />
                     <Carousel.Caption>

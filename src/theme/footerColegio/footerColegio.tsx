@@ -34,7 +34,7 @@ const FooterColegio = () => {
             <div className='d-flex flex-column my-3 textFooter text-center'>
               <h6><strong>Direccion:</strong> Manuel Rodríguez #1064, Los Andes</h6>
               <h6><strong>Email:</strong> colegioandeschile@gmail.com</h6>
-              <h6><strong>Telefono:</strong> +56 2 402858</h6>
+              <h6><strong>Telefono:</strong> 34 2 402858</h6>
             </div>
           </Col>
 
@@ -43,7 +43,7 @@ const FooterColegio = () => {
           <Col md={3} className="mb-3 d-none d-md-block">
             <Nav className="flex-column">
               <NavLink className="text-dark bold textFooter2" href="/comunidad">Nuestra Comunidad</NavLink>
-              <NavLink className="text-dark bold textFooter2" href="/pae">Programa PAE</NavLink>
+              {/* <NavLink className="text-dark bold textFooter2" href="/pae">Programa PAE</NavLink> */}
               <NavLink className="text-dark bold textFooter2" href="/reglamento">Reglamento interno de Convivencia Escolar</NavLink>
             </Nav>
           </Col>
@@ -67,7 +67,7 @@ const FooterColegio = () => {
 
         </Row>
 
-        <a href="https://wa.me/56967249389?text=Estimados,%20me%20dirijo%20a%20ustedes%20para%20solicitar%20información%20acerca%20del%20colegio.%20Agradezco%20su%20pronta%20respuesta." target="_blank" className="whatsapp">
+        <a href="https://wa.me/56993216494?text=Estimados,%20me%20dirijo%20a%20ustedes%20para%20solicitar%20información%20acerca%20del%20colegio.%20Agradezco%20su%20pronta%20respuesta." target="_blank" className="whatsapp">
           <OverlayTrigger
             placement="top"
             delay={{ show: 250, hide: 400 }}
