@@ -46,7 +46,7 @@ const Contacto = () => {
                         <h4 className='titulo-contacto'>Teléfono</h4>
                         <div className='d-flex align-items-center my-3'>
                             <FontAwesomeIcon icon={faPhone} className='mx-2' size='xl' color='#1c2260'/>
-                            <p className='align-self-center adjust-text mx-1 txt'>+56 2 402858</p>
+                            <p className='align-self-center adjust-text mx-1 txt'>34 2 402858</p>
                         </div>
                     </div>
                 </Col>

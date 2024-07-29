@@ -23,7 +23,7 @@ const FooterColegio = () => {
                 <img src={AndesLogo} width="120" height="150" className="mx-3 my-3" />
               </NavLink>
               <div className='d-flex flex-column'>
-                <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2024</Button>
+                <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2025</Button>
               </div>
             </div>
           </Col>
@@ -62,7 +62,7 @@ const FooterColegio = () => {
                 </NavLink>
               </li>
             </Nav>
-            <p className="text-muted text-center">© 2024 AlphaTechnology</p>
+            <p className="text-muted text-center">© 2024</p>
           </Col>
 
         </Row>

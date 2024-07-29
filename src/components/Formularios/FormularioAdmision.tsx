@@ -108,7 +108,7 @@ const FormularioAdmision = () => {
 
   return (
     <Card style={{ backgroundColor: '#f5f5f5', borderRadius: '15px', padding: '20px' }} className='shadow'>
-      <Card.Title>Formulario de Admisión 2024</Card.Title>
+      <Card.Title>Formulario de Admisión 2025</Card.Title>
       <Card.Body>
         <Form onSubmit={formik.handleSubmit}>
           <Form.Group>
