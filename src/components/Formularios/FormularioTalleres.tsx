@@ -27,7 +27,7 @@ const FormularioTalleres = () => {
       colegio: '',
       tallerPostula: '',
       cursoPostula: '',
-      consentimiento: false
+      //consentimiento: false
     },
     validationSchema: formSchema,
     onSubmit: async (values) => {
@@ -234,7 +234,7 @@ const FormularioTalleres = () => {
             </Col>
           </Row>
 
-          <Form.Group className="margenLabel">
+          {/* <Form.Group className="margenLabel">
             <Form.Check
               type="checkbox"
               label="Doy mi consentimiento para el manejo de mis datos."
@@ -244,7 +244,7 @@ const FormularioTalleres = () => {
               isInvalid={!!formik.errors.consentimiento && formik.touched.consentimiento}
             />
             {formik.errors.consentimiento && formik.touched.consentimiento && <Form.Text className="text-danger">{formik.errors.consentimiento}</Form.Text>}
-          </Form.Group>
+          </Form.Group> */}
 
           <Row>
             <Col md={12} sm={12} xs={12}>
