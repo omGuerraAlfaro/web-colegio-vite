@@ -63,11 +63,11 @@ function MisionVision() {
                     </div>
                     <div className="col-md-6 col-12 school-info mb-5">
                         <h4 className='tituloMision'>Misión</h4>
-                        <p className='parrafoMision'>El Colegio Andes Chile busca la formación académica integral de sus niños y niñas, despertando el interés por descubrir con sus propios talentos en el entorno social y cultural que les rodea. El Colegio Andes Chile fomenta la integración escolar a través del respeto, tolerancia y honestidad en un entorno familiar basado en la educación con amor.</p>
+                        <p className='parrafoMision'>El colegio Andes Chile busca la formación académica personalizada de excelencia para estudiantes desde pre kínder a octavo año básico del Valle del Aconcagua, fomentando el desarrollo intelectual y el pensamiento critico, valorando la diversidad y potenciando sus habilidades  y competencias sociales. Todo esto desarrollado en un ambiente familiar bajo nuestro lema “educando con amor” , formando educandos con principios y valores.</p>
                     </div>
                     <div className="col-md-6 col-12">
                         <h4 className='tituloVision'>Visión</h4>
-                        <p className='parrafoVision'>El colegio Andes Chile busca ser un centro educativo integral, enfocado en la formación académica inclusiva, complementando su cuerpo docente con la una educación que responde al curriculum vigente y a las necesidades individuales de los estudiantes, a traves, del conocimiento personal y familiar de la comunidad educativa.</p>
+                        <p className='parrafoVision'>El colegio Andes Chile tiene como visión consolidarse como una institución de excelencia académica, enfocada en la educación personalizada y familiar, con docentes altamente calificados, preparados para responder al curriculum vigente y cumplir con altos estándares de calidad académica y formativa, resaltando los valores y el desarrollo de conocimientos, habilidades y actitudes,  permitiendo que nuestros estudiantes sean capaces de enfrentar los desafíos que les presenta la sociedad siendo agente con altas expectativas de crecimiento , constituyéndose un aporte para la misma.</p>
                     </div>
                     <div className="col-md-6 col-12 school-info">
                         <CarouselSimce />
