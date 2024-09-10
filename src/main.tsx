@@ -7,6 +7,7 @@ import "leaflet/dist/leaflet.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
+import InscripcionMatricula from './components/InscripcionMatricula/InscripcionMatricula.tsx';
 
 const Home = lazy(() => import('./components/Home/Home.tsx'));
 /* const Pae = lazy(() => import('./components/Pae/Pae.tsx'));*/
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/talleres" element={<Talleres />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/admision" element={<Admision />} />
+        <Route path="/matricula" element={<InscripcionMatricula />} />
         <Route path="/verano" element={<EscuelaVerano />} />
         <Route path="/webpay-respuesta" element={<RespuestaWebPay />} />
         <Route path="/info-simce" element={<Simce />} />
