@@ -39,6 +39,9 @@ const formSchema = yup.object().shape({
   rut_alumno: yup.string()
     .required('El rut es requerido')
     .test('isValidRUT', 'El RUT no es válido', (value) => validarRutChileno(value)),
+  fecha_nacimiento_alumno: yup.date()
+    .required('La fecha de nacimiento es requerida')
+    .typeError('Debe ser una fecha válida'),
   curso_alumno: yup.string().required('El curso es requerido'),
   genero_alumno: yup.string().required('El género es requerido'),
   primer_nombre_apoderado: yup.string().required('El nombre es requerido'),
@@ -59,9 +62,9 @@ const formSchema = yup.object().shape({
     .required('La confirmación del correo es requerida'),
   parentesco_apoderado: yup.string().required('El parentesco es requerido'),
   estado_civil: yup.string().required('El estado civil es requerido'),
-  profesion_oficio: yup.string().required('La profesión u oficio es requerido'),
-  direccion: yup.string().required('La dirección es requerido'),
-  comuna: yup.string().required('La comuna es requerido'),
+  profesion_oficio: yup.string().required('La profesión u oficio es requerida'),
+  direccion: yup.string().required('La dirección es requerida'),
+  comuna: yup.string().required('La comuna es requerida'),
 });
 
 
@@ -73,6 +76,7 @@ const FormularioMatricula = () => {
       primer_apellido_alumno: '',
       segundo_apellido_alumno: '',
       rut_alumno: '',
+      fecha_nacimiento_alumno: '',
       curso_alumno: '',
       genero_alumno: '',
       primer_nombre_apoderado: '',
@@ -259,21 +263,44 @@ const FormularioMatricula = () => {
             </Col>
           </Row>
 
-          <Form.Group>
-            <Form.Label><small><strong>Rut</strong></small></Form.Label>
-            <Form.Control
-              className="rounded-input"
-              type="text"
-              placeholder="Ingrese rut alumno - ejemplo: 9999999-9"
-              name="rut_alumno"
-              value={formik.values.rut_alumno}
-              onChange={formik.handleChange}
-              isInvalid={!!formik.errors.rut_alumno && formik.touched.rut_alumno}
-            />
-            <Form.Control.Feedback type="invalid">
-              {formik.errors.rut_alumno}
-            </Form.Control.Feedback>
-          </Form.Group>
+          <Row className="margenLabel">
+            <Col md={6} xs={12}>
+              <Form.Group>
+                <Form.Label><small><strong>Rut</strong></small></Form.Label>
+                <Form.Control
+                  className="rounded-input"
+                  type="text"
+                  placeholder="Ejemplo: 9999999-9"
+                  name="rut_alumno"
+                  value={formik.values.rut_alumno}
+                  onChange={formik.handleChange}
+                  isInvalid={!!formik.errors.rut_alumno && formik.touched.rut_alumno}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {formik.errors.rut_alumno}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={6} xs={12}>
+              <Form.Group>
+                <Form.Label>
+                  <small><strong>Fecha de Nacimiento</strong></small>
+                </Form.Label>
+                <Form.Control
+                  className="rounded-input"
+                  type="date"  // Aquí utilizas un selector de fecha
+                  name="fecha_nacimiento_alumno"
+                  value={formik.values.fecha_nacimiento_alumno}
+                  onChange={formik.handleChange}
+                  isInvalid={!!formik.errors.fecha_nacimiento_alumno && formik.touched.fecha_nacimiento_alumno}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {formik.errors.fecha_nacimiento_alumno}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+          </Row>
 
           <Form.Group className="margenLabel">
             <Form.Label><small><strong>Curso</strong></small></Form.Label>
