@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faSchool } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import "./Formulario.css"
@@ -57,7 +57,11 @@ const formSchema = yup.object().shape({
   confirmar_correo_apoderado: yup.string()
     .oneOf([yup.ref('correo_apoderado'), undefined], 'Los correos no coinciden')
     .required('La confirmación del correo es requerida'),
-  parentesco_apoderado: yup.string().required('El parentesco es requerido')
+  parentesco_apoderado: yup.string().required('El parentesco es requerido'),
+  estado_civil: yup.string().required('El estado civil es requerido'),
+  profesion_oficio: yup.string().required('La profesión u oficio es requerido'),
+  direccion: yup.string().required('La dirección es requerido'),
+  comuna: yup.string().required('La comuna es requerido'),
 });
 
 
@@ -79,7 +83,11 @@ const FormularioMatricula = () => {
       telefono_apoderado: '',
       correo_apoderado: '',
       confirmar_correo_apoderado: '',
-      parentesco_apoderado: ''
+      parentesco_apoderado: '',
+      estado_civil: '',
+      profesion_oficio: '',
+      direccion: '',
+      comuna: ''
     },
     validationSchema: formSchema,
     onSubmit: async (values) => {
@@ -114,6 +122,19 @@ const FormularioMatricula = () => {
     "Abuela",
     "Abuelo",
     "Otro",
+  ];
+  const comuna = [
+    "Los Andes",
+    "San Esteban",
+    "Calle Larga",
+    "Rinconada",
+    "San Felipe",
+  ];
+  const civil = [
+    "Soltero/a",
+    "Casado/a",
+    "Viudo/a",
+    "Separado/a"
   ];
 
   const enviarDatos = async (data: any) => {
@@ -455,6 +476,103 @@ const FormularioMatricula = () => {
                 </div>
               </Form.Group>
             </Col>
+          </Row>
+
+          <Row className="margenLabel">
+            <Col md={6} xs={12}>
+              <Form.Group className="">
+                <Form.Label><small><strong>Estado Civil</strong></small></Form.Label>
+                <div className="select-wrapper">
+                  <Form.Select
+                    className="rounded-input"
+                    as="select"
+                    name="estado_civil"
+                    onChange={formik.handleChange}
+                    value={formik.values.estado_civil}
+                    isInvalid={!!formik.errors.estado_civil && formik.touched.estado_civil}
+                  >
+                    <option value="" disabled hidden>Seleccionar estado civil</option>
+                    {civil.map((parent, index) => (
+                      <option key={index} value={parent}>
+                        {parent}
+                      </option>
+                    ))}
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.estado_civil}
+                  </Form.Control.Feedback>
+                </div>
+              </Form.Group>
+            </Col>
+
+            <Col md={6} xs={12}>
+              <Form.Group>
+                <Form.Label><small><strong>Profesión u Oficio</strong></small></Form.Label>
+                <InputGroup>
+                  <Form.Control
+                    className="rounded-input"
+                    type="text"
+                    placeholder="Ingrese profesión u oficio"
+                    name="profesion_oficio"
+                    value={formik.values.profesion_oficio}
+                    onChange={formik.handleChange}
+                    isInvalid={!!formik.errors.profesion_oficio && formik.touched.profesion_oficio}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.profesion_oficio}
+                  </Form.Control.Feedback>
+                </InputGroup>
+              </Form.Group>
+            </Col>
+          </Row>
+
+          <Row className="margenLabel">
+            <Col md={6} xs={12}>
+              <Form.Group>
+                <Form.Label><small><strong>Dirección</strong></small></Form.Label>
+                <InputGroup>
+                  <Form.Control
+                    className="rounded-input"
+                    type="text"
+                    placeholder="Ingrese dirección"
+                    name="direccion"
+                    value={formik.values.direccion}
+                    onChange={formik.handleChange}
+                    isInvalid={!!formik.errors.direccion && formik.touched.direccion}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.direccion}
+                  </Form.Control.Feedback>
+                </InputGroup>
+              </Form.Group>
+            </Col>
+
+            <Col md={6} xs={12}>
+              <Form.Group className="">
+                <Form.Label><small><strong>Comuna</strong></small></Form.Label>
+                <div className="select-wrapper">
+                  <Form.Select
+                    className="rounded-input"
+                    as="select"
+                    name="comuna"
+                    onChange={formik.handleChange}
+                    value={formik.values.comuna}
+                    isInvalid={!!formik.errors.comuna && formik.touched.comuna}
+                  >
+                    <option value="" disabled hidden>Seleccionar comuna</option>
+                    {comuna.map((parent, index) => (
+                      <option key={index} value={parent}>
+                        {parent}
+                      </option>
+                    ))}
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.comuna}
+                  </Form.Control.Feedback>
+                </div>
+              </Form.Group>
+            </Col>
+
           </Row>
 
           <Form.Group>
