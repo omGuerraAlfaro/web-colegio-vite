@@ -146,23 +146,38 @@ const FormularioMatricula = () => {
       const headers = {
         'Content-Type': 'application/json',
       };
-      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
+      // const response = await axios.post('https://api-colegio.onrender.com/inscripcion-matricula', data, { headers: headers });
+      const response = await axios.post('http://localhost:3200/inscripcion-matricula', data, { headers: headers });
+      console.log(response.data);
+      const idUnico = response.data?.id_inscripcion;
+      console.log(idUnico);
+
       Swal.fire({
         title: '¡Gracias!',
-        text: 'Su formulario de admisión ha sido enviado.',
+        html: `
+          <p>Su formulario de inscripción ha sido enviado con éxito.</p>
+          <div style="margin-top: 20px; font-size: 22px; font-weight: bold; text-align: center; color: #007bff;">
+            ${idUnico}
+          </div>
+          <p style="margin-top: 20px;">
+            <strong>Importante:</strong>
+            <ul style="text-align: left; margin-top: 10px;">
+              <li>Guarde este identificador, ya que deberá presentarlo el día de las matrículas (primera semana de diciembre).</li>
+              <li>El identificador y toda la información necesaria también se enviarán al correo electrónico que ingresó en el formulario.</li>
+              <li>Si no recibe el correo, por favor revise su bandeja de spam o correo no deseado.</li>
+            </ul>
+          </p>`,
         icon: 'success',
         confirmButtonText: 'Entendido',
-        timer: 5000,
-        timerProgressBar: true,
       }).then(() => {
         formik.resetForm();
       });
-      // console.log(response.data);
+      
     } catch (error) {
       console.error('Error al enviar los datos:', error);
       Swal.fire({
-        title: '¡ Lo Sentimos :( !',
-        text: 'Tenemos problemas con nuestros servicios, por favor intente más tarde. Si el problema persiste, por favor contacte al colegio a través de nuestro Whatsapp.',
+        title: '¡Lo Sentimos :( !',
+        text: 'Tenemos problemas con nuestros servicios, por favor intente más tarde. Si el problema persiste, contacte al colegio a través de nuestro Whatsapp.',
         icon: 'error',
         confirmButtonText: 'Entendido',
         timer: 8000,
@@ -171,7 +186,8 @@ const FormularioMatricula = () => {
         formik.resetForm();
       });
     }
-  }
+  };
+
 
   return (
     <Card style={{ backgroundColor: '#f5f5f5', borderRadius: '15px', padding: '20px' }} className='shadow'>
