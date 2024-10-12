@@ -331,7 +331,7 @@ const FormularioMatricula = () => {
               >
                 <option value="" disabled hidden>Seleccionar curso</option>
                 {cursos.map((curso, index) => (
-                  <option key={index} value={curso}>
+                  <option key={index} value={index+1}>
                     {curso}
                   </option>
                 ))}
