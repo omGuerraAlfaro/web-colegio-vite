@@ -550,7 +550,7 @@ const FormularioMatricula = () => {
 
             <Col md={6} xs={12}>
               <Form.Group>
-                <Form.Label><small><strong>Profesión u Oficio</strong></small></Form.Label>
+                <Form.Label><small><strong>Profesión u Oficio (actual)</strong></small></Form.Label>
                 <InputGroup>
                   <Form.Control
                     className="rounded-input"
