@@ -78,11 +78,13 @@ function MisionVision() {
             <Container>
                 <div className='row'>
                     <div className='col-12'>
-                        <h4 className='tituloHistoria'>Nuestra Historia</h4>
-                        <p className='parrafoHistoria'>Colegio Andes Chile, fue fundado el 31 de octubre de 2003, para dar espacio educativo personalizado a muchas familias que buscaban un colegio distinto y diferente, donde niñas y niños se sintieran íntegros en su quehacer educativo diario. Colegio Andes Chile es un establecimiento educacional particular, que se ubica en Rodríguez # 1064, comuna de Los Andes. Su director es  el señor Alfredo Agustín Gallegos Ávila.</p>
-                        <p className='parrafoHistoria'>Nuestro establecimiento, es un centro educacional que imparte educación prebásica y básica. Así mismo a todos los alumnos se les imparte música, educación física, computación e inglés desde prekínder.</p>
-                        <p className='parrafoHistoria'>A nivel pedagógico, Colegio Andes Chile impulsa una educación personalizada, centrada en las habilidades y capacidades de cada niño y niña, buscando un equilibrio entre rendimiento académico y valores transversales, dados por el carácter cercano y personalizado que da sustento valórico a nuestro proceso educativo y que es un elemento central dentro de la cultura escolar.</p>
-                        <p className='parrafoHistoria'>Otro de los elementos que proporciona el sustento a estas características, es el Proyecto de Apoyo Educativo, que atiende a niños y niñas con necesidades educativas, proporcionando la tolerancia y aprecio a la diversidad que tanto se requieren en nuestra sociedad.</p>
+                        <h4 className='tituloHistoria'>Presentación Colegio Andes Chile</h4>
+                        <p className='parrafoHistoria'>El Colegio Andes Chile, fundado el 31 de octubre de 2003, es un establecimiento educativo particular pagado que se enfoca en brindar una educación personalizada y de excelencia.</p>
+                        <p className='parrafoHistoria'>Nuestro lema "Educando con amor" nos ha acompañado desde nuestro inicio y sigue siendo la base de nuestra filosofía educativa.</p>
+                        <p className='parrafoHistoria'>Estamos ubicados en Manuel Rodríguez # 1064, comuna de Los Andes ofreciendo educación pre básica y básica, con planes de expansión para incorporar enseñanza media en el futuro cercano.</p>
+                        <p className='parrafoHistoria'>Contamos con docentes especializados que imparten asignaturas como música, educación física e inglés desde pre kinder, comprometidos con el desarrollo integral del nuestros estudiantes.</p>
+                        <p className='parrafoHistoria'>Desde el año 2023 el señor Alfredo Agustín Gallegos Ávila asume la dirección del colegio, trayendo nueva visión y experiencia para continuar fortaleciendo nuestra comunidad educativa.</p>
+                        <p className='parrafoHistoria'>En Colegio Andes Chile nos comprometemos a brindar una educación de calidad, que permita a nuestros estudiantes crecer integralmente y alcanzar su máximo potencial.</p>
                     </div>
                 </div>
             </Container>
