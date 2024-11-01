@@ -146,8 +146,8 @@ const FormularioMatricula = () => {
       const headers = {
         'Content-Type': 'application/json',
       };
-      // const response = await axios.post('https://colegio-backend.onrender.com/inscripcion-matricula', data, { headers: headers });
-      const response = await axios.post('http://localhost:3200/inscripcion-matricula', data, { headers: headers });
+      const response = await axios.post('https://colegio-backend.onrender.com/inscripcion-matricula', data, { headers: headers });
+      // const response = await axios.post('http://localhost:3200/inscripcion-matricula', data, { headers: headers });
       console.log(response.data);
       const idUnico = response.data?.id_inscripcion;
       console.log(idUnico);
