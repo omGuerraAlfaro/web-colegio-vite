@@ -56,7 +56,7 @@ const FormularioAdmision = () => {
       const headers = {
         'Content-Type': 'application/json',
       };
-      await axios.post('https://api-colegio.onrender.com/correo/enviar', data, { headers: headers });
+      await axios.post('https://colegio-backend.onrender.com/correo/enviar', data, { headers: headers });
       Swal.fire({
         title: '¡Gracias!',
         text: 'Su formulario de admisión ha sido enviado.',

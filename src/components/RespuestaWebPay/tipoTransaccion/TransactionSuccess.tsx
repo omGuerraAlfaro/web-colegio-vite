@@ -81,7 +81,7 @@ function getPaymentTypeDescription(paymentTypeCode: any) {
 }
 
 const fetchBoletaData = async (id: number): Promise<BoletaData> => {
-    const response = await fetch(`https://api-colegio.onrender.com/boleta/id/${id}`);
+    const response = await fetch(`https://colegio-backend.onrender.com/boleta/id/${id}`);
     const data = await response.json();
     return {
         id,
@@ -94,7 +94,7 @@ const fetchBoletaData = async (id: number): Promise<BoletaData> => {
 };
 
 const fetchApoderadoData = async (rut: string): Promise<ApoderadoData> => {
-    const response = await fetch(`https://api-colegio.onrender.com/apoderado/rut/${rut}`);
+    const response = await fetch(`https://colegio-backend.onrender.com/apoderado/rut/${rut}`);
     const data = await response.json();
     return {
         primer_nombre: data.primer_nombre,
@@ -109,7 +109,7 @@ const fetchApoderadoData = async (rut: string): Promise<ApoderadoData> => {
 };
 
 const fetchEstudianteData = async (rut: string): Promise<EstudianteData> => {
-    const response = await fetch(`https://api-colegio.onrender.com/estudiante/rut/${rut}`);
+    const response = await fetch(`https://colegio-backend.onrender.com/estudiante/rut/${rut}`);
     const data = await response.json();
     return {
         primer_nombre: data.primer_nombre,

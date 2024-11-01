@@ -53,7 +53,7 @@ const FormularioEscuelaVerano = () => {
       }).then(() => {
         formik.resetForm();
       });
-      await axios.post('https://api-colegio.onrender.com/correo/enviar/verano', data, { headers: headers });
+      await axios.post('https://colegio-backend.onrender.com/correo/enviar/verano', data, { headers: headers });
       // console.log(response.data);
     } catch (error) {
       console.error('Error al enviar los datos:', error);

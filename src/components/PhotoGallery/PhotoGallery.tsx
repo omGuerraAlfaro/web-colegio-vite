@@ -55,7 +55,7 @@ function PhotoGallery({ photos }: PhotoGalleryProps) {
     useEffect(() => {
         const loadPhotos = async () => {
             try {
-                const response = await axios.get('https://api-colegio.onrender.com/noticias/');
+                const response = await axios.get('https://colegio-backend.onrender.com/noticias/');
                 let fetchedPhotos = response.data;
 
                 // Ordenar las noticias por noticiaId en orden descendente
@@ -82,7 +82,7 @@ function PhotoGallery({ photos }: PhotoGalleryProps) {
 
     const likePhoto = async (photoId: number) => {
         try {
-            const response = await axios.post(`https://api-colegio.onrender.com/noticias/${photoId}/like`);
+            const response = await axios.post(`https://colegio-backend.onrender.com/noticias/${photoId}/like`);
             // Encuentra el índice basado en noticiaId
             const index = photos.findIndex(photo => photo.noticiaId === photoId);
             if (index !== -1) { // Asegúrate de que se encontró el índice

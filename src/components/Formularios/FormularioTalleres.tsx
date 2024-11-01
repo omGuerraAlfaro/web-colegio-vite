@@ -73,7 +73,7 @@ const FormularioTalleres = () => {
         'Content-Type': 'application/json',
       };
       // await axios.post('http://localhost:3200/correo/enviar/taller', data, { headers: headers });
-      await axios.post('https://api-colegio.onrender.com/correo/enviar/taller', data, { headers: headers });
+      await axios.post('https://colegio-backend.onrender.com/correo/enviar/taller', data, { headers: headers });
       Swal.fire({
         title: '¡Gracias!',
         text: 'Su formulario de inscripción ha sido enviado.',

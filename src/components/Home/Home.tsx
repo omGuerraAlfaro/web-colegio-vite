@@ -44,7 +44,7 @@ function Home() {
     useEffect(() => {
         async function fetchNoticias() {
             try {
-                const response = await axios.get('https://api-colegio.onrender.com/noticias', {
+                const response = await axios.get('https://colegio-backend.onrender.com/noticias', {
                     headers: {
                         'Content-Type': 'application/json',
                     },
