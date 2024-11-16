@@ -1,11 +1,12 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
+import { Button, Card, Col, Form, InputGroup, Row, Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import "./Formulario.css"
+import { useState } from 'react';
 
 const validarRutChileno = (rut: any) => {
   if (!rut) return false;
@@ -33,7 +34,7 @@ const validarRutChileno = (rut: any) => {
 
 const formSchema = yup.object().shape({
   primer_nombre_alumno: yup.string().required('El nombre es requerido'),
-  segundo_nombre_alumno: yup.string().required('El nombre es requerido'),
+  segundo_nombre_alumno: yup.string(),
   primer_apellido_alumno: yup.string().required('El apellido es requerido'),
   segundo_apellido_alumno: yup.string().required('El apellido es requerido'),
   rut_alumno: yup.string()
@@ -45,7 +46,7 @@ const formSchema = yup.object().shape({
   curso_alumno: yup.string().required('El curso es requerido'),
   genero_alumno: yup.string().required('El género es requerido'),
   primer_nombre_apoderado: yup.string().required('El nombre es requerido'),
-  segundo_nombre_apoderado: yup.string().required('El nombre es requerido'),
+  segundo_nombre_apoderado: yup.string(),
   primer_apellido_apoderado: yup.string().required('El apellido es requerido'),
   segundo_apellido_apoderado: yup.string().required('El apellido es requerido'),
   rut_apoderado: yup.string()
@@ -69,6 +70,7 @@ const formSchema = yup.object().shape({
 
 
 const FormularioMatricula = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formik = useFormik({
     initialValues: {
       primer_nombre_alumno: '',
@@ -96,12 +98,15 @@ const FormularioMatricula = () => {
     validationSchema: formSchema,
     onSubmit: async (values) => {
       const { confirmar_correo_apoderado, ...datosParaEnviar } = values;
+      setIsSubmitting(true); // Activa el spinner
       try {
         await enviarDatos(datosParaEnviar);
       } catch (error) {
-        console.error('Error al enviar los datos:', error);
+        console.error("Error al enviar los datos:", error);
+      } finally {
+        setIsSubmitting(false); // Desactiva el spinner
       }
-    }
+    },
   });
 
   const cursos = [
@@ -165,6 +170,16 @@ const FormularioMatricula = () => {
               <li>Guarde este identificador, ya que deberá presentarlo el día de las matrículas (primera semana de diciembre).</li>
               <li>El identificador y toda la información necesaria también se enviarán al correo electrónico que ingresó en el formulario.</li>
               <li>Si no recibe el correo, por favor revise su bandeja de spam o correo no deseado.</li>
+            </ul>
+          </p>
+          <p style="margin-top: 20px;">
+            <strong>Documentación Solicitada:</strong>
+            <ul style="text-align: left; margin-top: 10px;">
+              <li>Certificados de Nacimiento.</li>
+              <li>Certificado de Notas.</li>
+              <li>Informe Personalidad.</li>
+              <li>Comprobante de Domicilio.</li>
+              <li>Fotocopia Cedula Identidad Apoderado.</li>
             </ul>
           </p>`,
         icon: 'success',
@@ -663,7 +678,16 @@ const FormularioMatricula = () => {
 
           <Row>
             <Col md={12} sm={12} xs={12}>
-              <Button type="submit" className='buttonFormulario btn-light'>Enviar Datos y Obtener Codigo de Inscripción</Button>
+            <Button type="submit" className="buttonFormulario btn-light" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Spinner animation="border" size="sm" className="me-2" />
+                    Procesando...
+                  </>
+                ) : (
+                  "Enviar Datos y Obtener Código de Inscripción"
+                )}
+              </Button>
             </Col>
           </Row>
         </Form>
