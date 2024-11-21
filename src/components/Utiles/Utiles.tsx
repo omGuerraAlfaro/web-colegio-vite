@@ -35,7 +35,7 @@ function Utiles() {
     return (
         <>
             <Container>
-                <h1 className='tituloUtiles'>Lista de Útiles Año 2024</h1>
+                <h1 className='tituloUtiles'>Lista de Útiles Año 2025</h1>
                 <Row>
                     <h1 className='tituloCursos'>Nivel Pre-Escolar</h1>
                     {cursos1.map((curso, index) => (
