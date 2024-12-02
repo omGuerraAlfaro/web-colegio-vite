@@ -5,7 +5,7 @@ import "./Admision.css";
 const Admision = () => {
   return (
     <Container>
-      <h3 className="titulo my-3">Proceso de Admisión</h3>
+      <h3 className="titulo my-3">Solicitud de Entrevista Admisión Alumnos Nuevos</h3>
       <Row>
         <Col sm={6} xs={12}>
           <FormularioAdmision />
