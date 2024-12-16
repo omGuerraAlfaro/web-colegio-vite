@@ -24,12 +24,7 @@ const Simce = lazy(() => import('./components/Simce/Simce.tsx'));
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Router>
-      <Navbar />      
-      <div className="waveWrapper">
-        <div className="wave wave1"></div>
-        <div className="wave wave2"></div>
-        <div className="wave wave3"></div>
-      </div>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mision-vision" element={<MisionVision />} />
