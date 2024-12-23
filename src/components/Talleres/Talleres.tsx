@@ -8,7 +8,7 @@ import FormularioTalleres from '../Formularios/FormularioTalleres';
 function Talleres() {
     return (
         <Container>
-            <h3 className="tituloTaller">Talleres</h3>
+            <h3 className="tituloTaller">Talleres 2025</h3>
             <Row className='my-3 d-flex align-items-center'>
                 <Col md={6} sm={6} xs={12}>
                     <CarouselTalleres />

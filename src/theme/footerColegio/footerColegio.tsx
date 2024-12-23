@@ -3,6 +3,7 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import AndesLogo from '../../assets/img/LOGOCOLEGIO.png';
+import EditorialSM from '../../assets/img/sm_logo.webp';
 import "./footerColegio.css";
 
 const FooterColegio = () => {
@@ -51,6 +52,15 @@ const FooterColegio = () => {
 
           <Col md={3} className="d-flex flex-column justify-content-between align-items-center">
             <Nav className="w-100 d-flex justify-content-center">
+              <li className="ms-3" style={{ position: 'relative', top: '-20px' }}>
+                <NavLink className="text-body-secondary" href='https://tiendasm.cl/produccion/web/catalogo/1'>
+                  <img
+                    src={EditorialSM}
+                    width="80"
+                    height="100"
+                  />
+                </NavLink>
+              </li>
               <li className="ms-3">
                 <NavLink className="text-body-secondary" href='https://www.instagram.com/cach.colegioandeschile/'>
                   <FontAwesomeIcon icon={faInstagram} size="3x" className='iconEffect' />
