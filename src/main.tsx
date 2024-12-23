@@ -16,7 +16,6 @@ const Utiles = lazy(() => import('./components/Utiles/Utiles.tsx'));
 const Talleres = lazy(() => import('./components/Talleres/Talleres.tsx'));
 const Contacto = lazy(() => import('./components/Contacto/Contacto.tsx'));
 const Admision = lazy(() => import('./components/Admision/Admision.tsx'));
-const EscuelaVerano = lazy(() => import('./components/Verano/Verano.tsx'));
 const MisionVision = lazy(() => import('./components/MisionVision/MisionVision.tsx'));
 const RespuestaWebPay = lazy(() => import('./components/RespuestaWebPay/RespuestaWebPay.tsx'));
 const Simce = lazy(() => import('./components/Simce/Simce.tsx'));
@@ -35,7 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/admision" element={<Admision />} />
         <Route path="/matricula" element={<InscripcionMatricula />} />
-        <Route path="/verano" element={<EscuelaVerano />} />
+        {/* <Route path="/verano" element={<EscuelaVerano />} /> */}        
         <Route path="/webpay-respuesta" element={<RespuestaWebPay />} />
         <Route path="/info-simce" element={<Simce />} />
       </Routes>

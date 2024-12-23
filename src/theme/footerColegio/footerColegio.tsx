@@ -42,7 +42,7 @@ const FooterColegio = () => {
 
           <Col md={3} className="mb-3 d-none d-md-block">
             <Nav className="flex-column">
-              <NavLink className="text-dark bold textFooter2" href="/comunidad">Nuestra Comunidad</NavLink>
+              <NavLink className="text-dark bold textFooter2" href="/mision-vision">Nuestra Comunidad</NavLink>
               {/* <NavLink className="text-dark bold textFooter2" href="/pae">Programa PAE</NavLink> */}
               <NavLink className="text-dark bold textFooter2" href="/reglamento">Reglamento interno de Convivencia Escolar</NavLink>
             </Nav>

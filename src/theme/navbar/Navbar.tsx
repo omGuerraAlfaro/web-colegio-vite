@@ -11,7 +11,6 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
-  // Dentro de tu componente
   const navigate = useNavigate();
 
   const handleNavClick = () => {
