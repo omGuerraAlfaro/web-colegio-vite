@@ -16,6 +16,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
 import AlertWelcome from '../Alert/AlertWelcome';
+import FlipBookPDF from '../VerPDF/VerPDF';
 
 function base64ToURL(base64: any) {
     const binary = atob(base64);
@@ -38,7 +39,7 @@ function isValidBase64(str: any) {
 
 function Home() {
     const [isLoading, setIsLoading] = useState(true);
-
+    const [showFlipBook, setShowFlipBook] = useState(false); // Estado para mostrar/ocultar el FlipBookPDF
     const [noticias, setNoticias] = useState([]);
 
     useEffect(() => {
@@ -131,6 +132,7 @@ function Home() {
             <AlertWelcome />
             <CarouselHome />
 
+            <FlipBookPDF file="/src/assets/docs/Anuario.pdf" />
             <Container className='my-5'>
                 <div className="row d-flex justify-content-center align-items-center">
                     <div className="col-md-6 col-12">
@@ -142,6 +144,9 @@ function Home() {
                     </div>
                 </div>
             </Container>
+
+
+            {/* /Users/omarguerra/Documents/GitHub/web-colegio-vite/src/assets/docs/Anuario.pdf */}
 
             <Container className="mt-5">
                 <h3 className="titulo mb-4">Nuestro Compromiso</h3>
