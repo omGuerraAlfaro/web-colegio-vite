@@ -17,6 +17,9 @@ import axios from 'axios';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
 import AlertWelcome from '../Alert/AlertWelcome';
 
+import anuario from '../../assets/docs/ANUARIO.pdf';
+
+
 function base64ToURL(base64: any) {
     const binary = atob(base64);
     const array = new Uint8Array(binary.length);
@@ -130,6 +133,24 @@ function Home() {
         <>
             <AlertWelcome />
             <CarouselHome />
+
+
+            <Container className="my-5 container-fondo">
+                <h3 className="titulo">¡Ve nuestro anuario!</h3>
+                <p className="parrafo">Explora los momentos más destacados del año escolar 2024 y revive las actividades, logros y eventos importantes que marcaron a nuestra comunidad educativa.</p>
+                <div className='text-center mt-5'>
+                    <a
+                        href={anuario}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="buttonAnimated text-decoration-none"
+                    >
+                        Ver Anuario 2024
+                    </a>
+                </div>
+            </Container>
+
+
 
             <Container className='my-5'>
                 <div className="row d-flex justify-content-center align-items-center">
