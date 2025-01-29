@@ -16,7 +16,6 @@ import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
 import AlertWelcome from '../Alert/AlertWelcome';
-import FlipBookPDF from '../VerPDF/VerPDF';
 
 import anuario from '../../assets/docs/ANUARIO.pdf';
 
@@ -42,7 +41,6 @@ function isValidBase64(str: any) {
 
 function Home() {
     const [isLoading, setIsLoading] = useState(true);
-    const [showFlipBook, setShowFlipBook] = useState(false); // Estado para mostrar/ocultar el FlipBookPDF
     const [noticias, setNoticias] = useState([]);
 
     useEffect(() => {
