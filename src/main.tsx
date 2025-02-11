@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
 import InscripcionMatricula from './components/InscripcionMatricula/InscripcionMatricula.tsx';
+import PdfValidacion from './components/Pdf-Validacion/PdfValidacion.tsx';
 
 const Home = lazy(() => import('./components/Home/Home.tsx'));
 /* const Pae = lazy(() => import('./components/Pae/Pae.tsx'));*/
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         {/* <Route path="/verano" element={<EscuelaVerano />} /> */}        
         <Route path="/webpay-respuesta" element={<RespuestaWebPay />} />
         <Route path="/info-simce" element={<Simce />} />
+        <Route path="/validar-certificado" element={<PdfValidacion />} />
       </Routes>
       <FooterColegio />
     </Router>
