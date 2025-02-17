@@ -2,6 +2,7 @@ import { Card } from 'react-bootstrap';
 import './Transactions.css'
 
 function TransactionNull(data:any) {
+    
     const {buy_order} = data.data;
     console.log(buy_order);
     

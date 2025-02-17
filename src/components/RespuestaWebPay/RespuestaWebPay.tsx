@@ -64,6 +64,7 @@ function RespuestaWebPay() {
     const getWebpayResponse = async (token: string) => {
         try {
             const response = await axios.post(`https://colegio-backend.onrender.com/payment/confirm`, { token }, config);
+            // const response = await axios.post(`http://localhost:3200/payment/confirm/`, { token }, config);
             setWebpayRespuesta(response.data);
         } catch (error) {
             console.error('Error al obtener la respuesta de Webpay:', error);

@@ -7,6 +7,7 @@ interface Props {
 }
 
 function TransactionFailure({ data }: Props) {
+    
     return (
         <Card className='cardStyle2 shadow' style={{ backgroundColor: '#e1cacd' }}>
             <Card.Header>

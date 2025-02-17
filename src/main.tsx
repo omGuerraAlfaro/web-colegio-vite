@@ -9,6 +9,7 @@ import Navbar from './theme/navbar/Navbar.tsx';
 import FooterColegio from './theme/footerColegio/footerColegio.tsx';
 import InscripcionMatricula from './components/InscripcionMatricula/InscripcionMatricula.tsx';
 import PdfValidacion from './components/Pdf-Validacion/PdfValidacion.tsx';
+import RespuestaWebPayCertificado from './components/RespuestaWebPay/RespuestaWebPayCertificado.tsx';
 
 const Home = lazy(() => import('./components/Home/Home.tsx'));
 /* const Pae = lazy(() => import('./components/Pae/Pae.tsx'));*/
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/matricula" element={<InscripcionMatricula />} />
         {/* <Route path="/verano" element={<EscuelaVerano />} /> */}        
         <Route path="/webpay-respuesta" element={<RespuestaWebPay />} />
+        <Route path="/webpay-respuesta/certificado" element={<RespuestaWebPayCertificado />} />
         <Route path="/info-simce" element={<Simce />} />
         <Route path="/validar-certificado" element={<PdfValidacion />} />
       </Routes>
