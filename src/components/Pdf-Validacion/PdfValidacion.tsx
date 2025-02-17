@@ -10,6 +10,14 @@ interface ValidationResult {
     certificateType: string;
     certificateNumber: string;
     isValid: boolean;
+    primerNombreAlumno: string;
+    segundoNombreAlumno: string;
+    primerApellidoAlumno: string;
+    segundoApellidoAlumno: string;
+    curso: string;
+    rut: string;
+    dv: string;
+    expirationDate: string;
   };
 }
 
@@ -51,6 +59,35 @@ const PdfValidacion = () => {
     }
   };
 
+  const transformCurso = (num: number): string => {
+    switch (num) {
+      case 1:
+        return 'Pre-Kinder';
+      case 2:
+        return 'Kinder';
+      case 3:
+        return 'Primero Básico';
+      case 4:
+        return 'Segundo Básico';
+      case 5:
+        return 'Tercero Básico';
+      case 6:
+        return 'Cuarto Básico';
+      case 7:
+        return 'Quinto Básico';
+      case 8:
+        return 'Sexto Básico';
+      case 9:
+        return 'Séptimo Básico';
+      case 10:
+        return 'Octavo Básico';
+      default:
+        return 'Curso Desconocido';
+    }
+  };
+
+
+
   return (
     <Container>
       <Row>
@@ -64,8 +101,8 @@ const PdfValidacion = () => {
           ) : (
             <>
               {validationResult ? (
-                <Card 
-                  className={validationResult.message === "Error al validar el certificado" ? 'cardStyle2' : 'cardStyle shadow'} 
+                <Card
+                  className={validationResult.message === "Error al validar el certificado" ? 'cardStyle2' : 'cardStyle shadow'}
                   style={{ backgroundColor: validationResult.message === "Error al validar el certificado" ? '#e1cacd' : '#D4EDDA' }}
                 >
                   <Card.Header>
@@ -80,11 +117,20 @@ const PdfValidacion = () => {
                         <Card.Subtitle><b>Tipo de Certificado:</b></Card.Subtitle>
                         <Card.Text><b>{validationResult.data.certificateType}</b></Card.Text>
                         <hr />
-                        <Card.Subtitle><b>Número de Certificado:</b></Card.Subtitle>
+                        <Card.Subtitle><b>Nombre Alumno:</b></Card.Subtitle>
+                        <Card.Text><b>{validationResult.data.primerNombreAlumno} {validationResult.data.segundoNombreAlumno} {validationResult.data.primerApellidoAlumno} {validationResult.data.segundoApellidoAlumno}</b></Card.Text>
+                        <hr />
+                        <Card.Subtitle><b>Rut Alumno:</b></Card.Subtitle>
+                        <Card.Text><b>{validationResult.data.rut}-{validationResult.data.dv}</b></Card.Text>
+                        <hr />
+                        <Card.Subtitle><b>Curso Alumno:</b></Card.Subtitle>
+                        <Card.Text><b>{transformCurso(Number(validationResult.data.curso))}</b></Card.Text>
+                        <hr />
+                        <Card.Subtitle><b>Número de Matrícula:</b></Card.Subtitle>
                         <Card.Text><b>{validationResult.data.certificateNumber}</b></Card.Text>
                         <hr />
-                        <Card.Subtitle><b>Válido:</b></Card.Subtitle>
-                        <Card.Text><b>{validationResult.data.isValid ? 'Sí' : 'No'}</b></Card.Text>
+                        <Card.Subtitle><b>Fecha Expiración:</b></Card.Subtitle>
+                        <Card.Text><b>{validationResult.data.expirationDate}</b></Card.Text>
                         <hr />
                       </>
                     )}
