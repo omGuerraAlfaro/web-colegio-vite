@@ -15,9 +15,10 @@ import { useState, useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
-import AlertWelcome from '../Alert/AlertWelcome';
+// import AlertWelcome from '../Alert/AlertInicioClases';
 
 import anuario from '../../assets/docs/ANUARIO.pdf';
+import AlertInicioClases from '../Alert/AlertInicioClases';
 
 
 function base64ToURL(base64: any) {
@@ -130,7 +131,7 @@ function Home() {
 
     return (
         <>
-            <AlertWelcome />
+            <AlertInicioClases />
             <CarouselHome />
 
 
