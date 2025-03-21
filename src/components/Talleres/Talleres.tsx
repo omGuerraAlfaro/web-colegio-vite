@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faChildren, faPersonChalkboard, faDollarSign, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faPersonChalkboard, faDollarSign, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import './Talleres.css';
 import CarouselTalleres from '../Carousel/CarouselTalleres';
 import FormularioTalleres from '../Formularios/FormularioTalleres';

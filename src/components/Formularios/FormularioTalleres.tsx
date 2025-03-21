@@ -19,6 +19,7 @@ const formSchema = yup.object().shape({
 
 const FormularioTalleres = () => {
   const [alumnosDelApoderado, setAlumnosDelApoderado] = useState<any[]>([]);
+  const [formHabilitado, setFormHabilitado] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -80,6 +81,7 @@ const FormularioTalleres = () => {
         formik.setFieldValue('apoderado', nombreCompletoApoderado);
         formik.setFieldValue('telefono', apoderado.telefono_apoderado || '');
         formik.setFieldValue('email', apoderado.correo_apoderado || '');
+        setFormHabilitado(true);
       } else {
         Swal.fire({
           icon: 'error',
@@ -90,6 +92,7 @@ const FormularioTalleres = () => {
         formik.setFieldValue('apoderado', '');
         formik.setFieldValue('telefono', '');
         formik.setFieldValue('email', '');
+        setFormHabilitado(false);
       }
     } catch (error) {
       console.error('Error al buscar apoderado:', error);
@@ -99,18 +102,18 @@ const FormularioTalleres = () => {
         text: 'Hubo un problema al buscar al apoderado. Intente más tarde.',
       });
       setAlumnosDelApoderado([]);
+      setFormHabilitado(false);
     }
   };
 
   const enviarDatos = async (data: any) => {
     try {
       const payload = {
-        id_alumno: data.pupilo,       // ID del alumno
-        id_taller: data.tallerPostula, // ID del taller
-        correo: data.email // correo ingresado
+        id_alumno: data.pupilo,
+        id_taller: data.tallerPostula,
+        correo: data.email
       };
-      
-      // await axios.post('http://localhost:3200/inscripcion-taller', payload, {
+
       await axios.post('https://colegio-backend.onrender.com/inscripcion-taller', payload, {
         headers: { 'Content-Type': 'application/json' }
       });
@@ -125,6 +128,7 @@ const FormularioTalleres = () => {
       }).then(() => {
         formik.resetForm();
         setAlumnosDelApoderado([]);
+        setFormHabilitado(false);
       });
     } catch (error) {
       console.error('Error al enviar los datos:', error);
@@ -149,7 +153,7 @@ const FormularioTalleres = () => {
             <Form.Control
               className="rounded-input"
               type="text"
-              placeholder="Ingrese RUT sin puntos ni guion"
+              placeholder="Ingrese RUT (Formato: 12345678-9)"
               name="rutApoderado"
               value={formik.values.rutApoderado}
               onChange={formik.handleChange}
@@ -169,6 +173,7 @@ const FormularioTalleres = () => {
               name="apoderado"
               value={formik.values.apoderado}
               readOnly
+              disabled={!formHabilitado}
             />
           </Form.Group>
 
@@ -181,6 +186,7 @@ const FormularioTalleres = () => {
               value={formik.values.pupilo}
               onChange={formik.handleChange}
               isInvalid={!!formik.errors.pupilo && formik.touched.pupilo}
+              disabled={!formHabilitado}
             >
               <option value="" disabled hidden>Seleccione un alumno</option>
               {alumnosDelApoderado.map((alumno) => (
@@ -192,7 +198,6 @@ const FormularioTalleres = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
-
           <Form.Group className="margenLabel">
             <Form.Label><small><strong>Taller al que postula</strong></small></Form.Label>
             <Form.Control
@@ -202,6 +207,7 @@ const FormularioTalleres = () => {
               value={formik.values.tallerPostula}
               onChange={formik.handleChange}
               isInvalid={!!formik.errors.tallerPostula && formik.touched.tallerPostula}
+              disabled={!formHabilitado}
             >
               <option value="" disabled hidden>Seleccionar Taller</option>
               {talleres.map((taller) => (
@@ -228,6 +234,7 @@ const FormularioTalleres = () => {
                     value={formik.values.telefono}
                     onChange={formik.handleChange}
                     isInvalid={!!formik.errors.telefono && formik.touched.telefono}
+                    disabled={!formHabilitado}
                   />
                   <Form.Control.Feedback type="invalid">
                     {formik.errors.telefono}
@@ -248,6 +255,7 @@ const FormularioTalleres = () => {
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     isInvalid={!!formik.errors.email && formik.touched.email}
+                    disabled={!formHabilitado}
                   />
                   <Form.Control.Feedback type="invalid">
                     {formik.errors.email}
@@ -259,7 +267,9 @@ const FormularioTalleres = () => {
 
           <Row>
             <Col md={12} sm={12} xs={12}>
-              <Button type="submit" className='buttonFormulario btn-light'>Ingresar Inscripción</Button>
+              <Button type="submit" className='buttonFormulario btn-light' disabled={!formHabilitado}>
+                Ingresar Inscripción
+              </Button>
             </Col>
           </Row>
         </Form>

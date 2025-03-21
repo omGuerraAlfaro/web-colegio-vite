@@ -18,7 +18,8 @@ import PhotoGallery from '../PhotoGallery/PhotoGallery';
 // import AlertWelcome from '../Alert/AlertInicioClases';
 
 import anuario from '../../assets/docs/ANUARIO.pdf';
-import AlertInicioClases from '../Alert/AlertInicioClases';
+// import AlertInicioClases from '../Alert/AlertInicioClases';
+import AlertWelcome from '../Alert/AlertSimse';
 
 
 function base64ToURL(base64: any) {
@@ -131,7 +132,7 @@ function Home() {
 
     return (
         <>
-            <AlertInicioClases />
+            <AlertWelcome />
             <CarouselHome />
 
 
