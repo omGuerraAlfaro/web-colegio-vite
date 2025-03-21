@@ -24,91 +24,25 @@ function Talleres() {
                 <Col md={4} sm={6} xs={12}>
                     <div className="body-card">
                         <h4 className='titulo-taller'>Taller de Agrupación Músical</h4>
-                        {/* <h6 className='cupos'>10 cupos máximo</h6> */}
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Gerson Olivares</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 5°A</p>
+                        </div>
+                        <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-1'>Lunes | 14:45 | 15:45</p>
                         </div>
                         <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Gerson Olivares</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Miércoles | 14:45 | 15:45</p>
                         </div>
                         <hr className='hrclass' />
-                        {/* <h6 className='cupos'>10 cupos máximo</h6> */}
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Jueves | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Gerson Olivares</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
-                        </div>
-                    </div>
-                </Col>
-
-                <Col md={4} sm={6} xs={12}>
-                    <div className="body-card">
-                        <h4 className='titulo-taller'>Taller de Manualidades</h4>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Karol Sanchez / Claudia Lazcano</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
-                        </div>
-                        <hr className='hrclass' />
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-2'>Jueves | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Karol Sanchez / Claudia Lazcano</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
-                        </div>
-                    </div>
-                </Col>
-
-                <Col md={4} sm={6} xs={12}>
-                    <div className="body-card">
-                        <h4 className='titulo-taller'>Taller de Teatro</h4>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Jorge Ramirez</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
-                        </div>
-                        <hr className='hrclass' />
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-2'>Miércoles | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Jorge Ramirez</p>
-                        </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
@@ -120,13 +54,20 @@ function Talleres() {
                     <div className="body-card">
                         <h4 className='titulo-taller'>Taller Instrumental</h4>
                         <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Gerson Olivares</p>
                         </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 5°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
@@ -138,13 +79,20 @@ function Talleres() {
                     <div className="body-card">
                         <h4 className='titulo-taller'>Taller de Coro</h4>
                         <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Jueves | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Gerson Olivares</p>
                         </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 5°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Jueves | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
@@ -154,15 +102,348 @@ function Talleres() {
 
                 <Col md={4} sm={6} xs={12}>
                     <div className="body-card">
-                        <h4 className='titulo-taller'>Taller Simce 8vo Básico</h4>
+                        <h4 className='titulo-taller'>Taller de Manualidades</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Karol Sanchez / Claudia Lazcano</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Hall</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
+                        </div>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-2'>Jueves | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller de Danza</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Paula Flores</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Patio Pasto</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Lunes | 14:45 | 15:45</p>
+                        </div>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-2'>Jueves | 13:15 | 14:15</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+                        <h6 className='cupos'>Mínimo 10 asistentes</h6>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller de Danza Párvulo</h4>
+
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Paula Flores</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Patio Pasto</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Miércoles | 13:15 | 14:15</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+                        <h6 className='cupos'>Mínimo 10 asistentes</h6>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller de Teatro</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Jorge Ramirez</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 6°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
+                        </div>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-2'>Miércoles | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller de Yoga</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Gina Herrera</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Cancha Colegio</p>
+                        </div>
+                        <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-1'>Jueves | 14:45 | 15:45</p>
                         </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>$10.000(Valor Mensual)</b></p>
+                        </div>
+                        <h6 className='cupos'>Mínimo 10 asistentes</h6>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller Fútbol</h4>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Maria Olga Bravo</p>
+                            <p className='align-self-center adjust-text'>Fernando Marinelli</p>
                         </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> MAS SPORT</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Lunes | 14:45 | 16:00</p>
+                        </div>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 16:00</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>$20.000(Valor Mensual)</b></p>
+                        </div>
+                        <h6 className='cupos'>Mínimo 10 asistentes</h6>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller de Defensa Personal</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Mushka Ceballos</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Cancha Colegio</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Viernes | 14:15 | 15:15</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>$20.000(Valor Mensual)</b></p>
+                        </div>
+                    </div>
+                </Col>
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller Redes Sociales y Herramientas Digitales</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Jovanna López</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Biblioteca</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-2'>Jueves | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>$10.000(Valor Mensual)</b></p>
+                        </div>
+                        <h6 className='cupos'>2 clases al mes</h6>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Jugando en Inglés Párvulo</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Romina Reyes</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Biblioteca</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Lunes | 13:30 | 14:15</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Inglés Primer Ciclo</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Romina Reyes</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 7°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Inglés Segundo Ciclo</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Romina Reyes</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 7°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Miércoles | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito</b></p>
+                        </div>
+                    </div>
+                </Col>
+
+
+
+
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller Simce 8vo Básico (Lenguaje)</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Jorge Ramírez</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 8°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Jueves | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>Gratuito / Obligatorio</b></p>
+                        </div>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller Simce 8vo Básico (Matemáticas)</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Cristian González</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 8°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Martes | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-3'><b>Gratuito / Obligatorio</b></p>
@@ -174,13 +455,20 @@ function Talleres() {
                     <div className="body-card">
                         <h4 className='titulo-taller'>Taller Simce 4to Básico</h4>
                         <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Miércoles | 14:45 | 15:45</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text'>Maria Olga Bravo</p>
                         </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Sala 4°A</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Miércoles | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-3'><b>Gratuito / Obligatorio</b></p>
@@ -188,49 +476,7 @@ function Talleres() {
                     </div>
                 </Col>
 
-                <Col md={4} sm={6} xs={12}>
-                    <div className="body-card">
-                        <h4 className='titulo-taller'>Taller Fútbol</h4>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Lunes | 14:45 | 16:00</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'><b>Ubicación:</b> MAS SPORT</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Fernando Marinelli</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>$20.000(Valor Mensual)</b></p>
-                        </div>
-                    </div>
-                </Col>
 
-                <Col md={4} sm={6} xs={12}>
-                    <div className="body-card">
-                        <h4 className='titulo-taller'>Taller de Defensa Personal</h4>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-1'>Viernes | 14:15 | 15:15</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Cancha Colegio</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Mushka Ceballos</p>
-                        </div>
-                        <div className='d-flex align-items-center my-2'>
-                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-3'><b>$20.000(Valor Mensual)</b></p>
-                        </div>
-                    </div>
-                </Col>
                 {/* <Container>
                     <Col md={12} sm={6} xs={12}>
                         <code className='nota text-center d-none d-md-block'>Nota: Aquellos estudiantes que asistan deberán traer su colación fría para ingerirla a la salida de clases (14:15 hrs).</code>

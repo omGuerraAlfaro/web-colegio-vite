@@ -41,16 +41,23 @@ const FormularioTalleres = () => {
   });
 
   const talleres = [
-    { id_taller: 1, descripcion_taller: 'Taller Agrupación Musical' },
-    { id_taller: 2, descripcion_taller: 'Taller de Reforzamiento' },
-    { id_taller: 3, descripcion_taller: 'Taller de Futbol' },
-    { id_taller: 4, descripcion_taller: 'Taller Instrumental' },
-    { id_taller: 5, descripcion_taller: 'Taller de Manualidades' },
-    { id_taller: 6, descripcion_taller: 'Taller de Teatro' },
-    { id_taller: 7, descripcion_taller: 'Taller de Coro' },
-    { id_taller: 8, descripcion_taller: 'Taller de Defensa Personal' },
-    { id_taller: 9, descripcion_taller: 'Taller Simce 4to Básico' },
-    { id_taller: 10, descripcion_taller: 'Taller Simce 8vo Básico' },
+    { id_taller: 1, descripcion_taller: 'Taller de Agrupación Músical' },
+    { id_taller: 2, descripcion_taller: 'Taller Instrumental' },
+    { id_taller: 3, descripcion_taller: 'Taller de Coro' },
+    { id_taller: 4, descripcion_taller: 'Taller de Manualidades' },
+    { id_taller: 5, descripcion_taller: 'Taller de Danza' },
+    { id_taller: 6, descripcion_taller: 'Taller de Danza Párvulo' },
+    { id_taller: 7, descripcion_taller: 'Taller de Teatro' },
+    { id_taller: 8, descripcion_taller: 'Taller de Yoga' },
+    { id_taller: 9, descripcion_taller: 'Taller Fútbol' },
+    { id_taller: 10, descripcion_taller: 'Taller de Defensa Personal' },
+    { id_taller: 11, descripcion_taller: 'Taller Redes Sociales y Herramientas Digitales' },
+    { id_taller: 12, descripcion_taller: 'Jugando en Inglés Párvulo' },
+    { id_taller: 13, descripcion_taller: 'Inglés Primer Ciclo' },
+    { id_taller: 14, descripcion_taller: 'Inglés Segundo Ciclo' },
+    { id_taller: 15, descripcion_taller: 'Taller Simce 8vo Básico (Lenguaje)' },
+    { id_taller: 16, descripcion_taller: 'Taller Simce 8vo Básico (Matemáticas)' },
+    { id_taller: 17, descripcion_taller: 'Taller Simce 4to Básico' }
   ];
 
   const buscarApoderado = async (rut: string) => {
