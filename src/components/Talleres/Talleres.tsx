@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faPersonChalkboard, faDollarSign, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import './Talleres.css';
-import CarouselTalleres from '../Carousel/CarouselTalleres';
+// import CarouselTalleres from '../Carousel/CarouselTalleres';
 import FormularioTalleres from '../Formularios/FormularioTalleres';
 
 function Talleres() {
@@ -10,9 +10,9 @@ function Talleres() {
         <Container>
             <h3 className="tituloTaller">Talleres 2025</h3>
             <Row className='my-3 d-flex align-items-center'>
-                <Col md={6} sm={6} xs={12}>
+                {/* <Col md={6} sm={6} xs={12}>
                     <CarouselTalleres />
-                </Col>
+                </Col> */}
                 <Col md={6} sm={6} xs={12}>
                     <p className='parrafoTalleres'>Dentro de nuestra comunidad, creemos que el aprendizaje va más allá del aula.</p>
                     <p className='parrafoTalleres'>Este año como colegio ampliamos la gama de talleres, entregando más opciones con el fin de fomentar el desarrollo de diversas habilidades en nuestros niños y niñas, y que puedan explorar diferentes áreas para un desarrollo integral.</p>
@@ -397,10 +397,6 @@ function Talleres() {
                     </div>
                 </Col>
 
-
-
-
-
                 <Col md={4} sm={6} xs={12}>
                     <div className="body-card">
                         <h4 className='titulo-taller'>Taller Simce 8vo Básico (Lenguaje)</h4>
@@ -510,19 +506,23 @@ function Talleres() {
 
             <h3 className="titulo my-3">Formulario de Inscripción Talleres 2025</h3>
             <Row>
+                <Col sm={6} xs={12} className="textSteps">
+                    <h4 className="tituloAdmision">Para incorporarse a nuestros talleres 2025, siga los siguientes pasos:</h4>
+                    <div className="bodySteps">
+                        <h4><strong>Paso 1:</strong> Complete el formulario de inscripción.</h4>
+                    </div>
+                    <div className="bodySteps">
+                        <h4><strong>Paso 2:</strong> Una vez enviado el formulario, la encargada de inscripciones se pondrá en contacto con usted para confirmar el proceso.</h4>
+                    </div>
+                    <div className="bodySteps">
+                        <h4><strong>Paso 3:</strong> Recibirá una notificación de confirmación a través de su correo electrónico.</h4>
+                    </div>
+                </Col>
                 <Col sm={6} xs={12}>
                     <FormularioTalleres />
                 </Col>
-                <Col sm={6} xs={12} className="textSteps">
-                    <h4 className="tituloAdmision">Para la incorporación a nuestros talleres 2024, debe seguir los siguientes pasos:</h4>
-                    <div className="bodySteps">
-                        <h4><strong>Paso 1: </strong>Llenar el formulario:</h4>
-                    </div>
-                    <div className="bodySteps">
-                        <h4><strong>Paso 2: </strong>Una vez que haya llenado el formulario, será contactado(a) a la brevedad por la encargada de inscripciones para concretar dicha inscripción.</h4>
-                    </div>
-                </Col>
             </Row>
+
 
         </Container>
     );
