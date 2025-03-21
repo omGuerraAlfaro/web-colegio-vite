@@ -152,3 +152,11 @@
 .buttonAnimated:active {
     transform: translateY(-1px);
 }
+
+.carousel-talleres-img {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

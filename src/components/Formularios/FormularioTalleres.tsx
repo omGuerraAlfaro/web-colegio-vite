@@ -1,33 +1,33 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { useState } from 'react';
 import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import "./Formulario.css"
+import "./Formulario.css";
 
 const formSchema = yup.object().shape({
-  pupilo: yup.string().required('El nombre del postulante es requerido'),
+  rutApoderado: yup.string().required('El RUT del apoderado es requerido'),
+  pupilo: yup.string().required('El alumno/a es requerido'),
   apoderado: yup.string().required('El nombre del apoderado es requerido'),
   telefono: yup.string().required('El teléfono es requerido'),
   email: yup.string().email('Debe ser un email válido').required('El email es requerido'),
-  consentimiento: yup.boolean().oneOf([true], 'El consentimiento es requerido'),
   tallerPostula: yup.string().required('El taller al que postula es requerido'),
-  cursoPostula: yup.string().required('El curso al que postula es requerido')
 });
 
 const FormularioTalleres = () => {
+  const [alumnosDelApoderado, setAlumnosDelApoderado] = useState<any[]>([]);
+
   const formik = useFormik({
     initialValues: {
+      rutApoderado: '',
       pupilo: '',
       apoderado: '',
       telefono: '',
       email: '',
-      colegio: '',
-      tallerPostula: '',
-      cursoPostula: '',
-      //consentimiento: false
+      tallerPostula: ''
     },
     validationSchema: formSchema,
     onSubmit: async (values) => {
@@ -40,40 +40,81 @@ const FormularioTalleres = () => {
   });
 
   const talleres = [
-    "Taller de Circo y Malabares",
-    "Taller de Ingles",
-    "Taller Fútbol Recreativo",
-    "Taller Instrumental y Expresión Musical",
-    "Taller de Reforzamiento",
-    "Taller de Ballet",
-    "Taller de Manualidades",
-    "Taller de Teatro y Expresión Corporal",
-    "Taller Voleibol Recreativo",
-    "Taller Danza Recreativa",
-    "Taller Simce 4to Básico",
-    "Taller de Defensa Personal",
+    { id_taller: 1, descripcion_taller: 'Taller Agrupación Musical' },
+    { id_taller: 2, descripcion_taller: 'Taller de Reforzamiento' },
+    { id_taller: 3, descripcion_taller: 'Taller de Futbol' },
+    { id_taller: 4, descripcion_taller: 'Taller Instrumental' },
+    { id_taller: 5, descripcion_taller: 'Taller de Manualidades' },
+    { id_taller: 6, descripcion_taller: 'Taller de Teatro' },
+    { id_taller: 7, descripcion_taller: 'Taller de Coro' },
+    { id_taller: 8, descripcion_taller: 'Taller de Defensa Personal' },
+    { id_taller: 9, descripcion_taller: 'Taller Simce 4to Básico' },
+    { id_taller: 10, descripcion_taller: 'Taller Simce 8vo Básico' },
   ];
 
-  const cursos = [
-    "Prekinder",
-    "Kinder",
-    "Primero",
-    "Segundo",
-    "Tercero",
-    "Cuarto",
-    "Quinto",
-    "Sexto",
-    "Séptimo",
-    "Octavo"
-  ];
+  const buscarApoderado = async (rut: string) => {
+    try {
+      const rutFormat = rut.split("-")[0];
+      const response = await axios.get(`https://colegio-backend.onrender.com/apoderado/${rutFormat}/with-estudents`);
+      const apoderado = response.data;
+
+      if (apoderado && apoderado.estudiantes?.length > 0) {
+        const nombreCompletoApoderado = [
+          apoderado.primer_nombre_apoderado,
+          apoderado.segundo_nombre_apoderado,
+          apoderado.primer_apellido_apoderado,
+          apoderado.segundo_apellido_apoderado
+        ].filter(Boolean).join(" ");
+
+        const alumnos = apoderado.estudiantes.map((alumno: any) => ({
+          id: alumno.id,
+          nombreCompleto: [
+            alumno.primer_nombre_alumno,
+            alumno.segundo_nombre_alumno,
+            alumno.primer_apellido_alumno,
+            alumno.segundo_apellido_alumno
+          ].filter(Boolean).join(" ")
+        }));
+
+        setAlumnosDelApoderado(alumnos);
+        formik.setFieldValue('apoderado', nombreCompletoApoderado);
+        formik.setFieldValue('telefono', apoderado.telefono_apoderado || '');
+        formik.setFieldValue('email', apoderado.correo_apoderado || '');
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Apoderado no encontrado',
+          text: 'No se encontró un apoderado con ese RUT.',
+        });
+        setAlumnosDelApoderado([]);
+        formik.setFieldValue('apoderado', '');
+        formik.setFieldValue('telefono', '');
+        formik.setFieldValue('email', '');
+      }
+    } catch (error) {
+      console.error('Error al buscar apoderado:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en la búsqueda',
+        text: 'Hubo un problema al buscar al apoderado. Intente más tarde.',
+      });
+      setAlumnosDelApoderado([]);
+    }
+  };
 
   const enviarDatos = async (data: any) => {
     try {
-      const headers = {
-        'Content-Type': 'application/json',
+      const payload = {
+        id_alumno: data.pupilo,       // ID del alumno
+        id_taller: data.tallerPostula, // ID del taller
+        correo: data.email // correo ingresado
       };
-      // await axios.post('http://localhost:3200/correo/enviar/taller', data, { headers: headers });
-      await axios.post('https://colegio-backend.onrender.com/correo/enviar/taller', data, { headers: headers });
+      
+      // await axios.post('http://localhost:3200/inscripcion-taller', payload, {
+      await axios.post('https://colegio-backend.onrender.com/inscripcion-taller', payload, {
+        headers: { 'Content-Type': 'application/json' }
+      });
+
       Swal.fire({
         title: '¡Gracias!',
         text: 'Su formulario de inscripción ha sido enviado.',
@@ -83,90 +124,41 @@ const FormularioTalleres = () => {
         timerProgressBar: true,
       }).then(() => {
         formik.resetForm();
+        setAlumnosDelApoderado([]);
       });
-      // console.log(response.data);
     } catch (error) {
       console.error('Error al enviar los datos:', error);
       Swal.fire({
-        title: '¡ Lo Sentimos :( !',
-        text: 'Tenemos problemas con nuestros servicios, por favor intente más tarde. Si el problema persiste, por favor contacte al colegio a través de nuestro Whatsapp.',
+        title: '¡Lo sentimos :(!',
+        text: 'Tenemos problemas con nuestros servicios, por favor intente más tarde.',
         icon: 'error',
         confirmButtonText: 'Entendido',
         timer: 8000,
         timerProgressBar: true,
-      }).then(() => {
-        formik.resetForm();
       });
     }
-  }
+  };
 
   return (
     <Card style={{ backgroundColor: '#f5f5f5', borderRadius: '15px', padding: '20px' }} className='shadow'>
-      <Card.Title>Formulario de inscripción Talleres 2024</Card.Title>
+      <Card.Title>Formulario de inscripción Talleres 2025</Card.Title>
       <Card.Body>
         <Form onSubmit={formik.handleSubmit}>
           <Form.Group>
-            <Form.Label><small><strong>Nombre completo del Alumno/a</strong></small></Form.Label>
+            <Form.Label><small><strong>RUT del Apoderado</strong></small></Form.Label>
             <Form.Control
               className="rounded-input"
               type="text"
-              placeholder="Ingrese nombre completo"
-              name="pupilo"
-              value={formik.values.pupilo}
+              placeholder="Ingrese RUT sin puntos ni guion"
+              name="rutApoderado"
+              value={formik.values.rutApoderado}
               onChange={formik.handleChange}
-              isInvalid={!!formik.errors.pupilo && formik.touched.pupilo}
+              onBlur={() => buscarApoderado(formik.values.rutApoderado)}
+              isInvalid={!!formik.errors.rutApoderado && formik.touched.rutApoderado}
             />
             <Form.Control.Feedback type="invalid">
-              {formik.errors.pupilo}
+              {formik.errors.rutApoderado}
             </Form.Control.Feedback>
-          </Form.Group>
-
-          <Form.Group className="margenLabel">
-            <Form.Label><small><strong>Curso del Alumno/a</strong></small></Form.Label>
-            <div className="select-wrapper">
-              <Form.Control
-                className="rounded-input"
-                as="select"
-                name="cursoPostula"
-                onChange={formik.handleChange}
-                value={formik.values.cursoPostula}
-                isInvalid={!!formik.errors.cursoPostula && formik.touched.cursoPostula}
-              >
-                <option value="" disabled hidden>Seleccionar Curso</option>
-                {cursos.map((curso, index) => (
-                  <option key={index} value={curso}>
-                    {curso}
-                  </option>
-                ))}
-              </Form.Control>
-              <Form.Control.Feedback type="invalid">
-                {formik.errors.cursoPostula}
-              </Form.Control.Feedback>
-            </div>
-          </Form.Group>
-
-          <Form.Group className="margenLabel">
-            <Form.Label><small><strong>Taller al que postula</strong></small></Form.Label>
-            <div className="select-wrapper">
-              <Form.Control
-                className="rounded-input"
-                as="select"
-                name="tallerPostula"
-                onChange={formik.handleChange}
-                value={formik.values.tallerPostula}
-                isInvalid={!!formik.errors.tallerPostula && formik.touched.tallerPostula}
-              >
-                <option value="" disabled hidden>Seleccionar Taller</option>
-                {talleres.map((taller, index) => (
-                  <option key={index} value={taller}>
-                    {taller}
-                  </option>
-                ))}
-              </Form.Control>
-              <Form.Control.Feedback type="invalid">
-                {formik.errors.tallerPostula}
-              </Form.Control.Feedback>
-            </div>
           </Form.Group>
 
           <Form.Group className="margenLabel">
@@ -174,30 +166,64 @@ const FormularioTalleres = () => {
             <Form.Control
               className="rounded-input"
               type="text"
-              placeholder="Ingrese nombre completo"
               name="apoderado"
               value={formik.values.apoderado}
-              onChange={formik.handleChange}
-              isInvalid={!!formik.errors.apoderado && formik.touched.apoderado}
+              readOnly
             />
-            <Form.Control.Feedback type="invalid">
-              {formik.errors.apoderado}
-            </Form.Control.Feedback>
-          </Form.Group>          
+          </Form.Group>
 
+          <Form.Group>
+            <Form.Label><small><strong>Alumno/a</strong></small></Form.Label>
+            <Form.Control
+              className="rounded-input"
+              as="select"
+              name="pupilo"
+              value={formik.values.pupilo}
+              onChange={formik.handleChange}
+              isInvalid={!!formik.errors.pupilo && formik.touched.pupilo}
+            >
+              <option value="" disabled hidden>Seleccione un alumno</option>
+              {alumnosDelApoderado.map((alumno) => (
+                <option key={alumno.id} value={alumno.id}>{alumno.nombreCompleto}</option>
+              ))}
+            </Form.Control>
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.pupilo}
+            </Form.Control.Feedback>
+          </Form.Group>
+
+
+          <Form.Group className="margenLabel">
+            <Form.Label><small><strong>Taller al que postula</strong></small></Form.Label>
+            <Form.Control
+              className="rounded-input"
+              as="select"
+              name="tallerPostula"
+              value={formik.values.tallerPostula}
+              onChange={formik.handleChange}
+              isInvalid={!!formik.errors.tallerPostula && formik.touched.tallerPostula}
+            >
+              <option value="" disabled hidden>Seleccionar Taller</option>
+              {talleres.map((taller) => (
+                <option key={taller.id_taller} value={taller.id_taller}>
+                  {taller.descripcion_taller}
+                </option>
+              ))}
+            </Form.Control>
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.tallerPostula}
+            </Form.Control.Feedback>
+          </Form.Group>
 
           <Row className="margenLabel">
             <Col md={6} xs={12}>
               <Form.Group>
                 <Form.Label><small><strong>Teléfono</strong></small></Form.Label>
                 <InputGroup>
-                  <InputGroup.Text>
-                    <FontAwesomeIcon icon={faPhone} />
-                  </InputGroup.Text>
+                  <InputGroup.Text><FontAwesomeIcon icon={faPhone} /></InputGroup.Text>
                   <Form.Control
                     className="rounded-input-right"
                     type="tel"
-                    placeholder="Ingrese teléfono"
                     name="telefono"
                     value={formik.values.telefono}
                     onChange={formik.handleChange}
@@ -214,13 +240,10 @@ const FormularioTalleres = () => {
               <Form.Group>
                 <Form.Label><small><strong>Email</strong></small></Form.Label>
                 <InputGroup>
-                  <InputGroup.Text>
-                    <FontAwesomeIcon icon={faEnvelope} />
-                  </InputGroup.Text>
+                  <InputGroup.Text><FontAwesomeIcon icon={faEnvelope} /></InputGroup.Text>
                   <Form.Control
                     className="rounded-input-right"
                     type="email"
-                    placeholder="Ingrese email"
                     name="email"
                     value={formik.values.email}
                     onChange={formik.handleChange}
@@ -234,26 +257,14 @@ const FormularioTalleres = () => {
             </Col>
           </Row>
 
-          {/* <Form.Group className="margenLabel">
-            <Form.Check
-              type="checkbox"
-              label="Doy mi consentimiento para el manejo de mis datos."
-              name="consentimiento"
-              checked={formik.values.consentimiento}
-              onChange={formik.handleChange}
-              isInvalid={!!formik.errors.consentimiento && formik.touched.consentimiento}
-            />
-            {formik.errors.consentimiento && formik.touched.consentimiento && <Form.Text className="text-danger">{formik.errors.consentimiento}</Form.Text>}
-          </Form.Group> */}
-
           <Row>
             <Col md={12} sm={12} xs={12}>
-              <Button type="submit" className='buttonFormulario btn-light'>Enviar formulario de inscripción</Button>
+              <Button type="submit" className='buttonFormulario btn-light'>Ingresar Inscripción</Button>
             </Col>
           </Row>
         </Form>
       </Card.Body>
-    </Card >
+    </Card>
   );
 };
 

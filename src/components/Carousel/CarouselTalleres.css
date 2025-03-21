@@ -1,0 +1,126 @@
+/* Carousel.css */
+
+/* Contenedor principal del carrusel */
+.carousel-talleres-wrapper {
+    width: 100%;
+    max-width: 700px; /* Ajustado al tamaño de la imagen */
+    height: 663px; /* Altura fija de la imagen */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Título encima del carrusel */
+.titulo-carrusel-talleres {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #8fcfe5;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 45px;
+    padding: 10px 20px;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Imágenes del carrusel con tamaño fijo y bien ajustadas */
+.carousel-talleres img {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Texto del carrusel (si usas captions) */
+.carousel-talleres .carousel-caption h2 {
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Indicadores del carrusel */
+.carousel-talleres .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #808080;
+    border: none;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.carousel-talleres .carousel-indicators button.active {
+    background-color: #1c2260;
+}
+
+/* Flechas del carrusel */
+.carousel-talleres .carousel-control-prev,
+.carousel-talleres .carousel-control-next {
+    background-color: transparent;
+}
+
+.carousel-talleres .carousel-control-prev-icon,
+.carousel-talleres .carousel-control-next-icon {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.carousel-talleres .carousel-control-prev-icon:hover,
+.carousel-talleres .carousel-control-next-icon:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+/* Estilos responsivos para tablets */
+@media (max-width: 992px) {
+    .titulo-carrusel-talleres {
+        font-size: 2rem;
+        padding: 10px 15px;
+    }
+
+    .carousel-talleres-wrapper {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel-talleres .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos responsivos para teléfonos */
+@media (max-width: 576px) {
+    .titulo-carrusel-talleres {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+
+    .carousel-talleres-wrapper {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel-talleres img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-talleres .carousel-caption h2 {
+        font-size: 1rem;
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 10px;
+    }
+}

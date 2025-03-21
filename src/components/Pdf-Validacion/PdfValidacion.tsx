@@ -61,32 +61,23 @@ const PdfValidacion = () => {
 
   const transformCurso = (num: number): string => {
     switch (num) {
-      case 1:
-        return 'Pre-Kinder';
-      case 2:
-        return 'Kinder';
-      case 3:
-        return 'Primero Básico';
-      case 4:
-        return 'Segundo Básico';
-      case 5:
-        return 'Tercero Básico';
-      case 6:
-        return 'Cuarto Básico';
-      case 7:
-        return 'Quinto Básico';
-      case 8:
-        return 'Sexto Básico';
-      case 9:
-        return 'Séptimo Básico';
-      case 10:
-        return 'Octavo Básico';
-      default:
-        return 'Curso Desconocido';
+      case 1: return 'Pre-Kinder';
+      case 2: return 'Kinder';
+      case 3: return 'Primero Básico';
+      case 4: return 'Segundo Básico';
+      case 5: return 'Tercero Básico';
+      case 6: return 'Cuarto Básico';
+      case 7: return 'Quinto Básico';
+      case 8: return 'Sexto Básico';
+      case 9: return 'Séptimo Básico';
+      case 10: return 'Octavo Básico';
+      default: return 'Curso Desconocido';
     }
   };
 
-
+  const isExpired = validationResult?.data?.expirationDate
+    ? new Date(validationResult.data.expirationDate) < new Date()
+    : false;
 
   return (
     <Container>
@@ -102,15 +93,20 @@ const PdfValidacion = () => {
             <>
               {validationResult ? (
                 <Card
-                  className={validationResult.message === "Error al validar el certificado" ? 'cardStyle2' : 'cardStyle shadow'}
-                  style={{ backgroundColor: validationResult.message === "Error al validar el certificado" ? '#e1cacd' : '#D4EDDA' }}
+                  className={isExpired ? 'cardStyleExpired' : (validationResult.message === "Error al validar el certificado" ? 'cardStyle2' : 'cardStyle shadow')}
+                  style={{
+                    backgroundColor: isExpired ? '#f8d7da' : (validationResult.message === "Error al validar el certificado" ? '#e1cacd' : '#D4EDDA'),
+                    borderColor: isExpired ? '#dc3545' : undefined
+                  }}
                 >
                   <Card.Header>
                     <Card.Title>Resultado de la Validación</Card.Title>
                   </Card.Header>
                   <Card.Body>
                     <Card.Subtitle><b>Mensaje:</b></Card.Subtitle>
-                    <Card.Text><b>{validationResult.message}</b></Card.Text>
+                    <Card.Text style={{ color: isExpired ? 'red' : 'black' }}>
+                      <b>{isExpired ? "El certificado ha expirado" : validationResult.message}</b>
+                    </Card.Text>
                     <hr />
                     {validationResult.data && (
                       <>
@@ -130,7 +126,9 @@ const PdfValidacion = () => {
                         <Card.Text><b>{validationResult.data.certificateNumber}</b></Card.Text>
                         <hr />
                         <Card.Subtitle><b>Fecha Expiración:</b></Card.Subtitle>
-                        <Card.Text><b>{validationResult.data.expirationDate}</b></Card.Text>
+                        <Card.Text style={{ color: isExpired ? 'red' : 'black' }}>
+                          <b>{validationResult.data.expirationDate}</b>
+                        </Card.Text>
                         <hr />
                       </>
                     )}
