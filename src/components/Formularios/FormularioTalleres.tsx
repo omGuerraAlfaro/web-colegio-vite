@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useState } from 'react';
-import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
+import { Button, Card, Col, Form, InputGroup, Row, Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from 'sweetalert2';
@@ -274,9 +274,17 @@ const FormularioTalleres = () => {
 
           <Row>
             <Col md={12} sm={12} xs={12}>
-              <Button type="submit" className='buttonFormulario btn-light' disabled={!formHabilitado}>
-                Ingresar Inscripción
+              <Button type="submit" className='buttonFormulario btn-light' disabled={!formHabilitado || formik.isSubmitting}>
+                {formik.isSubmitting ? (
+                  <>
+                    <Spinner animation="border" size="sm" className="me-2" />
+                    Procesando...
+                  </>
+                ) : (
+                  "Ingresar Inscripción"
+                )}
               </Button>
+
             </Col>
           </Row>
         </Form>

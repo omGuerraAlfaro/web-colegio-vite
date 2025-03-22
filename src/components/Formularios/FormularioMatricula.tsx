@@ -187,7 +187,7 @@ const FormularioMatricula = () => {
       }).then(() => {
         formik.resetForm();
       });
-      
+
     } catch (error) {
       console.error('Error al enviar los datos:', error);
       Swal.fire({
@@ -346,7 +346,7 @@ const FormularioMatricula = () => {
               >
                 <option value="" disabled hidden>Seleccionar curso</option>
                 {cursos.map((curso, index) => (
-                  <option key={index} value={index+1}>
+                  <option key={index} value={index + 1}>
                     {curso}
                   </option>
                 ))}
@@ -678,7 +678,7 @@ const FormularioMatricula = () => {
 
           <Row>
             <Col md={12} sm={12} xs={12}>
-            <Button type="submit" className="buttonFormulario btn-light" disabled={isSubmitting}>
+              <Button type="submit" className="buttonFormulario btn-light" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
                     <Spinner animation="border" size="sm" className="me-2" />
