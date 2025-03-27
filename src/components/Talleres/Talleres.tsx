@@ -149,7 +149,7 @@ function Talleres() {
                         </div>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-2'>Jueves | 13:15 | 14:15</p>
+                            <p className='align-self-center adjust-text mx-2'>Jueves | 14:45 | 15:45</p>
                         </div>
                         <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
