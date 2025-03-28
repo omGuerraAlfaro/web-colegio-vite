@@ -298,27 +298,26 @@ function Talleres() {
                 </Col>
                 <Col md={4} sm={6} xs={12}>
                     <div className="body-card">
-                        <h4 className='titulo-taller'>Taller Redes Sociales y Herramientas Digitales</h4>
+                        <h4 className='titulo-taller'>Taller de Voleibol</h4>
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'>Jovanna López</p>
+                            <p className='align-self-center adjust-text'>Angeelo Rodríguez</p>
                         </div>
                         <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Biblioteca</p>
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Cancha Colegio</p>
                         </div>
                         <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
-                            <p className='align-self-center adjust-text mx-2'>Jueves | 14:45 | 15:45</p>
+                            <p className='align-self-center adjust-text mx-2'>Míercoles | 14:45 | 15:45</p>
                         </div>
                         <hr className='hrclass' />
                         <div className='d-flex align-items-center my-2'>
                             <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
                             <p className='align-self-center adjust-text mx-3'><b>$10.000(Valor Mensual)</b></p>
                         </div>
-                        <h6 className='cupos'>2 clases al mes</h6>
                     </div>
                 </Col>
 
