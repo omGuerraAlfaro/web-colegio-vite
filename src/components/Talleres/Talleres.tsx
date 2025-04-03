@@ -216,7 +216,7 @@ function Talleres() {
                     </div>
                 </Col>
 
-                <Col md={4} sm={6} xs={12}>
+                {/* <Col md={4} sm={6} xs={12}>
                     <div className="body-card">
                         <h4 className='titulo-taller'>Taller de Yoga</h4>
                         <div className='d-flex align-items-center my-2'>
@@ -240,7 +240,7 @@ function Talleres() {
                         </div>
                         <h6 className='cupos'>Mínimo 10 asistentes</h6>
                     </div>
-                </Col>
+                </Col> */}
 
                 <Col md={4} sm={6} xs={12}>
                     <div className="body-card">

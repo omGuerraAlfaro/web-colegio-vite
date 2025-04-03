@@ -48,7 +48,7 @@ const FormularioTalleres = () => {
     { id_taller: 5, descripcion_taller: 'Taller de Danza' },
     { id_taller: 6, descripcion_taller: 'Taller de Danza Párvulo' },
     { id_taller: 7, descripcion_taller: 'Taller de Teatro' },
-    { id_taller: 8, descripcion_taller: 'Taller de Yoga' },
+    // { id_taller: 8, descripcion_taller: 'Taller de Yoga' },
     { id_taller: 9, descripcion_taller: 'Taller Fútbol' },
     { id_taller: 10, descripcion_taller: 'Taller de Defensa Personal' },
     { id_taller: 11, descripcion_taller: 'Taller Redes Sociales y Herramientas Digitales' },
