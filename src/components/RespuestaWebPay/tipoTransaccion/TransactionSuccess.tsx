@@ -83,6 +83,7 @@ function getPaymentTypeDescription(paymentTypeCode: any) {
 const fetchBoletaData = async (id: number): Promise<BoletaData> => {
     const response = await fetch(`https://colegio-backend.onrender.com/boleta/id/${id}`);
     const data = await response.json();
+    console.log(data);
     return {
         id,
         detalle: data.detalle.toUpperCase(),
@@ -111,11 +112,12 @@ const fetchApoderadoData = async (rut: string): Promise<ApoderadoData> => {
 const fetchEstudianteData = async (rut: string): Promise<EstudianteData> => {
     const response = await fetch(`https://colegio-backend.onrender.com/estudiante/rut/${rut}`);
     const data = await response.json();
+    console.log(data);
     return {
-        primer_nombre: data.primer_nombre,
-        segundo_nombre: data.segundo_nombre,
-        primer_apellido: data.primer_apellido,
-        segundo_apellido: data.segundo_apellido,
+        primer_nombre: data.primer_nombre_alumno,
+        segundo_nombre: data.segundo_nombre_alumno,
+        primer_apellido: data.primer_apellido_alumno,
+        segundo_apellido: data.segundo_apellido_alumno,
         rut: data.rut,
         dv: data.dv,
         curso: data.curso[0]
@@ -136,16 +138,16 @@ function TransactionSuccess({ data }: Props) {
             const rut = parts[0];
             const dePocoInteres = parts[1];
             const boleta1 = parts.length >= 3 ? parts[2] : null;
-            const boleta2 = parts.length === 4 ? parts[3] : null;
-            console.log(boleta1);
-
+            const boleta2 = parts.length >= 4 ? parts[3] : null;
+            const boleta3 = parts.length === 5 ? parts[4] : null;
 
             console.log(`RUT: ${rut}`);
             console.log(`De poco interés: ${dePocoInteres}`);
             console.log(`Boleta 1: ${boleta1}`);
             console.log(`Boleta 2: ${boleta2}`);
+            console.log(`Boleta 3: ${boleta3}`);
 
-            const idsBoletas = [boleta1, boleta2].filter(id => id !== null).map(id => parseInt(id!, 10));
+            const idsBoletas = [boleta1, boleta2, boleta3].filter(id => id !== null).map(id => parseInt(id!, 10));
 
             const boletaDataPromises = idsBoletas.map(id => fetchBoletaData(id));
             const boletaData = await Promise.all(boletaDataPromises);
@@ -158,7 +160,9 @@ function TransactionSuccess({ data }: Props) {
 
                 // Fetch estudiante data for each boleta
                 const estudianteDataPromises = boletaData.map(boleta => fetchEstudianteData(boleta.rut_estudiante));
+                console.log(estudianteDataPromises);
                 const estudianteData = await Promise.all(estudianteDataPromises);
+                console.log(estudianteData);
                 const estudiantesMap = boletaData.reduce((map, boleta, index) => {
                     map[boleta.rut_estudiante] = estudianteData[index];
                     return map;
@@ -195,7 +199,7 @@ function TransactionSuccess({ data }: Props) {
 
         // Agregar detalles de la factura
         doc.setFontSize(12);
-        doc.text(`Comprobante de págo: 001-2024`, 15, 40);
+        // doc.text(`Comprobante de págo: 001-2024`, 15, 40);
         doc.text(`Fecha Documento: ${format(new Date(), 'dd/MM/yyyy')}`, 15, 45);
         doc.text(`Nombre Apoderado: ${apoderadoName}`, 15, 50);
 
@@ -226,7 +230,7 @@ function TransactionSuccess({ data }: Props) {
             const apoderadoBody = [
                 ['Apoderado', apoderadoName],
                 ['RUT Apoderado', `${apoderado.rut}-${apoderado.dv}`],
-                ['Teléfono Apoderado', `+569 ${apoderado.telefono}`],
+                ['Teléfono Apoderado', `+56 ${apoderado.telefono}`],
                 ['Correo Apoderado', apoderado.correo_electronico]
             ];
 
@@ -244,6 +248,8 @@ function TransactionSuccess({ data }: Props) {
         // Agregar tablas de boletas
         boletas.forEach((boleta, index) => {
             const estudiante = estudiantes[boleta.rut_estudiante];
+            console.log(estudiante);
+            
             const estudianteName = estudiante ? `${estudiante.primer_nombre} ${estudiante.segundo_nombre} ${estudiante.primer_apellido} ${estudiante.segundo_apellido}`.trim() : 'sin datos';
             const estudianteRut = estudiante ? `${estudiante.rut}-${estudiante.dv}` : 'sin datos';
             const curso = estudiante ? estudiante.curso.nombre : 'sin datos';
