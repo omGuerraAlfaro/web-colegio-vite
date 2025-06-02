@@ -5,7 +5,7 @@ import FormularioMatricula from "../Formularios/FormularioMatricula";
 const InscripcionMatricula = () => {
   return (
     <Container>
-      <h3 className="tituloAdmision my-3">Inscripción Matrícula 2025</h3>
+      <h3 className="tituloAdmision my-3">Inscripción Matrícula 2026</h3>
       <Row>
         <Col sm={7} xs={12} className="textSteps order-sm-2 order-1">
           <h4 className="tituloAdmision">Para incorporarte a nuestra comunidad CACH 2025, ten en cuenta lo siguiente:</h4>

@@ -1,112 +1,167 @@
+/* 1) Franja roja superior */
+.top-strip {
+  width: 100%;
+  height: 4px;
+  background-color: #c12437;
+}
+
+/* 2) Fondo navbar */
+#color-bg {
+  background-color: #1c2260 !important;
+}
+
+/* 3) Botón toggle en blanco */
+#color-bg .navbar-toggler {
+  border-color: #fff;
+}
+#color-bg .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* 4) Links y dropdown-toggle en blanco */
+#color-bg .nav-link,
+#color-bg .dropdown-toggle {
+  color: #fff !important;
+}
+
+/* 5) Offset-parent para desktop */
+#color-bg .nav-item.dropdown {
+  position: relative;
+}
+
+/* 6) Dropdown absoluto en desktop */
+#color-bg .nav-item.dropdown .dropdown-menu {
+  /* DESKTOP */
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  transform: none !important;
+  margin: 0 !important;
+  background-color: #c12437;
+  border: none;
+  min-width: 180px;
+  padding: 0;
+  display: none;
+  z-index: 1000;
+}
+
+/* Mostrar en hover o .show (desktop) */
+@media (min-width: 992px) {
+  #color-bg .nav-item.dropdown:hover .dropdown-menu,
+  #color-bg .nav-item.dropdown.show .dropdown-menu {
+    display: block;
+  }
+}
+
+/* 7) Destacar toggle padre */
+#color-bg .nav-item.dropdown:hover > .dropdown-toggle,
+#color-bg .nav-item.dropdown.show > .dropdown-toggle {
+  background-color: #c12437 !important;
+  color: #fff !important;
+}
+
+/* 8) Estilo items */
+#color-bg .dropdown-item {
+  color: #fff !important;
+  padding: .75rem 1rem;
+  border-bottom: 1px dotted rgba(255,255,255,0.5);
+}
+#color-bg .dropdown-item:last-child {
+  border-bottom: none;
+}
+#color-bg .dropdown-item:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* 9) Flecha toggle */
+#color-bg .dropdown-toggle::after {
+  filter: invert(1);
+  margin-left: .25rem;
+  transition: transform .2s;
+}
+#color-bg .nav-item.dropdown.show .dropdown-toggle::after,
+#color-bg .nav-item.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* 10) Logo + texto */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
 .tituloNav {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
-  color: #1c2260;
-  position: relative;
-  padding-left: 25px;
+  font-size: 1.75rem;
+  color: #fff;
+  margin: 0;
 }
-
 .subtituloNav {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #1c2260;
-  position: relative;
-  padding-left: 25px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
 }
 
+/* 11) Underline hover/active */
 .custom-link {
   position: relative;
-  transition: all 0.3s ease;
-  /* Smooth transition for hover effects */
-  overflow: hidden;
-  /* Hide the underline before it's fully visible */
+  transition: all 0.3s;
+  color: #fff !important;
 }
-
 .custom-link::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  height: 2px;
+  bottom: 0; left: 50%;
+  width: 0; height: 2px;
   background-color: currentColor;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  transition: width 0.3s, left 0.3s;
 }
-
 .custom-link:hover::after,
 .active-link::after {
   width: 100%;
+  left: 0;
 }
 
-#color-bg {
-  background-color: #c12437 !important;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-#color-bg .navbar-toggler {
-  border-color: white;
-}
-
-#color-bg .navbar-toggler-icon {
-  filter: invert(1);
-  /* This will invert the colors, making black into white */
-}
-
-#color-bg .navbar-toggler:focus {
-  outline: none;
-  /* Removes the default outline */
-  box-shadow: 0 0 5px white;
-  /* Adds a white shadow around the button */
-}
-
+/* 12) Sticky */
 .sticky-navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-@media (max-width: 1800px) {
-  .tituloNav {
-    font-size: 2rem;
-    padding-left: 15px;
+/* 13) MÓVIL: dropdown inline dentro del colapsado */
+@media (max-width: 991px) {
+  #color-bg .nav-item.dropdown .dropdown-menu {
+    /* pasar a posición estática dentro del flujo */
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding-left: 1rem;
+    display: none;
+    width: 100%;
   }
-
-  .subtituloNav {
-    font-size: 1.5rem;
-    padding-left: 15px;
+  /* mostrar al click (React añade .show) */
+  #color-bg .nav-item.dropdown.show .dropdown-menu {
+    display: block !important;
   }
-  .nav-link {
-    font-size: 0.8rem;
+  /* indent para items */
+  #color-bg .dropdown-item {
+    padding-left: 2rem !important;
+    background-color: transparent !important;
+    border: none !important;
   }
 }
-/* Estilos para pantallas con un ancho máximo de 768px (tablets) */
+
+/* 14) Responsive text */
 @media (max-width: 768px) {
-  .tituloNav {
-    font-size: 2rem;
-    padding-left: 15px;
-  }
-
-  .subtituloNav {
-    font-size: 1.5rem;
-    padding-left: 15px;
-  }
-}
-
-/* Estilos para pantallas con un ancho máximo de 480px (móviles) */
-@media (max-width: 480px) {
-  .tituloNav {
-    font-size: 1.5rem;
-    padding-left: 10px;
-  }
-
-  .subtituloNav {
-    font-size: 1.2rem;
-    padding-left: 10px;
-  }
+  .tituloNav { font-size: 1.5rem; }
+  .subtituloNav { font-size: 0.9rem; }
+  .nav-link, .dropdown-toggle { font-size: 0.85rem; }
 }

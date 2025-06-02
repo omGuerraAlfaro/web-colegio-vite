@@ -39,3 +39,7 @@
     width: 100%;
     text-align: center;
 }
+
+.formulario-admision .input-group-text svg {
+  color: #218be1 !important;
+}

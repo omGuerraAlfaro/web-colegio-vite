@@ -1,52 +1,111 @@
+/* Admision.css */
+
+/* 1) Base font settings for the entire container */
+.container {
+  font-family: 'Roboto', sans-serif;
+  color: #4A4A4A; /* medium gray for most body text */
+}
+
+/* 2) Main page title (h3) */
+h3.titulo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1C2260; /* dark blue */
+  margin-bottom: 1.5rem;
+}
+
+/* 3) Section heading (h4) */
+.tituloAdmision {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1C2260; /* dark blue */
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* 4) Body steps text (the numbered steps, lists, paragraphs) */
+.textSteps {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #4A4A4A; /* medium gray */
+  line-height: 1.6;
+}
+
+/* 5) .bodySteps wrapper and vertical bar */
 .bodySteps {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
 }
 
 .bodySteps::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #333;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #333333; /* charcoal for the vertical line */
 }
 
-.textSteps {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
+/* 6) Fine‐tuning the <h4> inside each .bodySteps */
+.bodySteps h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #1C2260; /* dark blue to match .tituloAdmision */
+  margin-bottom: 0.5rem;
 }
 
-.tituloAdmision {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #1c2260;
-    position: relative;
-    margin-bottom: 1rem;
+/* 7) Paragraph text inside steps (if any) */
+.bodySteps p {
+  font-size: 0.95rem;
+  color: #666666; /* lighter gray for subtext or descriptions */
+  margin: 0.25rem 0 0 0;
 }
 
+/* 8) List items inside .bodySteps */
+.bodySteps ul {
+  margin-top: 0.5rem;
+  margin-left: 1.25rem;
+}
+
+.bodySteps ul li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #4A4A4A; /* same medium gray */
+  margin-bottom: 0.25rem;
+  list-style: disc inside;
+}
+
+/* 9) Media queries (adjust font sizes on tablets and mobiles) */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .tituloAdmision {
-        font-size: 1.5rem;
-    }
+  .tituloAdmision {
+    font-size: 1.5rem;
+  }
 
-    .textSteps {
-        font-size: 0.9rem;
-    }
+  .textSteps {
+    font-size: 0.9rem;
+  }
 
+  .bodySteps h4 {
+    font-size: 1.15rem;
+  }
 }
 
 @media (max-width: 767px) {
-    .tituloAdmision {
-        font-size: 1.2rem;
-    }
+  .tituloAdmision {
+    font-size: 1.2rem;
+  }
 
-    .textSteps {
-        font-size: 0.8rem;
-    }
+  .textSteps {
+    font-size: 0.8rem;
+  }
 
+  .bodySteps h4 {
+    font-size: 1rem;
+  }
 }

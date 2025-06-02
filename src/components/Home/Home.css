@@ -94,7 +94,6 @@
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  max-width: 95%;
 }
 
 .container-fondo::before {
@@ -124,4 +123,37 @@
 .container-fondo>* {
   position: relative;
   z-index: 2;
+}
+
+.body-card-contacto {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.body-card-contacto::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #1c2260;
+}
+
+.titulo-contacto {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1c2260;
+  position: relative;
+}
+
+.txt {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1rem;
+  color: #000000;
 }

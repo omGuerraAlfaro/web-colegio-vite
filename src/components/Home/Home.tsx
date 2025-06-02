@@ -1,5 +1,4 @@
 // import { useState } from 'react'
-import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CarouselHome from '../Carousel/Carousel'
@@ -15,11 +14,11 @@ import { useState, useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
-// import AlertWelcome from '../Alert/AlertInicioClases';
-
 import anuario from '../../assets/docs/ANUARIO.pdf';
-// import AlertInicioClases from '../Alert/AlertInicioClases';
 import AlertWelcome from '../Alert/AlertSimse';
+import { Col, Tab, Tabs } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faHome, faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 function base64ToURL(base64: any) {
@@ -74,6 +73,9 @@ function Home() {
 
         fetchNoticias();
     }, []);
+
+    const lat = "-32.8301184";
+    const lng = "-70.605871";
 
     const compromisos = [
         {
@@ -137,7 +139,7 @@ function Home() {
 
 
             <Container className="my-5 container-fondo">
-                <h3 className="titulo">¡Ve nuestro anuario!</h3>
+                <h3 className="titulo">¡Mira nuestro anuario!</h3>
                 <p className="parrafo">Explora los momentos más destacados del año escolar 2024 y revive las actividades, logros y eventos importantes que marcaron a nuestra comunidad educativa.</p>
                 <div className='text-center mt-5'>
                     <a
@@ -152,6 +154,18 @@ function Home() {
             </Container>
 
 
+            <Container className='my-5' id='noticias'>
+                <h3 className="titulo fonty1 mb-4">Galería de Noticias</h3>
+                {isLoading ? (
+                    <div className="d-flex justify-content-center align-items-center">
+                        <Spinner animation="border" role="status" style={{ marginRight: '10px' }} />
+                        Cargando Noticias...
+                    </div>
+
+                ) : (
+                    <PhotoGallery photos={noticias} />
+                )}
+            </Container>
 
             <Container className='my-5'>
                 <div className="row d-flex justify-content-center align-items-center">
@@ -165,40 +179,76 @@ function Home() {
                 </div>
             </Container>
 
-
-            {/* /Users/omarguerra/Documents/GitHub/web-colegio-vite/src/assets/docs/Anuario.pdf */}
-
             <Container className="mt-5">
-                <h3 className="titulo mb-4">Nuestro Compromiso</h3>
-                <Row className="justify-content-center">
-                    {compromisos.map((elemento, index) => (
-                        <div className="col-md-4 mb-4 d-flex" key={index}>
-                            <Card style={{ backgroundColor: elemento.color }} className="shadow h-100 w-100 d-flex flex-column">
-                                <div className="d-flex justify-content-center mt-3">
-                                    <Card.Img className="card-icon" variant="top" src={elemento.imgSrc} alt={elemento.imgAlt} />
+                <h3 className="titulo mb-3">Nuestro Compromiso</h3>
+                {/* Pestañas que envuelven y permiten wrap en móvil, no wrap en md+ */}
+                <Tabs
+                    defaultActiveKey={compromisos[0].caption}
+                    id="compromisos-tabs"
+                    className="mb-4 nav-pills d-flex flex-wrap flex-md-nowrap justify-content-start"
+                    variant="pills"
+                >
+                    {compromisos.map(({ imgSrc, caption, title, description, color }) => (
+                        <Tab eventKey={caption} title={caption} key={caption}>
+                            <div
+                                className="d-flex flex-column flex-md-row align-items-center p-3"
+                                style={{ backgroundColor: color, borderRadius: '8px' }}
+                            >
+                                <img src={imgSrc} alt={title} style={{ width: '64px', marginBottom: '1rem', marginRight: '1rem' }} />
+                                <div>
+                                    <h5 className="text-light mb-2">{title}</h5>
+                                    <p className="text-light mb-0">{description}</p>
                                 </div>
-                                <Card.Body className="d-flex flex-column">
-                                    <Card.Title className="text-light titulo-card">{elemento.title}</Card.Title>
-                                    <Card.Text className="text-light parrafo-card flex-grow-1">{elemento.description}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
+                            </div>
+                        </Tab>
                     ))}
-                </Row>
+                </Tabs>
             </Container>
 
 
-            <Container className='my-5' id='noticias'>
-                <h3 className="titulo fonty1 mb-4">Galería de Noticias</h3>
-                {isLoading ? (
-                    <div className="d-flex justify-content-center align-items-center">
-                        <Spinner animation="border" role="status" style={{ marginRight: '10px' }} />
-                        Cargando Noticias...
-                    </div>
 
-                ) : (
-                    <PhotoGallery photos={noticias} />
-                )}
+            <Container className='my-5'>
+                <h1 className='titulo'>Contacto</h1>
+                <Row>
+                    <Col md={8} xs={12}>
+                        <iframe
+                            width="100%"
+                            height="400"
+                            src={`https://maps.google.com/maps?q=${lat},${lng}&t=&z=19&ie=UTF8&iwloc=&output=embed`}
+                            title="Google Maps"
+                        ></iframe>
+                    </Col>
+                    <Col md={4} xs={12} className='my-3'>
+                        <div className="body-card-contacto">
+                            <h4 className='titulo-contacto'>Dirección</h4>
+                            <div className='d-flex align-items-center my-3'>
+                                <FontAwesomeIcon icon={faHome} className='mx-2' size='xl' color='#1c2260' />
+                                <p className='align-self-center adjust-text mx-1 txt'>Manuel Rodríguez #1064, Los Andes</p>
+                            </div>
+                        </div>
+                        <div className="body-card-contacto">
+                            <h4 className='titulo-contacto'>Horario de Atención</h4>
+                            <div className='d-flex align-items-center my-3'>
+                                <FontAwesomeIcon icon={faClock} className='mx-2' size='xl' color='#1c2260' />
+                                <p className='align-self-center adjust-text mx-1 txt'>Lunes a Viernes | 08:00 | 16:45</p>
+                            </div>
+                        </div>
+                        <div className="body-card-contacto">
+                            <h4 className='titulo-contacto'>Correo Electrónico</h4>
+                            <div className='d-flex align-items-center my-3'>
+                                <FontAwesomeIcon icon={faAt} className='mx-2' size='xl' color='#1c2260' />
+                                <p className='align-self-center adjust-text mx-1 txt'>colegioandeschile@gmail.com</p>
+                            </div>
+                        </div>
+                        <div className="body-card-contacto">
+                            <h4 className='titulo-contacto'>Teléfono</h4>
+                            <div className='d-flex align-items-center my-3'>
+                                <FontAwesomeIcon icon={faPhone} className='mx-2' size='xl' color='#1c2260' />
+                                <p className='align-self-center adjust-text mx-1 txt'>34 2 402858</p>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
             </Container>
         </>
     )

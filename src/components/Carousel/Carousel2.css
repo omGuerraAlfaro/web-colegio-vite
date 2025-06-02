@@ -1,0 +1,110 @@
+/* Carousel.css */
+.tituloCarrusel {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #8fcfe5;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    border: none;
+    border-radius: 45px;
+    padding: 10px 20px;
+}
+
+.my-carousel img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.my-carousel .carousel-caption h2 {
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.my-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #808080;
+    border: none;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.my-carousel .carousel-indicators button.active {
+    background-color: #1c2260;
+}
+
+.my-carousel .carousel-control-prev,
+.my-carousel .carousel-control-next {
+    background-color: transparent;
+}
+
+.my-carousel .carousel-control-prev-icon,
+.my-carousel .carousel-control-next-icon {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.my-carousel .carousel-control-prev-icon:hover,
+.my-carousel .carousel-control-next-icon:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    .tituloCarrusel {
+        font-size: 2rem;
+        padding: 10px 15px;
+    }
+
+    .my-carousel img {
+        max-height: 450px;
+    }
+
+    .my-carousel .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .my-carousel .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+    }
+
+    .my-carousel .carousel-control-prev-icon,
+    .my-carousel .carousel-control-next-icon {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+  .carousel-wrapper {
+    width: 100vw !important;  
+    padding: 0;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .my-carousel.container {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+  }
+
+  .my-carousel .carousel-item img {
+    width: 90vw !important;
+  }
+
+  .my-carousel .carousel-control-prev-icon,
+  .my-carousel .carousel-control-next-icon {
+    transform: scale(0.8) translateX(-50%);
+    padding: 0;
+  }
+}

@@ -1,65 +1,133 @@
-import { Navbar as RBNavbar, Nav, Container } from 'react-bootstrap';
-import { useLocation, useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import { useState } from 'react';
+import {
+  Navbar as RBNavbar,
+  Nav,
+  NavDropdown,
+  Container,
+  Modal,
+  Button,
+} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHome,
+  faUniversity,
+  faBookOpen,
+  faUserPlus,
+  faAt,
+} from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
+import './Navbar.css';
 import AndesLogo from '../../assets/img/LOGOCOLEGIO.png';
-// import AndesSlogan from '../../assets/img/slogan2.png';
 
-const Navbar = () => {
+export default function Navbar() {
   const location = useLocation();
+  const isActive = (path:any) => location.pathname === path;
 
-  const isActive = (path: any) => {
-    return location.pathname === path;
-  };
-
-  const navigate = useNavigate();
-
-  const handleNavClick = () => {
-    if (window.location.pathname !== '/') {
-      navigate('/');
-    }
-    setTimeout(() => {
-      const noticiasElement = document.getElementById('noticias');
-      if (noticiasElement) {
-        noticiasElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  };
+  const [showIntranetModal, setShowIntranetModal] = useState(false);
 
   return (
     <>
-      {/* d-none d-md-block */}
-      <div className="container d-flex align-items-center">
-        <img src={AndesLogo} width="120" height="150" className="my-3" />
-        <div>
-          <h3 className='tituloNav'>Colegio Andes Chile</h3>
-          <h5 className='subtituloNav'>Educando con Amor</h5>
-        </div>
-      </div>
+      <div className="top-strip" />
 
-
-      <RBNavbar bg="light" expand="lg" id='color-bg' className='mb-4 shadow sticky-navbar'>
+      <RBNavbar expand="lg" id="color-bg" className="sticky-navbar shadow">
         <Container>
+          <RBNavbar.Brand className="d-flex align-items-center" href="/">
+            <img
+              src={AndesLogo}
+              width={55}
+              height={65}
+              className="d-inline-block align-top"
+              alt="Logo Colegio Andes Chile"
+            />
+            <div className="ms-2 brand-text">
+              <div className="tituloNav">Colegio Andes Chile</div>
+              <div className="subtituloNav">Educando con Amor</div>
+            </div>
+          </RBNavbar.Brand>
+
           <RBNavbar.Toggle aria-controls="basic-navbar-nav" />
           <RBNavbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto d-flex justify-content-between align-items-center w-100">
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/") ? "active-link" : ""}`} href="/">Inicio</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/#noticias") ? "active-link" : ""}`} onClick={handleNavClick}>Noticias</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/info-simce") ? "active-link" : ""}`} href="/info-simce">Información SIMCE</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/mision-vision") ? "active-link" : ""}`} href="/mision-vision">Misión - Visión</Nav.Link>
-              {/* <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/pae") ? "active-link" : ""}`} href="/pae">Programa PAE</Nav.Link> */}
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/reglamento") ? "active-link" : ""}`} href="/reglamento">Reglamento Interno de Convivencia Escolar</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/utiles") ? "active-link" : ""}`} href="/utiles">Lista de Útiles</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/talleres") ? "active-link" : ""}`} href="/talleres">Talleres</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/admision") ? "active-link" : ""}`} href="/admision">Alumnos Nuevos 2025</Nav.Link>
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/matricula") ? "active-link" : ""}`} href="/matricula">Inscripción Matrícula 2025</Nav.Link>
-              {/* <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/verano") ? "active-link" : ""}`} href="/verano">Escuela de Verano</Nav.Link> */}
-              <Nav.Link className={`text-wrap custom-link text-light bold ${isActive("/contacto") ? "active-link" : ""}`} href="/contacto">Contacto</Nav.Link>
+            {/* Espaciado uniforme entre items */}
+            <Nav className="ms-auto" style={{ display: 'flex', gap: '1rem' }}>
+              <Nav.Link
+                href="/"
+                className={`custom-link bold ${isActive('/') ? 'active-link' : ''}`}
+              >
+                <FontAwesomeIcon icon={faHome} className="me-1" />
+                Inicio
+              </Nav.Link>
+
+              <NavDropdown
+                title={
+                  <><FontAwesomeIcon icon={faUniversity} className="me-1" /> Nuestro Colegio</>
+                }
+                id="nav-colegio"
+                className="custom-link bold"
+              >
+                <NavDropdown.Item href="/mision-vision">
+                  Misión – Visión
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/reglamento">
+                  Reglamento
+                </NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown
+                title={
+                  <><FontAwesomeIcon icon={faBookOpen} className="me-1" /> Vida Estudiantil</>
+                }
+                id="nav-vida"
+                className="custom-link bold"
+              >
+                <NavDropdown.Item href="/talleres">Talleres</NavDropdown.Item>
+                <NavDropdown.Item href="/utiles">Lista de Útiles</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown
+                title={
+                  <><FontAwesomeIcon icon={faUserPlus} className="me-1" /> Admisiones</>
+                }
+                id="nav-admisiones"
+                className="custom-link bold"
+              >
+                <NavDropdown.Item href="/admision">Formulario Postulación</NavDropdown.Item>
+                <NavDropdown.Item href="/matricula">Formulario Matrícula</NavDropdown.Item>
+              </NavDropdown>
+
+              <Nav.Link
+                className="custom-link bold"
+                onClick={() => setShowIntranetModal(true)}
+                style={{ cursor: 'pointer' }}
+              >
+                <FontAwesomeIcon icon={faAt} className="me-1" />
+                Intranet
+              </Nav.Link>
             </Nav>
           </RBNavbar.Collapse>
         </Container>
       </RBNavbar>
-    </>
-  )
-};
 
-export default Navbar;
+      <Modal show={showIntranetModal} onHide={() => setShowIntranetModal(false)} centered>
+        <Modal.Header
+          closeButton
+          style={{ backgroundColor: '#c12437', color: '#fff' }}
+          className="d-flex align-items-center"
+        >
+          <FontAwesomeIcon icon={faAt} size="lg" className="me-2" />
+          <Modal.Title>Intranet</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          <p style={{ fontSize: '1.1rem' }}>
+            <strong>¡Próximamente!</strong>
+          </p>
+          <p>El acceso a la Intranet estará habilitado muy pronto.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="light" onClick={() => setShowIntranetModal(false)}>
+            Cerrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}

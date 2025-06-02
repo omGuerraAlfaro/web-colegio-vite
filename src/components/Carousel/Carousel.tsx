@@ -27,9 +27,9 @@ function CarouselHome() {
                 <Carousel.Item>
                     <img className="d-block" src={carousel1} alt="First slide" />
                     <Carousel.Caption>
-                        <h2 className='tituloCarrusel'>¡Inscripciones 2025, Abiertas!</h2>
+                        <h2 className='tituloCarrusel'>¡Inscripciones 2026, Abiertas!</h2>
                         <h2 className='tituloCarrusel'>¡Únete a nuestra comunidad educativa!</h2>
-                        <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2025</Button>
+                        <Button href='/admision' variant="outline-primary" className="buttonAnimated mx-3">Admisión 2026</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 {/* <Carousel.Item>

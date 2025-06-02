@@ -471,6 +471,61 @@ function Talleres() {
                     </div>
                 </Col>
 
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller Ajedrez</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Rodrigo Gajardo</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Colegio</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Viernes | 14:15 | 15:15</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>$10.000(Valor Mensual)</b></p>
+                        </div>
+                        <h6 className='cupos'>Para: Estudiantes de 4° a 8° Básico</h6>
+                        <h6 className='cupos'>Mínimo 12 asistentes</h6>
+                    </div>
+                </Col>
+
+                <Col md={4} sm={6} xs={12}>
+                    <div className="body-card">
+                        <h4 className='titulo-taller'>Taller de Manualidades, Técnicas Decorativas y Más</h4>
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faPersonChalkboard} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'>Yasna Urquiza "Bendito Detalle"</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faLocationDot} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text'><b>Ubicación:</b> Colegio</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faClock} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-1'>Miércoles | 14:45 | 15:45</p>
+                        </div>
+                        <hr className='hrclass' />
+                        <div className='d-flex align-items-center my-2'>
+                            <FontAwesomeIcon icon={faDollarSign} className='mx-2 awesome' />
+                            <p className='align-self-center adjust-text mx-3'><b>$25.000(Valor Mensual)</b></p>
+                        </div>
+                        <h6 className='cupos'>Para: Apoderados</h6>
+                        <h6 className='cupos'>Incluye Materiales e Insumos</h6>
+                        <h6 className='cupos'>Mínimo 10 asistentes</h6>
+                    </div>
+                </Col>
+
 
                 {/* <Container>
                     <Col md={12} sm={6} xs={12}>

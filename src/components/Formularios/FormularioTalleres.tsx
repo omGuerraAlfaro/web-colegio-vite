@@ -57,7 +57,9 @@ const FormularioTalleres = () => {
     { id_taller: 14, descripcion_taller: 'Inglés Segundo Ciclo' },
     { id_taller: 15, descripcion_taller: 'Taller Simce 8vo Básico (Lenguaje)' },
     { id_taller: 16, descripcion_taller: 'Taller Simce 8vo Básico (Matemáticas)' },
-    { id_taller: 17, descripcion_taller: 'Taller Simce 4to Básico' }
+    { id_taller: 17, descripcion_taller: 'Taller Simce 4to Básico' },
+    { id_taller: 18, descripcion_taller: 'Taller de Ajedrez' },
+    { id_taller: 19, descripcion_taller: 'Taller de Manualidades, Técnicas Decorativas y Más' }
   ];
 
   const buscarApoderado = async (rut: string) => {
