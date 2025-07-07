@@ -1,8 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css';
-import carousel1 from '../../assets/img/carru.jpg';
+import carousel1 from '../../assets/img/carru.png';
 // import carousel2 from '../../assets/img/carru2.png';
-import carousel3 from '../../assets/img/carru3.png';
+import carousel3 from '../../assets/img/carru22.png';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 

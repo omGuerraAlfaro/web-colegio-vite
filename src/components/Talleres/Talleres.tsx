@@ -13,7 +13,7 @@ function Talleres() {
                 {/* <Col md={6} sm={6} xs={12}>
                     <CarouselTalleres />
                 </Col> */}
-                <Col md={6} sm={6} xs={12}>
+                <Col md={6} sm={12} xs={12}>
                     <p className='parrafoTalleres'>Dentro de nuestra comunidad, creemos que el aprendizaje va más allá del aula.</p>
                     <p className='parrafoTalleres'>Este año como colegio ampliamos la gama de talleres, entregando más opciones con el fin de fomentar el desarrollo de diversas habilidades en nuestros niños y niñas, y que puedan explorar diferentes áreas para un desarrollo integral.</p>
                     <p className='parrafoTalleres'>A continuación se detallan los talleres con el día que se llevará a cabo y su costo.</p>

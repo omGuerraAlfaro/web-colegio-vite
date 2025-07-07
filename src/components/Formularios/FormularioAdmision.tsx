@@ -141,7 +141,7 @@ const FormularioAdmision: React.FC = () => {
     onSubmit: async (values) => {
       try {
         console.log("Payload a enviar:", values);
-        await axios.post("http://localhost:3200/correo/enviar", values, {
+        await axios.post("https://colegio-backend.onrender.com/correo/enviar-postulacion", values, {
           headers: { "Content-Type": "application/json" },
         });
         Swal.fire({
