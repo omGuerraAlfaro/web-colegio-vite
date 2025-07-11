@@ -32,7 +32,7 @@ const formSchema = yup.object().shape({
   apoderado: yup.string().required("El nombre del apoderado es requerido"),
   rut: yup
     .string()
-    .matches(/^[0-9]+[-|‐]{1}[0-9kK]{1}$/, "Debe ser un RUT válido (ej: 12.345.678-5)")
+    .matches(/^[0-9]+[-|‐]{1}[0-9kK]{1}$/, "Debe ser un RUT válido (ej: 12345678-9)")
     .required("El RUT es requerido"),
   direccion: yup.string().required("La dirección es requerida"),
   comuna: yup.string().required("La comuna es requerida"),
