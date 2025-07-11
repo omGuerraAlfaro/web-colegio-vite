@@ -238,7 +238,7 @@ const FormularioAdmision: React.FC = () => {
                 </InputGroup.Text>
                 <Form.Control
                   type="text"
-                  placeholder="Ej: 12.345.678-5"
+                  placeholder="Ej: 12345678-9"
                   name="rut"
                   value={formik.values.rut}
                   onChange={formik.handleChange}
